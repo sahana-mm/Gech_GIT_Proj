@@ -15,3 +15,14 @@
     System.out.println(sum);
   }
 }
+
+1). What is public static void main(String[] args) in java...?
+  "public" is an access modifier which allows to access class from anywhere it means method would be visible in other packages.
+  "static" is a keyword which hepls the main method to run without creating any objects.
+  "void" is akeyword used we dont want to return anything from method or function.
+  function "main()" its default signature is defined in jvm, whenever we try to run java file first they looks for main function, without main function the main function will not run.
+  main() method is the entry point of the java program for the java virtual machine (jvm).
+  "String[] args" is used to command line argument of String type array.
+  "System.out.println" "System" is a final calss from the java dawline package 
+"out" is a class variable of type print String declared in the system class
+  "println" is the method of print String class.
