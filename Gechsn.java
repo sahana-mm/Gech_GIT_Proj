@@ -33,12 +33,12 @@
   public static vois main(String[] args){
     int a=1,b=2;
     //before swapping
-    System.out.println("a,b");
+    System.out.println("Before swapping:" + a + " ", + b);
     //after swapping using temporary variable
     int c=a;
     a=b;
     b=c;
-    System.out.println("a,b");
+    System.out.println("After swapping:" + a + " " , + b);
   }
 }
 
