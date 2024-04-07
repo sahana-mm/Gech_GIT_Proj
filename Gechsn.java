@@ -26,3 +26,19 @@
   "System.out.println" "System" is a final calss from the java dawline package 
 "out" is a class variable of type print String declared in the system class
   "println" is the method of print String class.
+
+  2).Swapping two numbers in Java
+  swapping two numbers by using another temporary variable.
+  public calss Swapping{
+  public static vois main(String[] args){
+    int a=1,b=2;
+    //before swapping
+    System.out.println("a,b");
+    //after swapping using temporary variable
+    int c=a;
+    a=b;
+    b=c;
+    System.out.println("a,b");
+  }
+}
+
