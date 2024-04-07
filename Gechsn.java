@@ -35,10 +35,59 @@
     //before swapping
     System.out.println("Before swapping:" + a + " ", + b);
     //after swapping using temporary variable
+    //logic 1- using third variable
     int c=a;
     a=b;
     b=c;
     System.out.println("After swapping:" + a + " " , + b);
+    //logic 2-using + and - operators 
+    int a=1,b=2;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    System.out.println("swapped numbers are:" +a+ " " +b);
+    //logic 3- using * and / operators
+    int a=1,b=2;
+    a=a*b;
+    b=a/b;
+    a=a/b;
+    System.out.println("swapped numbers are:" +a+ " " +b);
+    //logic 4- using XOR operator
+    int a=1,b=2;
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    System.out.println("swapped numbers are:" +a+ " " +b);
+    here the XOR operator convert two numbers into binary digit first.
+      truth table of  a XOR b
+                   a        b         aXORb
+                   0        0           0
+                   0        1           1
+                   1        0           1
+                   1        1           0
+
+here binary digit of a=1 is 0001 and b=2 is 0010
+then 0001
+     0010
+     0011 is equals to 3
+  for a=10 and b=20
+       1010
+      10100
+      11110 is 30
+  //logic 5- single statement
+  int a=10,b=20;
+    b=a+b-(a=b);
+   /*(this execution starts from right to left)
+     here b=a+b-(a=b)
+            a=10,b=20 and in a=b==20 (here the value of b will be assigned to a then a=20)
+b=10+20-20
+  30-20
+  10
+  then b=10;
+  and in (a=b) we assign value of a will be 20 so, a=20*/
+
+    System.out.println("swapped numbers are:" +a+ " " +b);
+    
   }
 }
 
