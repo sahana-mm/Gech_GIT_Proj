@@ -107,8 +107,8 @@ System.out.println("enter a number");
     int rev=0;
    while(num!=0)
    {
-     rev = rev*10+num/10;
-     num=num%10;
+     rev = rev*10+num%10;
+     num=num/10;
    }
     System.out.println("reverse of a number is "+rev);
   }
