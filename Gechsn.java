@@ -96,4 +96,21 @@ public class Main {
     System.out.println("Hello World!");
   }
   }
-3). Reverse of a string program.
+3). Reverse of a number in javaprogramming.
+  1).take input from the user
+  import java.util.Scanner;
+  public class ReverseNumber{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+System.out.println("enter a number");
+    int num=sc.nextInt();
+    int rev=0;
+   while(num!=0)
+   {
+     rev = rev*10+num/10;
+     num=num%10;
+   }
+    System.out.println("reverse of a number is "+rev);
+  }
+  }
+      
