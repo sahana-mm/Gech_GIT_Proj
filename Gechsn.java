@@ -27,7 +27,7 @@
 "out" is a class variable of type print String declared in the system class
   "println" is the method of print String class.
 
-  2).Swapping two numbers in Java
+  2).Swapping two numbers in Java.
   swapping two numbers by using another temporary variable.
   public calss Swapping{
   public static vois main(String[] args){
