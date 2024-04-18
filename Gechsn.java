@@ -84,7 +84,7 @@ b=10+20-20
   30-20
   10
   then b=10;
-  and in (a=b) we assign value of a will be 20 so, a=20*/
+  and in (a=b) we assign value of a will be 20 so, a=20*/.
 
     System.out.println("swapped numbers are:" +a+ " " +b);
     
