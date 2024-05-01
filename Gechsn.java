@@ -1,4 +1,4 @@
-**To add two number and store in a another variable.
+*To add two number and store in a another variable.
   public class Gechsn{
   public static void main(String[] args){
     int a=1,b=2;
