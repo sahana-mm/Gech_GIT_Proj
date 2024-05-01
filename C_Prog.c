@@ -102,3 +102,33 @@ int main() {
 
     return 0;
 }
+3).to calculate standard deviation.
+  #include<stdio.h>
+  void StandardDeviation(int n, int arr){
+//to calculate average
+  double sum = 0;
+for(int i=0;i<n;i++){
+sum+=arr[i];
+}
+double avg=sum/n;
+double sum_of_squares = 0;
+//to calculate sum of squares
+for(int i=0;i<n;i++){
+sum_of_squares+=(arr[i]-avg)*(arr[i]-avg);
+}
+//to calculate SD
+double standard deviation=0;
+standard deviation=sqrt(sum_of_squares/n);
+}
+int main(){
+  int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    double result = StandardDeviation(arr, n);
+    printf("Standard deviation: %.2f\n", result);
+
+    return 0;
+}
+
+
