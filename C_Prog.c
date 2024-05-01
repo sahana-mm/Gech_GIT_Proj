@@ -71,3 +71,34 @@ int main() {
 
     return 0;
 }
+2).to find how many number of cards are required to construct 2 staged pyramid using cards.
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int CalculateCards(int n) {
+    int ans = 0;
+    int level = 1;
+
+    while (level <= n) {
+        ans += (level * 3);
+        level++;
+    }
+
+    ans -= n;
+
+    return ans;
+}
+
+int main() {
+    int result = CalculateCards(2);
+    printf("%d\n", result);
+
+    return 0;
+}
