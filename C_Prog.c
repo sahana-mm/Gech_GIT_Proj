@@ -38,7 +38,7 @@ void reverse_rows(int N, int mat[N][N]) {
 }
 
 // Function to print the matrix
-void print_matrix(int N, int mat[N][N]) {
+void print_matrix(int N, int mat[N][N]){
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             printf("%d ", mat[i][j]);
