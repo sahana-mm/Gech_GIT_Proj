@@ -130,5 +130,37 @@ int main(){
 
     return 0;
 }
+4).to find the odd numbered ballon on the given table and print the same.
+#include <stdio.h>
+int main(){
+    char FindOddColor(char arr[], int n) {
+    char oddColor;
+    int count;
+
+    for (int i = 0; i < n; i++) {
+        count = 0;
+        for (int j = 0; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        if (count % 2 != 0) {
+            oddColor = arr[i];
+            break; // Exit loop once odd color is found
+        }
+    }
+    return oddColor;
+}
+
+int main() {
+    char arr[] = {'r','g', 'g', 'b', 'b', 'y', 'y'};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    char oddColor = FindOddColor(arr, n);
+
+    printf("%c is the odd color balloon.\n", oddColor);
+
+    return 0;
+}
 
 
