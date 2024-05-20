@@ -11,7 +11,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <stdio.h>
 
 // Function to transpose the matrix
-void transpose(int N, int mat[N][N]) {
+void transpose(int N, int mat[N][N]) 
     for (int i = 0; i < N; i++) {
         for (int j = i + 1; j < N; j++) {
             // Swap mat[i][j] with mat[j][i]
