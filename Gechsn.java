@@ -116,14 +116,16 @@ System.out.println("enter a number");
 
 4).write a java program to divide numbers and print divide by zero error if the denomenator is 0..?
   import java.util.Scanner;
-public class Divide{
-  public static void main(String[] args){
+  public class Divide{
+    public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
-    int num1=2,numr=1;
-    num3=num1/num2;
+    Syetm.out.println("enter the first number:");
+    int num1 = sc.nextInt();
+    Syetm.out.println("enter the first number:");
+    int num2 = sc.nextInt();
     if(num2 !=0)
     {
-    System.out.println("num3");
+    System.out.println("result:",num3);
     }
     else{
       System.out.println("Divide by Zero error");
