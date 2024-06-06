@@ -119,15 +119,20 @@ System.out.println("enter a number");
   public class Divide{
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
-    Syetm.out.println("enter the first number:");
+    System.out.println("enter the first number:");
     int num1 = sc.nextInt();
-    Syetm.out.println("enter the first number:");
+    System.out.println("enter the second number:");
     int num2 = sc.nextInt();
+    int num3;
     if(num2 !=0)
     {
-    System.out.println("result:",num3);
+        num3 = num1/num2;
+    System.out.println("result:" +num3);
     }
     else{
       System.out.println("Divide by Zero error");
     }
+    sc.close();
+    }
   }
+
