@@ -135,4 +135,49 @@ System.out.println("enter a number");
     sc.close();
     }
   }
+5).to create a calculator program and print the output if the operator is not given then exit from the condition...?
+  package com.palletechnologies.myfirstproject;
+
+import java.util.Scanner;
+public class Calculator {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		float a,b,result;
+		System.out.println("enter the two numbers to be calculated");
+	      a = sc.nextFloat();
+	      b = sc.nextFloat();
+	      System.out.println("1.addition\n 2.subtraction\n 3.multiplication\n 4.division\n ");
+	      System.out.println("choose the operation");
+	      int op = sc.nextInt();
+	      switch(op) {
+	      case 1:
+	    	  result = a+b;
+	    	  break;
+	      case 2:
+	    	  result = a-b;
+	    	  break;
+	      case 3:
+	    	  result = a*b;
+	    	  break;
+	      case 4:
+	    	 
+	    	  if(b != 0) {
+	    		  System.out.println(result=a/b);
+	    	  }
+	    	  else {
+	    		  System.out.println("divide by zero error");
+	    	  }
+	    	  break;
+	      case 5:
+	    	  System.exit(op);
+	    	  default:
+	    		  System.out.println("entered invalid operator");
+	    	return;
+	      }
+	      System.out.println(result);
+	}
+
+}
 
