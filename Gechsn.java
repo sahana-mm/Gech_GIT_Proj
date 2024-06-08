@@ -181,3 +181,52 @@ public class Calculator {
 
 }
 
+
+
+08/06/2024
+1).objects assignments
+[1].create object of nurse class in main method display data present in nurse object...?
+[2].create object of patients class in main method display data present in patients object...?	
+	package com.palletechnologies.myfirstproject;
+
+public class ObjectAssignments {
+
+	public static void main(String[] args) {
+	Nurse n = new Nurse();
+	Patients p = new Patients();
+	
+	System.out.println(n.name);
+	System.out.println(n.qualif);    
+	System.out.println(n.Age);
+	    
+	System.out.println("the nurse name is " + n.name);
+	System.out.println("the nurse qualification is " + n.qualif);
+	System.out.println("the nurse age is " + n.Age);
+    
+	
+	System.out.println(p.name);
+	System.out.println(p.age);
+	System.out.println(p.BloodGroup);
+	System.out.println(p.disease);
+	
+	System.out.println("the patient name is " + p.name);
+	System.out.println("the patient age is " + p.age);
+	System.out.println("the patient Blood Group is " + p.BloodGroup);
+	System.out.println("the patient disease is " + p.disease);
+	}
+
+}
+class Nurse{
+	public String name = "vani";
+	public String qualif = "nursing";
+	public int Age = 26;
+	
+}
+class Patients{
+	public String name = "Suleman";
+	public int age = 79;
+	public String BloodGroup = "o+ve";
+	public String disease = "viral fever";
+}
+
+
