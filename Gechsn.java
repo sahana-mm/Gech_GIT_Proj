@@ -229,4 +229,42 @@ class Patients{
 	public String disease = "viral fever";
 }
 
+10/06/2024
+1).methods creation inside the class and main statements in java programming.	
+
+package com.palletechnologies.myfirstproject;
+
+public class Methods {
+
+	public static void main(String[] args) {
+Methods methods = new Methods();
+		
+		// Example usage of methods
+		char result1 = methods.m5("example", 5);
+		float result2 = methods.m1("example", true);
+		int result3 = methods.m3('c');
+
+		System.out.println("Result of m5: " + result1);
+		System.out.println("Result of m1: " + result2);
+		System.out.println("Result of m3: " + result3);
+		
+	}
+		public char m5(String s, int x)
+		{
+        char c = 's';
+        return c;
+	}
+		public float m1(String s,boolean b)
+		{
+			float f = 1.1f;
+			return f;
+		}
+		public int m3(char c)
+		{
+			int x = 10;
+			return x;
+		}
+	}
+
+
 
