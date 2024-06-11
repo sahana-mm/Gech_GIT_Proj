@@ -266,5 +266,48 @@ Methods methods = new Methods();
 		}
 	}
 
+11/06/2024
+1).create a addition,subtraction,multiplication and division methods ins the Calci class and perform operation...?
+	package com.palletechnologies.MyFfrstprogram;
 
+public class MethodsAssignments2 {
+
+	public static void main(String[] args) {
+		Methods m = new Methods();
+		        int sum1 = m.add(1,2);
+                System.out.println(sum1);
+                double sub1 = m.sub(1.2, 1.1);
+                System.out.println(sub1);
+                int mul1 = m.mul(3,6);
+                System.out.println(mul1);
+                double div1 = m.div(2.2, 1.1);
+                System.out.println(div1);
+	}
+
+}
+
+class Methods
+{
+public int add(int x,int y)
+{
+	int sum1 = x + y;
+	return sum1;
+}
+public double sub(double d,double e)
+{
+	double sub1 = d - e;
+	return sub1;
+}
+public int mul(int m,int n) {
+	int mul1 = m*n;
+	return mul1;
+}
+public double div(double p, double q)
+{
+	double div1 = p/q;
+	return div1;
+}
+}
+
+	
 
