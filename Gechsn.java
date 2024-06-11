@@ -308,6 +308,25 @@ public double div(double p, double q)
 	return div1;
 }
 }
+2).create a areaoftriangle by creating class Triangle and using getArea as a method
+	package com.palletechnologies.MyFfrstprogram;
 
+public class AreaOfTriangle {
+
+    public static void main(String[] args) {
+        Triangle t = new Triangle();
+        double area = t.getArea(2.2, 2.3);
+        System.out.println(area);
+    }
+
+}
+
+class Triangle {
+    public double getArea(double b, double h) {
+        double area = 0.5 * b * h;
+        return area;
+    }
+}
+here we can use double area = (1.0/2.0) *b * h;
 	
 
