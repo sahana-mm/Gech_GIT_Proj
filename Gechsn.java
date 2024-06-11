@@ -6,7 +6,6 @@
     System.out.println(sum);
   }
 }
-
 2).to subtract two numbers and store it in another variable.
   public class Gechsn{
   public static void main(String[] args){
