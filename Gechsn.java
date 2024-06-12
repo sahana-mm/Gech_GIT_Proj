@@ -327,5 +327,145 @@ class Triangle {
     }
 }
 here we can use double area = (1.0/2.0) *b * h;
+12/06/2024
+1).methods assignment.....
+	package com.palletechnologies.MyFfrstprogram;
+
+public class MethodsAssignments {
+
+	public static void main(String[] args) {
+
+     MethodsAssignments methods = new MethodsAssignments();
+		
+		// Example usage of methods
+		char c1 = methods.m5("example", 5);
+		float f1 = methods.m1("example", true);
+		int i1 = methods.m3('c');
+
+		System.out.println("Result of m5: " + c1);
+		System.out.println("Result of m1: " + f1);
+		System.out.println("Result of m3: " + i1);
+		
+	}
+		public char m5(String s, int x)
+		{
+        char c = 's';
+        return c;
+	}
+		public float m1(String s,boolean b)
+		{
+			float f = 1.1f;
+			return f;
+		}
+		public int m3(char c)
+		{
+			int x = 10;
+			return x;
+		}
 	
+}
+
+2)....
+	package com.palletechnologies.MyFfrstprogram;
+
+public class MethodsAssignments2 {
+
+	public static void main(String[] args) {
+		Methods m = new Methods();
+		        int sum1 = m.add(1,2);
+                System.out.println(sum1);
+                double sub1 = m.sub(1.2, 1.1);
+                System.out.println(sub1);
+                int mul1 = m.mul(3,6);
+                System.out.println(mul1);
+                double div1 = m.div(2.2, 1.1);
+                System.out.println(div1);
+	}
+
+}
+
+class Methods
+{
+public int add(int x,int y)
+{
+	int sum1 = x + y;
+	return sum1;
+}
+public double sub(double d,double e)
+{
+	double sub1 = d - e;
+	return sub1;
+}
+public int mul(int m,int n) {
+	int mul1 = m*n;
+	return mul1;
+}
+public double div(double p, double q)
+{
+	double div1 = p/q;
+	return div1;
+}
+}
+
+3).Create methods inside the methods...
+	package com.palletechnologies.MyFfrstprogram;
+
+public class MethodInsideMethod {
+
+	public static void main(String[] args) {
+	    Circle1 c = new Circle1();
+	    float area1 = c.getArea(6);
+	    System.out.println(area1);
+
+	}
+
+}
+    class Circle1 {
+    	
+         public float getArea(int r)
+         {
+        	 float area = 3.142f*r*r;
+        	
+        	 double circumference = getCircumference(12);
+        	 System.out.println(circumference);
+        	 return area;
+         }
+    	public double getCircumference(int r)
+    	{
+    		double circum = 2*3.142*r;
+    		return circum;
+    	}
+    }
+
+4)....
+	package com.palletechnologies.MyFfrstprogram;
+
+public class MethodInsideMethods {
+
+	public static void main(String[] args) {
+	     Method m = new Method();
+	     int addition = m.Add(6, 5);
+	     System.out.println(addition);
+
+	}
+
+}
+class Method{
+	public int Add(int a,int b) {
+		int add = a+b;
+		float subtraction = Sub(2.3f,1.5f);
+		System.out.println(subtraction);
+		return add;
+	}
+	public float Sub(float x,float y) {
+		float sub = x - y;
+		return sub;
+	}
+}
+
+
+	
+
+
+
 
