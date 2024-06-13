@@ -462,6 +462,35 @@ class Method{
 		return sub;
 	}
 }
+13/06/2024
+1).Naming convention in pl...?
+	**pascal casing... for project names, class names and interface names...(like MyFirstProject)....
+	**camel casing...for variable names and method names...(like getAddition)....
+2).BreakPoints...
+	By double clicking in the left side of the line where the code writtern line by line..
+	Right click on code page and debug as javaa application 
+	the buttons like fn+f6 for line by line dubugging for the detection of the errors in the code 
+	the buttons like fn+f8 for execution of the code by jumping one function to another function and give the output in the console screen.
+
+	Debugging Crashes
+	1).Compile time error and 2).run time error
+3).the code which shows exception and this exception is one of the error type of the run time error...
+	package debuggingcrashes;
+
+public class DebuggingEx {
+
+	public static void main(String[] args) {
+		int i =10;
+		System.out.println("Hi");
+		System.out.println("Good Morning");
+		int j = i/0;    //abruptly means suddenly stop the execution
+		System.out.println("Hello");
+		System.out.println(j);
+		
+
+	}
+
+}
 
 
 	
