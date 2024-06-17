@@ -492,7 +492,14 @@ public class DebuggingEx {
 
 }
 
-
+14/06/2024
+	conditional statements...
+	1).if
+	2).if else
+	3).if- else if
+	4).nested if
+	5).switch
+	6).ternary operator(?:)	
 	
 
 
