@@ -500,8 +500,24 @@ public class DebuggingEx {
 	4).nested if
 	5).switch
 	6).ternary operator(?:)	
-	
-
+18/06/2024
+	operators
+	1).arithmetic operators
+	a). + (addition)
+	b). - (subtraction)
+	c). * (multiplication)
+	d). / (division)   to get quotient
+	e). % (modulus)to get reminder
+	2).logical operators
+	a). AND (&&)
+	b). OR (||)
+	c). NOT (!)
+	3).relational operators
+	a).  >
+        b).  < 
+	c). ==
+	d). <=
+	e). >=
 
 
 
