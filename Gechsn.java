@@ -518,6 +518,99 @@ public class DebuggingEx {
 	c). ==
 	d). <=
 	e). >=
+    
 
+1)).print the statements according to the conditions
+package conditional;
 
+public class Sample1 {
+
+	public static void main(String[] args) {
+		int x =14;
+		if(x==10)
+		{
+			System.out.println("Hi");
+		}
+		else if(x==14) 
+		{
+			System.out.println("Hello");
+		}
+		else if(x==20)
+		{
+			System.out.println("Bye");
+		}
+		//the else part is may be included or else not included it may be present or not
+		else
+		{
+			System.out.println("Invalid number entered");
+		}
+	}
+
+}
+
+2)).package conditional;
+
+public class Sample3 {
+
+	public static void main(String[] args) {
+	String fruitname = "mango";
+	
+	if(fruitname == "apple") {
+		System.out.println("one");
+	}
+	
+	else if(fruitname == "banana") {
+		System.out.println("two");
+	}
+	
+	else if(fruitname == "mango") {
+		System.out.println("three");
+	}
+	else {
+		System.out.println("four");
+	}
+
+	}
+
+}
+
+3)).to print the number which is odd or even
+	package conditional;
+
+public class EvenOdd {
+
+	public static void main(String[] args) {
+		int num = 28;
+		int rem = num%2;
+		if(rem==1)
+		{
+			System.out.println("Odd");
+		}
+		else if(rem==0)
+		{
+			System.out.println("Even");
+		}
+	}
+
+}
+4)).write a program to find biggest among two numbers...
+	package conditional;
+
+public class BigAmongNumbers {
+
+	public static void main(String[] args) {
+		
+				int num1 = 20, num2 = 30;
+				
+				if(num1 >num2) 
+				{
+					System.out.println(num1);
+				}	
+					else 
+					{
+						System.out.println(num2);
+				    }
+				}
+                            }   
+      
 
