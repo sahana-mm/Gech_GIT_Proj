@@ -699,3 +699,22 @@ public class DayNumUsingDayName {
 
 }
 3).using multiple expressions in conditional statements 
+package scanner;
+
+import java.util.Scanner;
+
+public class IfExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+      if(2<4 && 1>0)
+      {
+    	  System.out.println("yes both conditions true it execute if block statement");
+      }
+      else
+      {
+    	  System.out.println("if any one condition is false then else block will be executed");
+      }
+	}
+
+}
