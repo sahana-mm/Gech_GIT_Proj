@@ -613,4 +613,89 @@ public class BigAmongNumbers {
 				}
                             }   
       
+19/06/2024
+1). write the code to find biggest among two numbers and their sum also by giving user input.....?
+	user input hives by creating a Scanner class and create object for it and also use the default in built methods which are given by sun micro systems...
+	package scanner;
 
+import java.util.Scanner;
+
+public class BigAmongNumbers {
+
+	public static void main(String[] args) {
+		
+		//req:Writea Program to find Biggest among two numbers
+		
+		Scanner sc = new Scanner(System.in);
+		
+		   System.out.println("enter the first number");
+		   int x = sc.nextInt();
+		   
+		   System.out.println("enter the second number");
+		   int y = sc.nextInt();
+		  
+		   int sum = x+y;
+		   System.out.println("the sum of two numbers is " + sum);
+		   if(x>y) {
+			   System.out.println(x + "is bigger");
+		   }
+		   else {
+			   System.out.println(y + " is bigger than x");
+		   }
+		   System.out.println("enter the name...");
+		   String s =sc.next();
+          		   
+		
+
+	}
+
+}
+2).Find out the dayNum by using dayName...?
+	package scanner;
+
+import java.util.Scanner;
+
+public class DayNumUsingDayName {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the day name");
+        String DayName = sc.next().intern();
+        if(DayName=="Monday")
+        {
+        	System.out.println(1 + "is the day num of monday");
+        }
+        else if(DayName=="Tuesday")
+        {
+        	System.out.println(2 + " is the day num of tueday");
+        }
+        else if(DayName=="Wednesday")
+        {
+        	System.out.println(3 + " is the day num of wednesday");
+        }
+        else if(DayName=="Thursday")
+        {
+        	System.out.println(4 + " is the day num of thursday");
+        }
+        else if(DayName=="Friday")
+        {
+        	System.out.println(5 + " is the day num of friday");
+        }
+        else if(DayName=="Saturday")
+        {
+        	System.out.println(6 + " is the day num of saturday");
+        }
+        else if(DayName=="Sunday")
+        {
+        	System.out.println(7 + " is the day num ofsunday");
+        }
+        else 
+        {
+        	System.out.println("invalid day name entered");
+        }
+
+        
+	}
+
+}
+3).using multiple expressions in conditional statements 
