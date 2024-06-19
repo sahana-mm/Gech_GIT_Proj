@@ -718,3 +718,53 @@ public class IfExample {
 	}
 
 }
+
+4).find the day name by using day number apply daynumners in the conditional blocks.....?
+	package scanner;
+
+import java.util.Scanner;
+
+public class DayNameUsingDayNum {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the day num");
+       int DayNum = sc.nextInt();
+        if(DayNum==1)
+        {
+        	System.out.println("monday");
+        }
+        else if(DayNum==2)
+        {
+        	System.out.println("tueday");
+        }
+        else if(DayNum==3)
+        {
+        	System.out.println("wednesday");
+        }
+        else if(DayNum==4)
+        {
+        	System.out.println("thursday");
+        }
+        else if(DayNum==5)
+        {
+        	System.out.println("friday");
+        }
+        else if(DayNum==6)
+        {
+        	System.out.println("saturday");
+        }
+        else if(DayNum==7)
+        {
+        	System.out.println("sunday");
+        }
+        else 
+        {
+        	System.out.println("invalid day naumber entered");
+        }
+
+        
+	}
+
+}
+
