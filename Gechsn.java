@@ -825,4 +825,9 @@ class FruitShop{
 		
 	}
 }
-
+2)....here why we are taking fruit.equals(fruitname) means.......
+	String s1 = "saan";
+        String s2 = "saan";
+       (s1 == s2)
+	       s1.equals(s2)     we shold take why because s1 and s2 are the variables they are storing the address of the varisbles....
+	       and "saan" "saan" are data's....or content data.
