@@ -767,4 +767,62 @@ public class DayNameUsingDayNum {
 	}
 
 }
+20/06/2024
+1)write a program for calculating the total sales cost based on the fallowing canditions...?
+	package conditional;
+
+import java.util.Scanner;
+
+public class FruitShopping {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter the fruit name");
+		String fruit1 = s.next();
+		System.out.println("enter the quantity");
+		int qty1 = s.nextInt();
+		
+		FruitShop fs = new FruitShop();
+		int TOTALCOST = fs.getTotalCost(fruit1, qty1);
+        System.out.println(TOTALCOST);
+	}
+
+}
+class FruitShop{
+	public int getTotalCost(String fruit, int qty) {
+		if(fruit.equals("apple") && qty <10) {
+			int totcost =qty*15;
+			return totcost;
+		}
+		else if(fruit.equals("apple") && (qty >= 10 && qty <= 20)) {
+			int totcost =qty*13;
+			return totcost;
+		}
+		else if(fruit.equals("apple") && qty >20) {
+			int totcost =qty*12;
+			return totcost;
+		}
+		else if(fruit.equals("orange") && qty <20) {
+			int totcost =qty*8;
+			return totcost;
+		}
+		else if(fruit.equals("orange") && qty >=20) {
+			int totcost =qty*7;
+			return totcost;
+		}
+		else if(fruit.equals("banana") && qty <100) {
+			int totcost =qty*3;
+			return totcost;
+		}
+		else if(fruit.equals("banana") && qty >=100) {
+			int totcost =qty*2;
+			return totcost;
+		}
+		else {
+			System.out.println("invalid fruitname entered");
+			return 0;
+		}	
+		
+	}
+}
 
