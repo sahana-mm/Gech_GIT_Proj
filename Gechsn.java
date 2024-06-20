@@ -831,3 +831,104 @@ class FruitShop{
        (s1 == s2)
 	       s1.equals(s2)     we shold take why because s1 and s2 are the variables they are storing the address of the varisbles....
 	       and "saan" "saan" are data's....or content data.
+import java.util.Scanner;: This imports the Scanner class from the java.util package, which is used for reading input from the user.
+
+FruitShopping Class
+java
+Copy code
+package conditional;
+
+import java.util.Scanner;
+
+public class FruitShopping {
+package conditional;: This declares that the class FruitShopping is part of the conditional package.
+import java.util.Scanner;: This imports the Scanner class from the java.util package, which is used for reading input from the user.
+public class FruitShopping {: This declares the FruitShopping class. It is a public class, meaning it can be accessed from other classes.
+java
+Copy code
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+public static void main(String[] args): This is the main method, which is the entry point of any Java application. The main method is static, so it can be called without creating an instance of the class.
+Scanner s = new Scanner(System.in);: This creates a Scanner object s to read input from the standard input stream (keyboard).
+java
+Copy code
+        System.out.println("enter the fruit name");
+        String fruit1 = s.next();
+System.out.println("enter the fruit name");: This prints a prompt message to the console asking the user to enter the fruit name.
+String fruit1 = s.next();: This reads a string input from the user and stores it in the variable fruit1.
+java
+Copy code
+        System.out.println("enter the quantity");
+        int qty1 = s.nextInt();
+System.out.println("enter the quantity");: This prints a prompt message to the console asking the user to enter the quantity of the fruit.
+int qty1 = s.nextInt();: This reads an integer input from the user and stores it in the variable qty1.
+java
+Copy code
+        FruitShop fs = new FruitShop();
+        int TOTALCOST = fs.getTotalCost(fruit1, qty1);
+        System.out.println(TOTALCOST);
+    }
+}
+FruitShop fs = new FruitShop();: This creates an instance of the FruitShop class.
+int TOTALCOST = fs.getTotalCost(fruit1, qty1);: This calls the getTotalCost method of the FruitShop instance fs with the user-provided fruit name and quantity, and stores the result in the variable TOTALCOST.
+System.out.println(TOTALCOST);: This prints the total cost to the console.
+FruitShop Class
+java
+Copy code
+class FruitShop {
+    public int getTotalCost(String fruit, int qty) {
+class FruitShop {: This declares the FruitShop class. It is a default access class, meaning it can only be accessed by other classes in the same package.
+public int getTotalCost(String fruit, int qty) {: This declares the getTotalCost method, which takes a String representing the fruit and an int representing the quantity, and returns an int representing the total cost.
+java
+Copy code
+        if (fruit.equals("apple") && qty < 10) {
+            int totcost = qty * 15;
+            return totcost;
+        } else if (fruit.equals("apple") && (qty >= 10 && qty <= 20)) {
+            int totcost = qty * 13;
+            return totcost;
+        } else if (fruit.equals("apple") && qty > 20) {
+            int totcost = qty * 12;
+            return totcost;
+        }
+This block checks if the fruit is an apple and calculates the total cost based on the quantity:
+If the fruit is "apple" and quantity is less than 10, the cost is 15 per apple.
+If the fruit is "apple" and quantity is between 10 and 20 (inclusive), the cost is 13 per apple.
+If the fruit is "apple" and quantity is greater than 20, the cost is 12 per apple.
+java
+Copy code
+        else if (fruit.equals("orange") && qty < 20) {
+            int totcost = qty * 8;
+            return totcost;
+        } else if (fruit.equals("orange") && qty >= 20) {
+            int totcost = qty * 7;
+            return totcost;
+        }
+This block checks if the fruit is an orange and calculates the total cost based on the quantity:
+If the fruit is "orange" and quantity is less than 20, the cost is 8 per orange.
+If the fruit is "orange" and quantity is 20 or more, the cost is 7 per orange.
+java
+Copy code
+        else if (fruit.equals("banana") && qty < 100) {
+            int totcost = qty * 3;
+            return totcost;
+        } else if (fruit.equals("banana") && qty >= 100) {
+            int totcost = qty * 2;
+            return totcost;
+        }
+This block checks if the fruit is a banana and calculates the total cost based on the quantity:
+If the fruit is "banana" and quantity is less than 100, the cost is 3 per banana.
+If the fruit is "banana" and quantity is 100 or more, the cost is 2 per banana.
+java
+Copy code
+        else {
+            System.out.println("invalid fruitname entered");
+            return 0;
+        }
+    }
+}
+else { ... }: This block handles the case where the fruit name is not recognized:
+It prints "invalid fruitname entered" to the console.
+It returns 0, indicating an invalid input.                                                           
+
+	here this is the explaination of java code by chatgpt
