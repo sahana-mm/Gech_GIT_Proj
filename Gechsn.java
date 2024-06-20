@@ -931,4 +931,124 @@ else { ... }: This block handles the case where the fruit name is not recognized
 It prints "invalid fruitname entered" to the console.
 It returns 0, indicating an invalid input.                                                           
 
-	here this is the explaination of java code by chatgpt
+
+3).You are tasked with creating a program that calculates the shipping cost based on the weight of a package. Here are the requirements:
+
+Ask the user to enter the weight of the package in kilograms.
+Calculate the shipping cost based on the following rules:
+If the weight is less than 2 kg, the cost is $5 per kg.
+If the weight is between 2 kg (inclusive) and 5 kg (exclusive), the cost is $4 per kg.
+If the weight is 5 kg or more, the cost is $3 per kg.
+Print the total shipping cost.	
+
+
+	package conditional;
+
+import java.util.Scanner;
+
+public class ShippingCost {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter the weight of the package");
+			float Weight = s.nextFloat();
+		
+		
+			ShippingCost1 sc = new ShippingCost1();
+			float TOTALSHIPPINGCOST = sc.totalShippingCost(Weight);
+			System.out.println("the total cost of the package is " + TOTALSHIPPINGCOST);
+			System.out.println(TOTALSHIPPINGCOST);
+			
+
+	}
+
+}
+class ShippingCost1{
+	public float totalShippingCost(float weight) {
+		
+		if(weight<2) {
+		float totshipcost = weight*5;
+		return totshipcost;
+	    }
+		
+	    else if(weight>2 && weight<5) {
+	    float totshipcost = weight*4;
+		return totshipcost;
+	    }
+		
+	    else if(weight>2 && weight<5) {
+	    float totshipcost = weight*4;
+		return totshipcost;
+	    }
+		
+	    else if(weight>5) {
+		float totshipcost = weight*3;
+	    return totshipcost;
+	    } 
+		
+	    else {
+	    	System.out.println("invalid weight enterde");
+	    	return 0;
+	    }
+		
+		
+	}
+}
+
+if we enter the weight of package in float datatype then use above code ...
+ 
+4).if we want to get total weight of the package in integer data type and we should also give inputs of the type integer we use belove code.....
+	package conditional;
+
+import java.util.Scanner;
+
+public class ShippingCost {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter the weight of the package");
+			int  Weight = s.nextInt();
+		
+		
+			ShippingCost1 sc = new ShippingCost1();
+			int TOTALSHIPPINGCOST = sc.totalShippingCost(Weight);
+			System.out.println("the total cost of the package is " + TOTALSHIPPINGCOST);
+			System.out.println(TOTALSHIPPINGCOST);
+			
+
+	}
+
+}
+class ShippingCost1{
+	public int totalShippingCost(int weight) {
+		
+		if(weight<2) {
+		int totshipcost = weight*5;
+		return totshipcost;
+	    }
+		
+	    else if(weight>2 && weight<5) {
+	    int totshipcost = weight*4;
+		return totshipcost;
+	    }
+		
+	    else if(weight>2 && weight<5) {
+	    int totshipcost = weight*4;
+		return totshipcost;
+	    }
+		
+	    else if(weight>5) {
+		int totshipcost = weight*3;
+	    return totshipcost;
+	    } 
+		
+	    else {
+	    	System.out.println("invalid weight enterde");
+	    	return 0;
+	    }
+		
+		
+	}
+}
+
+
