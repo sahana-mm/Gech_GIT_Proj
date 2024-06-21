@@ -1051,4 +1051,64 @@ class ShippingCost1{
 	}
 }
 
+21/06/2024
+1).write a program to find the user given character in the console screen is vowel or consonant...?
+	package scanner;
 
+import java.util.Scanner;
+
+public class Alphabet {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the chracter");
+        char ch = sc.next().charAt(0);
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') {
+        	System.out.println("it is a vowel");
+        }
+        else if(ch>'a' && ch<='z') {
+        	System.out.println("it is consonant");
+        }
+        else if(ch>='0' && ch<='9') {
+        	System.out.println("it is digit");
+        }
+        else {
+        	System.out.println("it is special character");
+        }
+	}
+
+}
+2).not anly for  small 'a' it should also print output as vowel for both a and A...?
+	package scanner;
+
+import java.util.Scanner;
+
+public class AlphabetCapsAlso {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the chracter");
+        char ch = sc.next().charAt(0);
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') {
+        	System.out.println("it is a vowel");
+        }
+        
+        if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {
+        	System.out.println("it is a vowel");
+        }
+        
+        else if(ch>'a' && ch<='z') {
+        	System.out.println("it is consonant");
+        }
+        
+        else if(ch>='0' && ch<='9') {
+        	System.out.println("it is digit");
+        }
+        
+        else {
+        	System.out.println("it is special character");
+        }
+
+	}
+
+}
