@@ -1111,4 +1111,39 @@ public class AlphabetCapsAlso {
 
 	}
 
+	5)....write a program to find the sun of elements of the array only the even numbers or elements in the odd position only .....
+	package scanner;
+
+import java.util.Scanner;
+
+public class S {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[4];
+        int sum = 0;
+
+        System.out.println("Enter the 4 numbers of the array:");
+
+        // Input 4 elements into the array
+        for (int i = 0; i < 4; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Iterate through the array
+        for (int i = 0; i < 4; i++) {
+            // Check if the index is even (1-based index: 1, 3) in a 0-based index and if the value is even
+            if (i % 2 == 0 && arr[i] % 2 == 0) {
+                sum += arr[i];
+            }
+        }
+
+        // Print the sum
+        System.out.println("The sum is " + sum);
+
+        sc.close();
+    }
+}
+
+
 }
