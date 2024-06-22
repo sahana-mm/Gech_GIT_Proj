@@ -1144,6 +1144,112 @@ public class S {
         sc.close();
     }
 }
+}
 
+22/06/2024
+1).write the program to find biggest among three numbers by giving user input and in ternary operator and in eclipse...?
+	package ternaryop;
 
+import java.util.Scanner;
+
+public class TernaryOpForBigAmongThree {
+
+	public static void main(String[] args) {
+		
+     /* this code is for giving inputs itself in the code
+      int a = 40;
+      int b = 30;
+      int c = 20;
+      System.out.println((a>b) ? (a>c)?"a is bigger" : "c is bigger":(b>c)?"bis bigger":"c is bigger");
+	*/
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter the first number num1");
+		int num1 = sc.nextInt();
+		
+		System.out.println("enter the second number num2");
+		int num2 = sc.nextInt();
+		
+		System.out.println("enter the third number num3");
+		int num3 = sc.nextInt();
+		
+		System.out.println((num1>num2) ? (num1>num3) ? "num1 is big" : "num3 is big" :(num2>num3) ? "num2 is big" : "num3 is big");
+		
+		
+		
+}
+}
+
+2).write a program to print the day by giving day number...
+	public class Main
+{
+	public static void main(String[] args) {
+	    int n=5;
+	    switch(n){
+	    case 1:
+	        System.out.println("monday");
+	        break;
+	    case 2:
+	        System.out.println("tuesday");
+	        break;
+	    case 3:
+	        System.out.println("wednesday");
+	        break;
+	    case 4:
+	        System.out.println("thursday");
+	        break;
+	    case 5:
+	        System.out.println("friday");
+	        break;   
+	    case 6:
+	        System.out.println("saturday");
+	        break;     
+	    case 7:
+	        System.out.println("sunday");
+	        break;     
+	    default:
+	        System.out.println("invalid number given");
+	    }
+		
+	}
+}
+
+3).write a program to find the day by giving day number as user input in switch statement...?
+	import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+	    System.out.println("enter the day number");
+	    int n=sc.nextInt();
+	    
+	    switch(n){
+	    case 1:
+	        System.out.println("monday");
+	        break;
+	    case 2:
+	        System.out.println("tuesday");
+	        break;
+	    case 3:
+	        System.out.println("wednesday");
+	        break;
+	    case 4:
+	        System.out.println("thursday");
+	        break;
+	    case 5:
+	        System.out.println("friday");
+	        break;   
+	    case 6:
+	        System.out.println("saturday");
+	        break;     
+	    case 7:
+	        System.out.println("sunday");
+	        break;     
+	    default:
+	        System.out.println("invalid day number given");
+	    }
+		
+	}
 }
