@@ -1253,3 +1253,113 @@ public class Main
 		
 	}
 }
+3).write a program to convert celsius to fehrenheit and convert from fehrenheit to celsius....?
+	package ternaryop;
+
+public class Assignment {
+
+	public static void main(String[] args) {
+		
+		TemperatureConverter tc = new TemperatureConverter();
+		
+		/*celsius=(fehrenheit-32)*5/9;
+		fehrenheit=(celsius*9/5) -32;
+		*/
+		double celsius1 = tc.toCelsius(100.76);
+		double fehrenheit1 = tc.toFehrenheit(36.876);
+		
+		System.out.println(celsius1);
+		System.out.println(fehrenheit1);
+
+	}
+
+}
+class TemperatureConverter{
+	public double toCelsius(double fehrenheit) {
+		double celsius=(fehrenheit -32) * 5 / 9;
+		return celsius;
+	}
+	public double toFehrenheit(double celsius) {
+		double fehrenheit=(celsius * 9 / 5) +32;
+		return fehrenheit;
+	}
+}
+4).Problem: Body Mass Index (BMI) Calculation
+Description:
+Create a class BMI that calculates the Body Mass Index (BMI) for a person. The class should have the following features:
+
+Attributes:
+
+weight (double) - weight in kilograms.
+height (double) - height in meters.
+Methods:
+
+calculateBMI(): Returns the BMI calculated using the formula:
+BMI
+=
+weight
+height
+2
+BMI= 
+height 
+2
+ 
+weight
+
+ 
+getBMICategory(): Returns the BMI category as a string based on the BMI value:
+"Underweight" if BMI < 18.5
+"Normal weight" if 18.5 <= BMI < 24.9
+"Overweight" if 25 <= BMI < 29.9
+"Obesity" if BMI >= 30
+Tasks:
+Define the BMI class with the specified attributes and methods.
+In the main method:
+Create an instance of the BMI class.
+Call the calculateBMI() and getBMICategory() methods.
+Print the BMI value and its category.
+
+package ternaryop;
+
+public class Assign {
+
+	public static void main(String[] args) {
+		
+      BMI bmi = new BMI();
+      
+      double totBMI1 = bmi.calculateBMI(22.64, 11.65);
+      System.out.println(totBMI1);
+      
+      String category1 = bmi.getBMICategory(totBMI1);//String category1 = bmi.getBMICategory(totBMI1);
+
+      System.out.println(category1);
+      
+	}
+
+}
+class BMI{
+	public double calculateBMI(double weight, double height) {
+		double totBMI = weight/height*height;
+		return totBMI;
+	}
+	public String getBMICategory(double BMI) {
+		if(BMI<18.5) {
+			return "underweight";
+		}
+		else if(BMI>=18.5 && BMI<=24.9) {
+			String category = "normal weight";
+			return category;
+		}
+		else if(BMI>=25 && BMI<=29.9) {
+			String category ="overweight";
+			return category;
+		}
+		else if(BMI>=30) {
+			return "obesity";
+		}
+		else {
+			return "invalid input given";
+		}
+	}
+}
+	
