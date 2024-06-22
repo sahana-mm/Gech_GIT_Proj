@@ -1362,4 +1362,66 @@ class BMI{
 		}
 	}
 }
-	
+5).Simple Quiz Game
+Write a Java program for a simple quiz game with multiple-choice questions. The program should:
+
+Store a few questions and their correct answers.
+Display each question with options (A, B, C, D).
+Prompt the user to enter their answer (A, B, C, or D).
+Use a switch statement to check if the user's answer matches the correct answer for each question.
+Keep track of the score and display it at the end of the quiz.
+These problems vary in complexity and require you to utilize user input handling along with the switch statement to implement different functionalities such as arithmetic operations, day conversion, and quiz evaluation. They provide a good opportunity to practice control flow and decision-making in Java programming.
+	import java.util.Scanner;
+
+public class QuizGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int score = 0;
+        
+        // Questions and Answers
+        String[][] questions = {
+            {"What is the capital of France?", "A. Paris", "B. London", "C. Rome", "D. Berlin", "A"},
+            {"Which planet is known as the Red Planet?", "A. Jupiter", "B. Mars", "C. Venus", "D. Saturn", "B"},
+            {"What is the largest mammal?", "A. Elephant", "B. Blue Whale", "C. Giraffe", "D. Lion", "B"}
+        };
+        
+        // Display each question with options
+        for (int i = 0; i < questions.length; i++) {
+            System.out.println(questions[i][0]); // Display question
+            System.out.println("Options:");
+            for (int j = 1; j <= 4; j++) {
+                System.out.println(questions[i][j]); // Display options A, B, C, D
+            }
+            
+            // Prompt user for input
+            System.out.print("Enter your answer (A, B, C, or D): ");
+            String answer = scanner.nextLine().toUpperCase(); // Convert input to uppercase
+            
+            // Check answer using switch statement
+            switch (answer) {
+                case "A":
+                case "B":
+                case "C":
+                case "D":
+                    if (answer.equals(questions[i][5])) {
+                        System.out.println("Correct!\n");
+                        score++;
+                    } else {
+                        System.out.println("Incorrect. The correct answer is " + questions[i][5] + ".\n");
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid input. Please enter A, B, C, or D.\n");
+                    i--; // Decrement i to repeat the same question
+                    break;
+            }
+        }
+        
+        // Display final score
+        System.out.println("Quiz completed! Your final score is: " + score + "/" + questions.length);
+        
+        scanner.close();
+    }
+}
+
