@@ -1425,3 +1425,59 @@ public class QuizGame {
     }
 }
 
+23/06/2024
+	1).Question 2: Calculate Factorial of a Number
+Write a program that calculates the factorial of a number entered by the user. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+
+Steps:
+Prompt the user to enter a non-negative integer (n).
+Read the integer using Scanner.
+Implement a method to compute the factorial of n.
+Output the factorial value.
+package ternaryop;
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter any number:");
+        int n = sc.nextInt();
+        
+        /*if (n < 0) {
+            System.out.println("Factorial not possible for negative numbers");
+        } else {
+            int fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+            System.out.println("The factorial of number " + n + " is " + fact);
+        }*/
+        
+        Fact f = new Fact();
+        long factorial = f.findFact(n);
+        
+        System.out.println(factorial);
+    }
+}
+
+class Fact {
+    public long findFact(int n) {
+        if (n < 0) {
+            System.out.println("Factorial for negative number is not possible");
+            return -1; // Returning -1 to indicate an error
+        } else {
+            long factorial = 1; // Initialize factorial to 1
+            for (int i = 1; i <= n; i++) {
+                factorial = factorial * i;
+            }
+            return factorial; // Return the computed factorial
+        }
+    }
+}
+
+
+
+
+
