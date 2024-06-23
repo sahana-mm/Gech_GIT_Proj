@@ -1111,7 +1111,7 @@ public class AlphabetCapsAlso {
 
 	}
 
-	5)....write a program to find the sun of elements of the array only the even numbers or elements in the odd position only .....
+	5)....write a program to find the sum of elements of the array only the even numbers or elements in the odd position only .....
 	package scanner;
 
 import java.util.Scanner;
@@ -1175,7 +1175,7 @@ public class TernaryOpForBigAmongThree {
 		int num3 = sc.nextInt();
 		
 		System.out.println((num1>num2) ? (num1>num3) ? "num1 is big" : "num3 is big" :(num2>num3) ? "num2 is big" : "num3 is big");
-		
+		//int largest = (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
 		
 		
 }
