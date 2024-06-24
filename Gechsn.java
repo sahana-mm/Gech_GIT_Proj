@@ -1477,6 +1477,193 @@ class Fact {
     }
 }
 
+34/06/2024
+1)if today is monday after certain number of days by giving userinput you have to find the dayname write a java program for this ...?
+	import java.util.Scanner;
+
+public class FindDayName {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt user for the starting day name
+        System.out.print("Enter the starting day name (e.g., Monday): ");
+        String dayName = sc.next().toLowerCase(); // Read and convert to lowercase
+
+        // Prompt user for the number of days after today
+        System.out.print("Enter the number of days after today: ");
+        int numDays = sc.nextInt();
+
+        // Calculate future day index
+        int startDayIndex = getDayIndex(dayName);
+        int futureDayIndex = (startDayIndex + numDays) % 7; // Use modulus to wrap around the days
+
+        // Array of day names
+        String[] dayNames = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+        // Output the future day name
+        String futureDayName = dayNames[futureDayIndex];
+        System.out.println("After " + numDays + " days, the day will be: " + futureDayName);
+
+        sc.close();
+    }
+
+    // Method to get the index of the day name in the array
+    private static int getDayIndex(String dayName) {
+        switch (dayName) {
+            case "monday": return 0;
+            case "tuesday": return 1;
+            case "wednesday": return 2;
+            case "thursday": return 3;
+            case "friday": return 4;
+            case "saturday": return 5;
+            case "sunday": return 6;
+            default: throw new IllegalArgumentException("Invalid day name entered");
+        }
+    }
+}
+  or......
+	  package ternaryop;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.TextStyle;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class FindDayName {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the starting day name (e.g., Monday):");
+        String dayName = sc.nextLine().trim().toLowerCase(); // Read and normalize input
+
+        DayOfWeek startDay = DayOfWeek.valueOf(dayName.toUpperCase()); // Convert input to DayOfWeek enum
+
+        System.out.println("Enter the number of days after today:");
+        int numDays = sc.nextInt();
+
+        LocalDate today = LocalDate.now();
+        DayOfWeek futureDay = startDay.plus(numDays); // Calculate future day
+
+        // Get the localized name of the future day
+        String futureDayName = futureDay.getDisplayName(TextStyle.FULL, Locale.getDefault());
+
+        System.out.println("After " + numDays + " days, the day will be: " + futureDayName);
+
+        sc.close();
+    }
+}
+
+2).we will have 3 inputs we have to WAP to check whether 
+i).all the numbers re are equal
+
+ii).all the numbers are different
+
+iii).all the numbers are neither equal nor different
+	
+package ternaryop;
+
+import java.util.Scanner;
+
+public class NumEqualness {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        int n1 = sc.nextInt();
+        System.out.println("Enter the second number:");
+        int n2 = sc.nextInt();
+        System.out.println("Enter the third number:");
+        int n3 = sc.nextInt();
+        
+        if (n1 == n2 && n2 == n3) {
+            System.out.println("All numbers are equal");
+        } else if (n1 != n2 && n2 != n3 && n3 != n1) {
+            System.out.println("All numbers are different");
+        } else {
+            System.out.println("All the numbers are neither equal nor different");
+        }
+
+        sc.close(); // Close the scanner to prevent resource leak
+    }
+}
+3).write a java program to find the given year is leap year or not...?
+package ternaryop;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+        String days = "365";
+
+        if (days.equals("366") || days.equals("365")) {
+            switch (days) {
+                case "366":
+                    System.out.println("leap year");
+                    break;
+                case "365":
+                    System.out.println("normal year");
+                    break;
+            }
+        } else {
+            int daysInt = Integer.parseInt(days);
+            if (daysInt >= 1 && daysInt <= 364) {
+                System.out.println("not predictable");
+            } else {
+                System.out.println("invalid days value given");
+            }
+        }
+    }
+}
+4).write a program to find whether the given character is vowel or not...?
+	package ternaryop;
+
+import java.util.Scanner;
+
+public class VowelOrConsonant {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the character: ");
+        char c = sc.next().toLowerCase().charAt(0);
+        
+        Alphabet alf = new Alphabet();
+        
+        String s = alf.getVowel(c);
+        System.out.println(s);
+       
+        String s1 = alf.getConsonant(c);
+        System.out.println(s1);
+    }
+}
+
+class Alphabet {
+    public String getVowel(char ch) {
+        switch(ch) {
+            case 'a':
+                return "a is a vowel";
+            case 'e':
+                return "e is a vowel";
+            case 'i':
+                return "i is a vowel";
+            case 'o':
+                return "o is a vowel";
+            case 'u':
+                return "u is a vowel";
+            default:
+                return "consonant";
+        }
+    }
+
+    public String getConsonant(char c) {
+        if ((c >= 'a' && c <= 'z') && !(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')) {
+            return c + " is a consonant";
+        }
+        return "invalid consonant or vowel";
+    }
+}
 
 
 
