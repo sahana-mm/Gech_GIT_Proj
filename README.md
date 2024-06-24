@@ -41,7 +41,7 @@ public class Main
 	public static void main(String[] args) {
 		
 		
-		float a = 10;
+		float a = 10.53;
 	
 		float b = 2.5f;
 		
@@ -105,3 +105,68 @@ public class Main
 	    }
 	}		
 }
+24/06/2024
+1).sum of two complex numbers and write java code for this...?
+public class Main{
+    public static void main(String[] args){
+        double real1 = 4.2;
+        double real2 = 3.5;
+        double imaginary1 = 3.8;
+        double imaginary2 = 5.43;
+        double sumReal = real1 + real2;
+        double sumImaginary = imaginary1 +imaginary2;
+        System.out.println("sum of real numbers is " + sumReal + " the sum of imaginary numbers is " + sumImaginary +"i");
+    }
+}
+2).java aprogram to add two binary strings...?
+public class BinaryAddition {
+
+    public static void main(String[] args) {
+        String binary1 = "01";
+        String binary2 = "10";
+
+        String sum = addBinary(binary1, binary2);
+
+        System.out.println(binary1 + " + " + binary2 + " = " + sum);
+    }
+
+    public static String addBinary(String binary1, String binary2) {
+        // Convert binary strings to integers
+        int num1 = Integer.parseInt(binary1, 2);
+        int num2 = Integer.parseInt(binary2, 2);
+
+        // Add the integers
+        int result = num1 + num2;
+
+        // Convert back to binary string
+        return Integer.toBinaryString(result);
+    }
+}
+3).java program to find largest among three numbers...?
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       
+       System.out.println("enter the first number");
+       int n1 = sc.nextInt();
+       
+       System.out.println("enter the second number");
+       int n2 = sc.nextInt();
+       
+       System.out.println("enter the third number");
+       int n3 = sc.nextInt();
+       
+       if(n1>n2 && n2>n3){
+           System.out.println("n1 is big");
+       }
+       else if(n2>n3){
+           System.out.println("n2 is big");
+       }
+       else{
+           System.out.println("n3 is big");
+    }
+}
+}
+4).java program to display all the prime numbers from 1 to n...?
