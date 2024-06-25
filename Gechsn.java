@@ -1477,7 +1477,7 @@ class Fact {
     }
 }
 
-34/06/2024
+24/06/2024
 1)if today is monday after certain number of days by giving userinput you have to find the dayname write a java program for this ...?
 	import java.util.Scanner;
 
@@ -1664,7 +1664,78 @@ class Alphabet {
         return "invalid consonant or vowel";
     }
 }
+25/06/2024
+1).you have to read 4 integer values a,b,c,d 70,5,50, 80 all are true then print Hi forst are true & went ang of then are false print Hello.
+if first one Itrelf is falre print Bye
+70,50,100,80 Hi
+70,6,20,30 Hello
+7,50,100,80 Bye	
 
+package conditional;
 
+import java.util.Scanner;
+
+public class Read {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the first number");
+        int a = sc.nextInt();
+        
+        System.out.println("enter the second number");
+        int b = sc.nextInt();
+
+        System.out.println("enter the third number");
+        int c = sc.nextInt();
+
+        System.out.println("enter the fourth number");
+        int d = sc.nextInt();
+        
+        if ((a >= 50 && a <= 100) && (b >= 50 && b <= 100) && (c >= 50 && c <= 100) && (d >= 50 && d <= 100)) {
+            System.out.println("Hi");
+        } else if (a < 50) {
+            System.out.println("Bye");
+        } else {
+            System.out.println("Hello");
+        }
+    }
+}
+
+2).write a program to find the given year is leap year or not...?
+	package ternaryop;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+    	/*String days = "365";
+
+        if (days.equals("366") || days.equals("365")) {
+            switch (days) {
+                case "366":
+                    System.out.println("leap year");
+                    break;
+                case "365":
+                    System.out.println("normal year");
+                    break;
+            }
+        } else {
+            int daysInt = Integer.parseInt(days);
+            if (daysInt >= 1 && daysInt <= 364) {
+                System.out.println("not predictable");
+            } else {
+                System.out.println("invalid days value given");
+            }*/
+    	int num = 200;
+    	if((num%4 ==0 && num%100 !=0)||(num%400 ==0)) {
+    		System.out.println("it is a leap year");
+    	}
+    	else {
+    		System.out.println("it is not a leap year");
+    	}
+     }
+   }
+
+3).
 
 
