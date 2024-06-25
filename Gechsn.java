@@ -1736,6 +1736,40 @@ public class LeapYear {
      }
    }
 
-3).
+3).find the given character is vowel or consonant...?
+	package ternaryop;
+
+import java.util.Scanner;
+
+public class VowelOrConsonant {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the character: ");
+        char c = sc.next().charAt(0); 
+        Alphabet alf = new Alphabet();
+        String result = alf.getVowel(c);
+        System.out.println(result);
+           }
+
+class Alphabet {
+    public String getVowel(char ch) {
+        switch(ch) {
+            case 'a':
+                return "a is a vowel";
+            case 'e':
+                return "e is a vowel";
+            case 'i':
+                return "i is a vowel";
+            case 'o':
+                return "o is a vowel";
+            case 'u':
+                return "u is a vowel";
+            default:
+                return "consonant";
+        }
+ }
+}	
+
 
 
