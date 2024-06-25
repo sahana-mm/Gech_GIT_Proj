@@ -1771,5 +1771,50 @@ class Alphabet {
  }
 }	
 
+26/06/2024
+	1).write a java code to find whether the given number is negative positive or equal to zero...?
+	package scanner;
+
+import java.util.Scanner;
+
+public class Numbers {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number:");
+        int num = sc.nextInt();
+
+        // Auxiliary variable to determine the sign of the number
+        int sign;
+        if (num > 0) {
+            sign = 1;
+        } else if (num < 0) {
+            sign = -1;                                //java code to find the number is negative,positive or equal to zero.
+        } else {
+            sign = 0;
+        }
+
+        switch (sign) {
+            case 1:
+                System.out.println("Positive number");
+                break;
+
+            case -1:
+                System.out.println("Negative number");
+                break;
+
+            case 0:
+                System.out.println("Number is equal to zero");
+                break;
+
+            default:
+                System.out.println("Invalid character entered");
+                break;
+        }
+
+        sc.close();
+    }
+}
 
 
