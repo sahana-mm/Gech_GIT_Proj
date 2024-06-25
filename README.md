@@ -170,3 +170,43 @@ public class Main{
 }
 }
 4).java program to display all the prime numbers from 1 to n...?
+
+
+
+5).to find the given year is leap year or not..?
+package ternaryop;
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+    	/*String days = "365";
+
+        if (days.equals("366") || days.equals("365")) {
+            switch (days) {
+                case "366":
+                    System.out.println("leap year");
+                    break;
+                case "365":
+                    System.out.println("normal year");
+                    break;
+            }
+        } else {
+            int daysInt = Integer.parseInt(days);
+            if (daysInt >= 1 && daysInt <= 364) {
+                System.out.println("not predictable");
+            } else {
+                System.out.println("invalid days value given");
+            }*/
+    	int num = 200;
+    	if((num%4 ==0 && num%100 !=0)||(num%400 ==0)) {
+    		System.out.println("it is a leap year");
+    	}
+    	else {
+    		System.out.println("it is not a leap year");
+    	}
+     }
+   }
+
+
+
+
