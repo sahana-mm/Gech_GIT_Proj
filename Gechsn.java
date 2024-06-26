@@ -1816,5 +1816,124 @@ public class Numbers {
         sc.close();
     }
 }
+26/06/2024
+1).write a java code for want code for if i enter any string name then i give any character of
+that string it print as character is present otherwise if character is not present in that string name then print as character is not present...?
+	like if i give string name as "sahana" then give character 'h' it will give yes the character is present otherwise if I enter character name as 'v'
+	it is not present in the string as well then it prints as a character is not present....
+	package debuggingcrashes;
+
+import java.util.Scanner;
+
+public class S
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter the string");
+		String s = sc.next();
+		
+		System.out.println("enter the character");
+		char c = sc.next().charAt(0);
+		int count =0;
+		
+	    for(int i =0;i<=s.length()-1;i++){
+	        if(s.charAt(i)==c){
+	           count =count + 1; 
+	        }
+	    }
+	        if(count>=1){
+	            System.out.println("character is present");
+	        }
+	        else {
+	            System.out.println("character is not present");
+	        }
+	    }
+	}
+2).using switch statement give a java code for the capitalcity like banglore is in karnataka ...?
+	package debuggingcrashes;
+
+public class BelongingState {
+
+	public static void main(String[] args) {
+		String capitalCity= "mumbai";
+		switch(capitalCity) {
+		case "banglore":
+			System.out.println("karnataka");
+			break;
+		case "chennai":
+			System.out.println("telangana");
+			break;
+		case "mumbai":
+			System.out.println("maharashtra");
+			break;
+		case "amaravathi":
+			System.out.println("andhrapradesh");
+            break;
+            default:
+            	System.out.println("invalid capitalcity entered");
+		}
+
+	}
+
+}
+3).using switch statement provide an java code for addition sutraction......so on...?
+	package debuggingcrashes;
+
+public class Operations {
+
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 30;
+		String op = "add";
+		switch(op) {
+		case "add":
+			System.out.println("addition of these two numbers is " + (a+b));
+			break;
+		case "sub":
+			System.out.println("subtraction of these two numbers is " + (a-b));
+			break;
+		case "mul":
+			System.out.println("multiplication of these two numbers " + (a*b));
+			break;
+		case "div":
+			if (b != 0) {
+                System.out.println("division of these two numbers " + (a / b));
+            } else {
+            	System.out.println("divide by zero error");
+            }
+			break;
+		}
+
+	}
+
+}
+4).write a java code for if we give 'L', 'M' or any sizes it will print as a sizes ...?
+	package debuggingcrashes;
+
+public class SizeOfDress {
+
+	public static void main(String[] args) {
+		String c ="S";
+		switch(c) {
+		case "L":
+			System.out.println("Large");
+		break;
+		case "M":
+			System.out.println("Medium");
+			break;
+		case "S":
+			System.out.println("Small");
+			break;
+		case "XL":
+			System.out.println("extra large");
+			default:
+				System.out.println("invalid size entered");
+				
+		}
+
+	}
+
+}
 
 
