@@ -72,3 +72,103 @@ public class Main{
            B  C
         D  E  F 
      G  H  I  J
+
+
+
+
+
+
+
+5).
+*
+**
+***
+****
+*****
+public class RightAngleTriangle {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the triangle
+
+        // Outer loop for the number of rows
+        for (int i = 1; i <= rows; i++) {
+            // Inner loop for printing asterisks in each row
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+6).
+*****
+****
+***
+**
+*
+public class ReverseRightAngleTriangle {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the triangle
+
+        // Outer loop for the number of rows
+        for (int i = rows; i >= 1; i--) {
+            // Inner loop for printing asterisks in each row
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+7).
+*****
+ ****
+  ***
+   **
+    *
+public class ReverseRightAngleTriangle {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the triangle
+
+        // Outer loop for the number of rows
+        for (int i = 1; i <= rows; i++) {
+            // Print spaces for alignment
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+            // Inner loop for printing asterisks in each row
+            for (int j = i; j <= rows; j++) {
+                System.out.print("*");
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+8).
+    *
+   **
+  ***
+ ****
+*****
+public class ReverseRightAngleTriangle {
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows for the triangle
+
+        // Outer loop for the number of rows
+        for (int i = rows; i >= 1; i--) {
+            // Inner loop for printing spaces
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            // Inner loop for printing asterisks
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
+
