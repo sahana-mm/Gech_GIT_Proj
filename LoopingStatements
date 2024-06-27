@@ -31,3 +31,19 @@ System.out.println(i);
 }
 }
 }
+2).to print pattern matching we are using for loop
+A
+A B
+A B C
+A B C D
+A B C D E
+public class Main{
+public static void main(String[] args){
+for(int i=1;i<=5;i++){
+for(int j=1;j<=i;j++){
+System.out.println((char)(j+64) + " ");
+}
+System.out.println();
+}
+}
+}
