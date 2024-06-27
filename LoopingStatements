@@ -1,1 +1,24 @@
-
+27/06/2024
+looping statements are used to eliminate the duplication of code....
+1).To print the numbers from 1 to 10 without using loops is difficult like duplication of code occurs again and again and also execution of the same code again and again in the code.....
+public class Main{
+public static void main(String[] args){
+int res =0,i = 1;
+reu = res +i;
+System.out.println(res);
+res = res +i;
+System.out.println(res);
+res = res +i;
+System.out.println(res);
+res = res +i;
+System.out.println(res);
+res = res +i;
+System.out.println(res);
+.
+.
+.
+.
+res = res +i;
+System.out.println(res);
+}
+}
