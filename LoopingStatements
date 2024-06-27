@@ -37,13 +37,38 @@ A B
 A B C
 A B C D
 A B C D E
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            char letter = 'A'; // Reset letter to 'A' for each new row
+            for (int j = 1; j <= i; j++) {
+                System.out.print(letter + " ");
+                letter++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+3).to print the pattern matching using for loop
+A
+B C
+D E F
+G H I J
+K L M N O
 public class Main{
-public static void main(String[] args){
-for(int i=1;i<=5;i++){
-for(int j=1;j<=i;j++){
-System.out.println((char)(j+64) + " ");
+    public static void main(String[] args){
+        char letter = 'A';
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(letter + " ");
+                letter++;
+            }
+            System.out.println();
+        }
+    }
 }
-System.out.println();
-}
-}
-}
+4).           A
+           B  C
+        D  E  F 
+     G  H  I  J
