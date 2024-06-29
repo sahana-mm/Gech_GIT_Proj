@@ -439,6 +439,102 @@ public class Main {
         scanner.close();
     }
 }
+5).to find the year is leap year or not in java program goes like this....?
+public class Main{
+    public static void main(String[] args){
+        int year = 1700;
+        if((year %4==0) && (year %100 !=0)|| (year %400 ==0)){
+        System.out.println("leap year");
+    }
+    else{
+        System.out.println("not a leap year");
+    }
+}
+}
+6).reverse of the number in java program...?
+public class Main{
+    public static void main(String[] args){
+        int num = 123;
+        int rev =0;
+        while(num!=0){
+            int dig = num%10;
+            rev = rev * 10 + dig;
+            num = num/10;
+        }
+        System.out.println("revers of the number is " + rev);
+}
+} 
+orr......
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number = scanner.nextInt();
+        int reversedNumber = reverseNumber(number);
+        System.out.println("Reversed Number: " + reversedNumber);
+        scanner.close();
+    }
+
+    public static int reverseNumber(int number) {
+        int reversed = 0;
+        while (number != 0) {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number /= 10;
+        }
+        return reversed;
+    }
+}
+it is the program written by using methods and giving user input...
+6).to find whethe the number is armstrong number or not using java program...?
+here how to find the armstrong number 
+370 = 3*3*3 + 7*7*7 + 0 
+   =  27 + 343 + 0
+   =  370
+Input : 100 200
+Output :153
+Explanation : 100 and 200 are given  
+two integers.
+ 153 = 1*1*1 + 5*5*5 + 3*3*3  
+     = 1 + 125 + 27
+     =  153
+Therefore, only 153 is an Armstrong number between 100 and 200.
+   
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = scanner.nextInt();
+        int originalNum = num;
+        int numofdigit = countDigits(num);
+        int sum = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, numofdigit);
+            num /= 10;
+        }
+
+        if (sum == originalNum) {
+            System.out.println("It is an Armstrong number");
+        } else {
+            System.out.println("It is not an Armstrong number");
+        }
+    }
+
+    public static int countDigits(int num) {
+        int count = 0;
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+        return count;
+    }
+}
 
 
 
