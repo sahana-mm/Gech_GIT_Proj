@@ -185,7 +185,84 @@ public class Main{
 }
 }
 4).java program to display all the prime numbers from 1 to n...?
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        int start, end, temp, num, count, isprime;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the start number:");
+        start = scanner.nextInt();
+
+        System.out.println("Enter the end number:");
+        end = scanner.nextInt();
+
+        // Swap start and end if start is greater than end
+        if (start > end) {
+            temp = start;
+            start = end;
+            end = temp;
+        }
+
+        System.out.println("The prime numbers between " + start + " to " + end + " are:");
+
+        // Iterate over the range from start to end
+        for (num = start; num <= end; num++) {
+            if (num < 2) {
+                continue; // Skip numbers less than 2, since they are not prime
+            }
+            isprime = 1; // Assume num is prime until proven otherwise
+            // Check for factors of num
+            for (count = 2; count <= Math.sqrt(num); count++) {
+                if (num % count == 0) {
+                    isprime = 0; // num is not prime
+                    break;
+                }
+            }
+            if (isprime == 1) {
+                System.out.println(num); // Print num if it is prime
+            }
+        }
+        
+        scanner.close();
+    }
+}
+or....
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	int start,end,temp,num,count,isprime;
+	Scanner sc = new Scanner(System.in);
+	System.out.println("enter the start number");
+	 start = sc.nextInt();
+	System.out.println("enter the end number");
+	 end = sc.nextInt();
+	if(start>end){
+	    temp = start;
+	    start = end;
+	    end = temp;
+	}
+	System.out.println("the prime numbers between" + start +  " to "+ end);
+	for(num=start;num<=end;num++){
+	    if(num<2){
+	        continue;
+	    }
+	    isprime=1;
+	    for(count = 2;count<=Math.sqrt(num);count++){
+	        if(num % count ==0){
+	            isprime =0;
+	            break;
+	        }
+	    }
+	    if(isprime==1){
+	    System.out.println(num);
+	}
+	}
+    sc.close();
+}
+} this code is writtern by me..
 
 
 5).to find the given year is leap year or not..?
@@ -260,7 +337,109 @@ public class Main
       }
      
 }
-3).
+3).calculator program by using switch...?
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int a =2, b=10;
+	char ch ='*';
+	switch(ch){
+	    case '+':
+	        System.out.println("addition is " + (a+b));
+	   break;
+	   case '-':
+	       System.out.println("subtraction is " + (a-b));
+	   break;
+	   case '*':
+	       System.out.println("multiplication is " + (a*b));
+	   break;
+	   case '/':
+	       if(b==0){
+	           System.out.println("divide by zero error");
+	       }
+	       else{
+	       System.out.println("division is " + (a/b));
+	   break;    
+	       } 
+	   case '%':
+	       System.out.println("modulus is " + (a%b));
+	   break;  
+	   default:
+	   System.out.println("invalid operator");
+	}
+}
+}
+4).write a java program that includes class creation object creation methods creation also includes conditional statements switch block.
+import java.util.Scanner;
+
+// Class definition
+class Calculator {
+    // Method for addition
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method for subtraction
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Method for multiplication
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Method for division
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Divide by zero error");
+        }
+        return (double) a / b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Object creation
+        Calculator calculator = new Calculator();
+        Scanner scanner = new Scanner(System.in);
+
+        // Getting user input
+        System.out.println("Enter the first number:");
+        int a = scanner.nextInt();
+        System.out.println("Enter the second number:");
+        int b = scanner.nextInt();
+        System.out.println("Enter the operation (+, -, *, /):");
+        char operation = scanner.next().charAt(0);
+
+        // Switch block for choosing the operation
+        switch (operation) {
+            case '+':
+                System.out.println("Result: " + calculator.add(a, b));
+                break;
+            case '-':
+                System.out.println("Result: " + calculator.subtract(a, b));
+                break;
+            case '*':
+                System.out.println("Result: " + calculator.multiply(a, b));
+                break;
+            case '/':
+                try {
+                    System.out.println("Result: " + calculator.divide(a, b));
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+            default:
+                System.out.println("Invalid operation");
+                break;
+        }
+
+        scanner.close();
+    }
+}
+
 
 
 
