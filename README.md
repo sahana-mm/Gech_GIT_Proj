@@ -142,6 +142,21 @@ public class BinaryAddition {
         return Integer.toBinaryString(result);
     }
 }
+
+or.....
+
+public class Main
+{
+	public static void main(String[] args) {
+		String binary1="10";
+		String binary2="01";
+		int num1=Integer.parseInt(binary1);
+		int num2 = Integer.parseInt(binary2);
+		int result = num1+num2;
+		System.out.println(result);
+		}
+}
+this is actually writtern by me and it is correct.
 3).java program to find largest among three numbers...?
 import java.util.Scanner;
 
@@ -207,7 +222,45 @@ public class LeapYear {
      }
    }
 26/06/2024
-1).
+1).find the LCM and HCF(GCD) of two numbers....?
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println(lcm(10,20));
+	}
+      public static int gcd(int a,int b){
+		while(b !=0){
+		    int temp =b;
+		    b =a % b;
+		    a = temp;
+		}
+		return a;
+      }
+      public static int lcm(int a,int b){
+		return Math.abs(a*b)/gcd(a,b);
+		
+		}
+}
+2).find the GCD(HCF) of two numbers we find it by using formula in java programming...?
+the GCD (Greatest Common Divisor) of 10 and 20 is 10, The GCD of two numbers is the largest positive integer that divides both of the numbers without leaving a remainder.
+**Divisors of 10: 1, 2, 5, 10    for(10)...
+**Divisors of 20: 1, 2, 4, 5, 10, 20    for(20).....
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println(gcd(10,20));
+	}
+      public static int gcd(int a,int b){
+		while(b !=0){
+		    int temp =b;
+		    b =a % b;
+		    a = temp;
+		}
+		return a;
+      }
+     
+}
+3).
 
 
 
