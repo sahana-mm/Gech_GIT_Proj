@@ -535,6 +535,85 @@ public class Main {
         return count;
     }
 }
+30/06/2024
+1).write a java code for to find whether the number is neon number or not...?
+public class Main {
+    public static void main(String[] args) {
+        int n = 9;
+        int sum = 0;
+        int sqr = n * n; // Calculate the square of n
+        
+        // Calculate the sum of digits of sqr
+        while (sqr > 0) {
+            int r = sqr % 10;
+            sum += r;
+            sqr = sqr / 10;
+        }
+        
+        // Check if the sum of digits equals n
+        if (sum == n) {
+            System.out.println("It is a neon number.");
+        } else {
+            System.out.println("It is not a neon number.");
+        }
+    }
+}
+2).to find whether the character is vowel or not.....?
+public class Main {
+    public static void main(String[] args) {
+        char ch = 'a'; // Initialize 'ch' with a character value
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            System.out.println("It is a vowel");
+        } else {
+            System.out.println("It is a consonant");
+        }
+    }
+}
+3).to find the factorial of the given number...?
+public class Main {
+    public static void main(String[] args) {
+        int number = 5; // Example: Calculate factorial of 5
+        int factorial = 1;
+
+        for (int i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+}
+4).find the fibonacci series of the first five numbers including 0...?
+Initialization:
+
+We manually initialize or print the first two numbers (0 and 1) before the loop starts.
+Loop Starting Point (i = 2):
+
+We start the loop at i = 2 because:
+i = 0 would correspond to the first Fibonacci number (0).
+i = 1 would correspond to the second Fibonacci number (1).
+i = 2 corresponds to generating the third Fibonacci number, which is the sum of the first two (0 + 1 = 1).
+Loop Execution:
+
+From i = 2 onward, each iteration of the loop calculates the next Fibonacci number by adding the two preceding numbers.
+public class Main {
+    public static void main(String[] args) {
+        int n = 5; // Number of terms in the Fibonacci series
+        int a = 0, b = 1;
+        
+        System.out.println("Fibonacci series up to " + n + " terms:");
+        System.out.print(a + ", " + b); // Print the first two terms
+        
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(", " + c);
+            a = b;
+            b = c;
+        }
+        
+        System.out.println();
+    }
+}
 
 
 
