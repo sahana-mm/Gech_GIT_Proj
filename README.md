@@ -614,7 +614,80 @@ public class Main {
         System.out.println();
     }
 }
-
+30/06/2024
+1).to find the simple interest using java...?
+public class Main
+{
+	public static void main(String[] args) {
+	int p = 2000;
+	int t = 2;
+	int r = 10;
+	double SI= (p*t*r)/100;
+	System.out.println(SI);
+	}
+}
+or......
+public class Main
+{
+	public static void main(String[] args) {
+	float p = 10000;
+	float t = 5;
+	float r = 5;
+	float SI= (p*t*r)/100;
+	System.out.println(SI);
+	}
+}
+2).to find the compound interest using java programming..?
+public class Main
+{
+    public static void main(String[] args) {
+        float p = 10000.0f;
+        int t = 5;
+        float r = 5.4f;
+        double amount = p * Math.pow((1 + r / 100), t); // Total amount after interest
+        float CI = (float)(amount - p); // Compound interest
+        System.out.println("Compound Interest: " + CI);
+        System.out.println("Total Amount: " + amount);
+    }
+}
+orr...
+public class Main
+{
+	public static void main(String[] args) {
+	float p = 10000.0f;
+	int t = 5;
+	float r = 5.4f;
+	double  CI= p * Math.pow((1 + r/100), t) - p;
+	System.out.println(CI);
+	}
+}
+3).to find the perimeter of the rectangle using java....?
+public class Main
+{
+    public static void main(String[] args) {
+        int width = 20;
+        int height = 30;
+        int perimeter = 2 * (width + height); // formula for the perimeter
+        System.out.println("Perimeter of the rectangle: " + perimeter);
+    }
+}
+4).to find the fibonacci series of the numbers from 0 to something upto n..?
+public class Main
+{
+	public static void main(String[] args) {
+	int n =10;
+	int a =0,b=1;
+	System.out.println(a);
+	System.out.println(b);
+	for(int i=2;i<=n;i++){
+	    int c = a+b;
+	    System.out.println(c);
+	    a=b;
+	    b=c;
+	}
+	System.out.println();
+	}
+}
 
 
 
