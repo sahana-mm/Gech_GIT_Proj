@@ -681,3 +681,32 @@ public class Main {
     }
 }   the code is this
 
+03/06/2024
+1).write a java program to find the number is positive negative or 0 using while loop as well as do while loop...?
+package whileloop;
+
+public class PositiveOrNegative {
+
+	public static void main(String[] args) {
+		int num = -4;
+		while(num<=0) {
+			if(num > 0) {
+			System.out.println("the num" + num + " is positive ");
+		    }
+			if(num < 0) {
+				System.out.println("the num" + num + " is negative ");
+			}
+
+			else {
+				System.out.println("the num" + num + " is equals to zero ");
+			}
+			num++;
+		}
+
+     }
+}   the output is like this
+the num-4 is negative 
+the num-3 is negative 
+the num-2 is negative 
+the num-1 is negative 
+the num0 is equals to zero 
