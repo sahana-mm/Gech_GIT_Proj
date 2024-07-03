@@ -753,4 +753,40 @@ public class Reverse {
 	}
 
 }
+3).find whether the number is armstrong number or not...?
+package whileloop;
+
+public class AmStrongNum {
+
+	public static void main(String[] args) {
+		//check whether the 153 is amstrong number or not  
+       int num = 153;
+       int temp = num;
+       int sum = 0;
+       
+       while(num!=0) {
+    	   int dig = num % 10;
+    	   sum = sum + (int) Math.pow(dig, getCount(153));
+    	   num = num / 10;
+       }
+       System.out.println(sum);
+       if(sum==temp) {
+    	   System.out.println("it is a armstrong number");
+       }
+       else {
+    	   System.out.println("it is not a armstrong number");
+       }
+    	   
+	}
+
+
+public static int getCount(int num) {
+	int count = 0;
+	while(num !=0) {
+		num = num / 10;
+		count++;
+	}
+	return count;
+  }
+}
 
