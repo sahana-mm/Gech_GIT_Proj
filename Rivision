@@ -454,4 +454,209 @@ public class Main
 	 }
    }
 }
-25).
+25).factorial of number 6..?
+public class Main
+{
+	public static void main(String[] args) {
+		int fact = 1;
+		for(int i =1;i<=6;i++){
+		    fact = fact * i;
+		}
+		System.out.println(fact);
+	}
+}
+26).factorial of numbers from 20 - 25..?
+here we need to use biginteger insted integer or long data type because using integer and long datatypes 
+may cause overflow issues thats why recomended to use bininteger...
+import java.math.BigInteger;
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 20; i <= 25; i++) {
+            BigInteger fact = BigInteger.ONE;
+            for (int j = 1; j <= i; j++) {
+                fact = fact.multiply(BigInteger.valueOf(j));
+            }
+            System.out.println("Factorial of " + i + " is: " + fact);
+        }
+    }
+}
+output for this will be...
+2432902008176640000
+51090942171709440000
+1124000727777607680000
+25852016738884976640000
+620448401733239439360000
+15511210043330985984000000
+
+27).check whether the number is prime or not..?
+number is 7
+public class Main
+{
+	public static void main(String[] args) {
+	    int count = 0;
+	    int n = 7;
+			for(int i = 1; i <= n; i++){
+			    if(n % i == 0){
+			        count = count + 1;
+			    }
+			}
+			if(count == 2){
+			    System.out.println("it is prime number");
+			}
+			else{
+			    System.out.println("it is not a prime number");
+			}
+           }
+}
+28).find the prime numbers between 1 to 100...?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(int i = 1; i <= 100; i++){
+	    int count = 0;
+			for(int j = 1; j <= i; j++){
+			    if(i % j == 0){
+			        count = count + 1;
+			    }
+			}
+			if(count == 2){
+			    System.out.println(i);
+			}
+			
+        }
+    }
+}
+29).write a java program to print the square of the numbers from 1 - 100...?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(int i = 1; i <= 100; i++){
+	        System.out.println(i*i);
+	    }
+    }
+}           // it is a simple way by using for loop...
+
+by using while loop...
+public class Main
+{
+	public static void main(String[] args) {
+	    int i = 1;
+	    while(i <= 100){
+	        System.out.println(i*i);
+	        i++;
+	    }
+    }
+}    here we no need to strore the product or square value of every number in the another variable
+     to reduce the memory usage....
+30).fibonacci series from 1 - 100...?
+public class Main
+{
+	public static void main(String[] args) {
+	    int a = 1;
+	    int b = 1;
+	    System.out.println(a);
+	    while(b <= 100){
+	        System.out.println(b);
+	        int fib = a + b;
+	        a = b;
+	        b = fib;
+	    }
+    }
+}
+31).find the reverse of the number using java program...?
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 123;
+	    int rev = 0;
+	    while(num !=0){
+	        int dig = num % 10;
+	        rev = rev * 10 + dig;
+	        num = num / 10;
+	    }
+	    System.out.println("the reverse of number is " + rev);
+    }
+}
+32).find whether the number is palindrome or not...?
+here I'm taking 121 as a checking numbe...
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 121;
+	    int temp = num;
+	    int rev = 0;
+	    while(num !=0){
+	        int dig = num % 10;
+	        rev = rev * 10 + dig;
+	        num = num / 10;
+	    }
+	   // System.out.println("the reverse of number is " + rev);
+	    if(rev == temp){
+	        System.out.println("the number " + rev + " is palindrome");
+	    }
+	    else{
+	        System.out.println("the number " + rev + " is not palindrome");
+	    }
+    }
+}
+33).write a program to check whether the number is armstrong number or not...?
+public class Main {
+    public static void main(String[] args) {
+        int num = 153;
+        int temp = num;
+        int sum = 0;
+        int power = getArmStrongNum(num); // Get the number of digits once
+
+        while (num != 0) {
+            int dig = num % 10;
+            sum += Math.pow(dig, power); // Corrected: sum should accumulate the result
+            num = num / 10;
+        }
+
+        if (sum == temp) { // Corrected: check if sum equals temp
+            System.out.println("The number is an Armstrong number");
+        } else {
+            System.out.println("The number is not an Armstrong number");
+        }
+    }
+
+    public static int getArmStrongNum(int num) { // Corrected: made static
+        int count = 0;
+        while (num != 0) {
+            num = num / 10;
+            count++;
+        }
+        return count;
+    }
+}
+in a simple way   public class Main {
+    public static void main(String[] args) {
+        int num = 153;
+        int temp = num;
+        int count = 0;
+        int sum = 0;
+
+        // Calculate the number of digits
+        int n = num;
+        while (n != 0) {
+            n = n / 10;
+            count++;
+        }
+
+        n = num;
+        while (n != 0) {
+            int dig = n % 10;
+            sum += Math.pow(dig, count);
+            n = n / 10;
+        }
+
+        if (sum == temp) {
+            System.out.println("The number is an Armstrong number");
+        } else {
+            System.out.println("The number is not an Armstrong number");
+        }
+    }
+}
+
+
