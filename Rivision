@@ -118,4 +118,248 @@ public class Main
 	    }
 	}
 }
-8).
+8).writee a program for calculating the total sales cost based on the fallowing conditions..?
+public class Main
+{
+	public static void main(String[] args) {
+	    Fruit f = new Fruit();
+	    float tc=f.getFruit("apple",5);
+	    System.out.println(tc);
+	    
+		
+	}
+}
+class Fruit{
+    public float getFruit(String fruit,int qty){
+        if(fruit.equals("apple") && qty<10){
+            float totcost=qty*15;
+            return totcost;
+        }
+        else if(fruit.equals("apple") && qty >=10 && qty <=20){
+             float totcost=qty*13;
+             return totcost;
+        }
+        else if(fruit.equals("apple") && qty >20){
+            float totcost=qty*12;
+            return totcost;
+            
+        }   
+        else if(fruit.equals("orange") && qty<20){
+            float totcost=qty*8;
+            return totcost;
+        }
+        else if(fruit.equals("orange") && qty>=20){
+            float totcost= qty*7;
+            return totcost;
+        }
+        else if(fruit.equals("banana") && qty <100){
+            float totcost=qty*3;
+            return totcost;
+        }
+        else if(fruit.equals("banana") && qty <100){
+            float totcost=qty*2;
+            return totcost;
+        }
+        else {
+            System.out.println("invalid fruit name entered");
+            return 0;
+        }
+}
+
+}
+9).write a java program for to check whether the entered character is vowel or not..?
+public class Main
+{
+	public static void main(String[] args) {
+	    char c = 'u';
+	    if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+	        System.out.println("it ia a vowel");
+	    }
+	    else{
+	        System.out.println("it is a consonant");
+	    }
+       }
+   }
+10).write a program to find whether the entered character is vowel or consonant or digit or special character..?
+public class Main
+{
+	public static void main(String[] args) {
+	    char c = '0';
+	    if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
+	        System.out.println("it ia a vowel");
+	    }
+	    else if(c>'a' && c<='z'){
+	        System.out.println("it is a consonant");
+	    }
+	    else if(c>='0' && c<='9'){
+	        System.out.println("it is a digit");
+	    }
+	    else{
+	        System.out.println("it is a special character");
+	    }
+   }
+
+}
+11).ternary operator
+using this operator write a program to find the bigger number among two numbers...?
+public class Main
+{
+	public static void main(String[] args) {
+	    int a = 2;
+	    int b = 4;
+	    System.out.println((a>b)?"a is bigger":"b is bigger");
+   }
+
+}
+12).using ternary operator find the biggest number among three numbers...?
+public class Main
+{
+	public static void main(String[] args) {
+	    int a = 2;
+	    int b = 4;
+	    int c = 3;
+	    System.out.println((a>b)?(a>c)?"a is bigger":"c is bigger":(b>c)?"b is bigger":"c is bigger");
+   }
+
+}
+13).write a program to find that this year is leap year or not..?
+public class Main
+{
+	public static void main(String[] args) {
+	    int year = 2024;
+	    if(year %4 ==0 && year % 100 !=0 || year % 400 ==0)
+	    {
+	    System.out.println("this is a leap year");
+   }
+   else{
+       System.out.println("this year is not a leap year");
+   }
+}
+}
+14).using switch find whether the number is positive, negative or equals to zero...?
+public class Main {
+    public static void main(String[] args) {
+        int num = -7;
+        int sign = 0; // Initialize sign to ensure it has a default value
+        
+        if (num < 0) {
+            sign = -1; // Set sign to -1 for negative numbers
+        } else if (num == 0) {
+            sign = 0; // Set sign to 0 for zero
+        } else if (num > 0) {
+            sign = 1; // Set sign to 1 for positive numbers
+        }
+        
+        switch (sign) {
+            case -1:
+                System.out.println("it is a negative number");
+                break;
+            case 0:
+                System.out.println("it is equal to zero");
+                break;
+            case 1:
+                System.out.println("it is a positive Number");
+                break;
+            default:
+                System.out.println("invalid number entered");
+        }
+    }
+}
+15)using for loop print 100,99,98,97,96,......,0...?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(int i=100;i>=0;i--){
+	        System.out.println(i);
+	    }       
+    }
+}
+16).write a program for printing A,C,E,G,......,upto Z...?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(char c='A';c<='Z';c=(char)(c+2)){
+	        System.out.println(c);
+	    }       
+    }
+}
+17).find the average of numbers from 1-100..?
+public class Main
+{
+	public static void main(String[] args) {
+	    int n = 100;
+	    int sum = 0;
+	    int avg;               //float avg also ok
+	    for(int i=1;i<=n;i++){
+	        sum = sum +i;
+	    }    
+	    avg=sum / n;
+	    System.out.println(avg);
+    }
+}
+18).check whetehr the number is prime or not...?
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 7;
+	    int count =0;
+	    for(int i=1;i<=num;i++){
+	        if(num%i==0){
+	            count = count+1;
+	        }
+	    }
+	    if(count==2){
+	        System.out.println("the number is prime number");
+	    }
+	    else{
+	        System.out.println("the number is not a prime number");
+	    }
+    }
+}19).print the number it is prime numbers or not a prime number from 1-100..?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(int i=1;i<=100;i++){
+	    int count =0;
+	    for(int j=1;j<=i;j++){
+	        if(i%j==0){
+	            count = count+1;
+	        }
+	    }
+	    if(count==2){
+	        System.out.println(i + " the number is prime number");
+	    }
+	    else{
+	        System.out.println(i+ " the number is not a prime number");
+	    }
+    }
+}
+} here above code will give all the numbers from 1 - 100 is ot is prime number os not
+20).print the prime numbers only from 1 - 100...?
+public class Main
+{
+	public static void main(String[] args) {
+	    for(int i=1;i<=100;i++){
+	    int count =0;
+	    for(int j=1;j<=i;j++){
+	        if(i%j==0){
+	            count = count+1;
+	        }
+	    }
+	    if(count==2){
+	        System.out.println(i + " the number is prime number");
+	    }
+	    }
+    }
+}
+21).print the math table like structure of 10..?
+public class Main
+{
+	public static void main(String[] args) {
+	    int num = 7;
+	   for(int i =1;i<=10;i++){
+	       System.out.println(num + " x " + i + " = " + num * i);
+	   }
+    }
+
+}
