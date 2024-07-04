@@ -1,1 +1,121 @@
-
+04/06/2024
+Today I'm rivisioning my java concepts from first day to till now for that I'm creatimg this file....
+1)create a class and store doctor details..?
+public class Doctor
+{
+	public static void main(String[] args) {
+		String name = "sahana";
+	     byte age= 22;
+		 String stream="cse";
+		String course="java";
+		System.out.println(age);
+	}
+}
+2).create a object of Doctor class in main method and display data present in the Doctor class..?
+public class Main
+{
+	public static void main(String[] args) {
+	    Doctor d = new Doctor();
+	System.out.println(d.age);
+	System.out.println(d.firstlet);
+	System.out.println(d.name);
+	
+	}
+}
+class Doctor{
+    public String name= "sahana";
+    public int age=22;
+    public char firstlet='s';
+}
+3).create a method for adding two numbers in the other class and access the addition method to the inside fo the main method...?
+public class Main
+{
+	public static void main(String[] args) {
+	Add add = new Add()	;
+	int summation = add.addition(2,5);
+	System.out.println(summation);
+	}
+}
+class Add{
+    public int addition(int a,int b){
+        int sum = a+b;
+        return sum;
+    }
+}
+4)create one class inside that we have two methods and access one method inside the other method(here no need to create an 
+object for the method which is called as calling method ..?
+public class Main
+{
+	public static void main(String[] args) {
+	Add add = new Add()	;
+	int summation = add.addition(2,5);
+	System.out.println(summation);
+	}
+}
+class Add{
+    public int addition(int a,int b){                       //calling method
+        int sum = a+b;
+        float subtract = subtraction(3.52f,1.42f);
+        System.out.println(subtract);
+        return sum;
+    }
+    public float subtraction(float i,float j){            //callee or called method
+        float sub = i - j;
+        return sub;
+    }
+}
+5).here write a code for return area and circumference of the circle ny using formula...
+call the one method inside the another method..?
+public class Main
+{
+	public static void main(String[] args) {
+	Add add = new Add()	;
+	float area1 = add.getArea(2.47f);
+	System.out.println(area1);
+	}
+}
+class Add{
+    public float getArea(float r){
+        float area=3.142f*r*r;
+        float circum1 = getCircum(3.52f);
+        System.out.println(circum1);
+        return area;
+    }
+    public float getCircum(float r){
+        float circum = 2*3.142f*r;
+        return circum;
+    }
+}
+6).find whether the given number is odd or even by using if else conditional block..?
+public class Main
+{
+	public static void main(String[] args) {
+	    int num =20;
+	    int rem = num % 2;
+	    if(rem==0){
+	        System.out.println("the number is even");
+	    }
+	    else{
+	        System.out.println("the number is odd");
+	    }
+	}
+}
+7).Write a program to find the biggest among three numbers using if,else if, else..?
+public class Main
+{
+	public static void main(String[] args) {
+	    float a = 20.1f;
+	    float b = 20.534f;
+	    float c = 47;
+	    if(a>b && a>c){
+	        System.out.println("the number a is big");
+	    }
+	    else if(b>c){
+	        System.out.println("the number b is big");
+	    }
+	    else{
+	        System.out.println("the number c is big");
+	    }
+	}
+}
+8).
