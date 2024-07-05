@@ -812,8 +812,41 @@ public class Sahana {
 		else {
 			System.out.println("character is not present");
 		}
+              }
+          }
+05/06/2024
+Array programs 
+1).If I want to strore some numbers 3,5,10,20,9..?
+int[] arr1 = {3,5,10,20,9};
+2).req:store a,*,$,!..?
+char[] arr2 = {'a','*','$','!'};
+3).req:store 1.5,2.5,3.5..?
+float[] arr3 = {1.5f,2.5f,3.5f};
+4).req:store true,false,true,false...?
+boolean arr4 = {true,false,true,false};
+ARRAY PROPERTIES....
+AND PRINT THE NUMBERS OF THE ARRAYS...?
+package arrays;
 
+public class ArrayProperties {
+
+	public static void main(String[] args) {
+		/*    these are the array properties
+		 * int[] arr = {10,20,30,40,50};
+		System.out.println(arr.length);
+		System.out.println("the last index of the array is = " + (arr.length-1));
+		System.out.println(arr[3]);
+                System.out.println(arr[1]); 
+                System.out.println(arr[5]); 
+                System.out.println("Hi");
+                System.out.println("Hello");*/
+		
+		//print the numbers of array
+		int[] arr = {10,11,14,26};
+		System.out.println(arr.length-1);
+		for(int i = 0; i <= 3; i++) {
+			System.out.println(arr[i]);
+		}
 	}
-
 }
 
