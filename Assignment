@@ -1,1 +1,82 @@
+06/06/2024
+1).write a java program for simple calculator using switch statement...?
+package assignment;
+
+import java.util.Scanner;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the character");
+        char c = sc.next().charAt(0);
+        System.out.println("enter the first number");
+        int n1= sc.nextInt();
+        System.out.println("enter the second number");
+        int n2 = sc.nextInt();
+       
+        Calci cal=new Calci();
+        int output = cal.getMethod(n1, n2, c);
+        System.out.println(output);
+	}
+}
+        class Calci{
+        	public int getMethod(int n1,int n2,char c) {
+        int output1 = n1+n2;
+        switch(c){
+        case '+':
+        	return n1+n2;
+        case '-':
+        	return n1-n2;
+        case '*':
+        	return n1*n2;
+        case '/':
+        	if(n2==0) {
+        		System.out.println("divide by zero error");
+        	}
+        	return n1/n2;
+        case '%':
+        	return n1%n2;
+        	
+        }
+        return output1;
+	}
+        }
+2).write a java program to check the eligibility for voting based on age using switch case..?
+(hint:use ternary operator for getting predicted values)
+age > 18...eligible for voting
+age < 18... not eligible for voting
+package assignment;
+
+public class Vote {
+
+	public static void main(String[] args) {
+		int age = 21;
+		String eligibility;
+		switch(age) {
+		default:
+		    eligibility = (age>=18) ? "eligible for vote" : "not eligible for vote";
+		break;
+		}
+		System.out.println(eligibility);
+	}
+
+}
+3).write a program to check whether the number is divisible by 5 and 11 or not..?
+package assignment;
+
+public class Divisibility {
+
+	public static void main(String[] args) {
+      int n = 20;
+      if(n % 5 == 0 && n % 11 == 0) {
+    	  System.out.println(n + " it is divisible by 5 and 11");
+      }
+      else {
+    	  System.out.println(n + " it is not divisible by 5 and 11");
+      }
+	}
+}
+4).write aprogram to ckeck whether it is alphabet or not (should work for asny input given by user)...?
+
 
