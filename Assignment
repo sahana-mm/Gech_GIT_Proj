@@ -79,4 +79,90 @@ public class Divisibility {
 }
 4).write aprogram to ckeck whether it is alphabet or not (should work for asny input given by user)...?
 
+import java.util.Scanner;
 
+public class CheckAlphabet {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a character:");
+        char c = sc.next().charAt(0); // Read the first character input from the user
+
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+            System.out.println(c + " is an alphabet.");
+        } else {
+            System.out.println(c + " is not an alphabet.");
+        }
+
+        sc.close(); // Close the scanner
+    }
+}
+5).WAP to input electricity unit charges & Calculate total electricity bill according to the giver condition.
+
+a).for first 5o units Rs. 0.50/ unit
+
+b).for next 150 units Rs. 0.75 /unit
+
+c).for next 250 units Rs. 1.20 /unit
+
+d).for unit above 250 units  Rs.150/unit
+
+- surcharge of 20% is added to the bill
+package assignment;
+
+public class Electricity {
+
+    public static void main(String[] args) {
+        int unit = 100; // Example unit value
+        ElectricBill el = new ElectricBill();
+        double totalcharges = el.getBill(unit);
+        System.out.println("Total charges including surcharge: Rs. " + totalcharges);
+    }
+}
+
+class ElectricBill {
+    public double getBill(int unit) {
+        double totcharge = 0;  // Initialize totcharge with a default value
+
+        if (unit <= 50) {
+            totcharge = unit * 0.50;
+        } else if (unit <= 150) {
+            totcharge = 50 * 0.50 + (unit - 50) * 0.75;
+        } else if (unit <= 250) {
+            totcharge = 50 * 0.50 + 100 * 0.75 + (unit - 150) * 1.20;
+        } else {
+            totcharge = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (unit - 250) * 1.50;
+        }
+
+        // Adding 20% surcharge
+        
+        double surcharge = totcharge * 0.20;
+        totcharge += surcharge;
+        return totcharge;
+    }
+}
+6).WAP to enter the numbers till the user wants and at the end it should display the count of 
+positive,negative, or zeros entered{hint:use do while loop and inside it use the nested if]...?
+
+
+7).To find the sum of even numbers between 1 to n and here n is user input..?
+package assignment;
+
+import java.util.Scanner;
+
+public class Sum {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int n = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                sum = sum + i;
+            }
+        }
+        System.out.println("Sum of even numbers from 1 to " + n + ": " + sum);
+        sc.close(); // Don't forget to close the scanner
+    }
+}
