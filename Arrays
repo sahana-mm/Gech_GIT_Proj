@@ -1,1 +1,142 @@
+08/06/2024
+1).WAAP to print the elements 10,11,14,26 using array/...?
+package arrays;
+public class PrintNumbers {
+	public static void main(String[] args) {
+		int[] arr = {10,11,14,26};
+		for(int i =0; i<=arr.length-1; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+}
+2).WAP to print the alternate numbers of the array..?
+package arrays;
+public class PrintAlternateNum {
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26,12,93,65};
+		//this will print even index values
+		for(int i = 0; i<= a.length-1; i=i+2) {
+			System.out.println(a[i]);
+			/*this will print odd index values
+			 * for(int i = 1; i<= a.length-1; i=i+2) {
+				System.out.println(a[i]);
+				*/
+		}
+	}
+}
+3).WAP to print the numbers of the array in the reverse order...?
+package arrays;
+
+public class ReverseNumPrinting {
+
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26};
+		for(int i = a.length-1; i>= 0; i--) {
+			System.out.println(a[i]);
+		}
+	}
+}
+
+4).WAP to print the sum of the even index of the array..?
+package arrays;
+
+public class SumOfEvenIndex {
+
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26,12,93,65};
+		int sum = 0;
+		for(int i = 0 ; i<= a.length-1; i= i+2) {
+			sum = sum + a[i];
+		}
+        System.out.println(sum);  
+	}
+}
+5).WAP to print the sum of odd index of the array...?
+package arrays;
+
+public class SumOfOddIndex {
+
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26,12,93,65};
+		int sum = 0;
+		for(int i = 1; i<= a.length-1; i=i+2) {
+			sum = sum +a[i];
+		}
+        System.out.println(sum);
+	}
+}
+6).WAP to print the sum of odd index and even indes  sum in the same program of the array...?
+package arrays;
+
+public class SumOfOddindexEvenindex {
+
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26,12,93,65};
+		int Esum = 0;
+		int Osum = 0;
+		for(int i = 0 ; i<= a.length-1; i++) {
+			if(i%2==0) {
+				Esum = Esum + a[i];
+			}
+			else {
+				Osum = Osum + a[i];
+			}			
+		}
+		System.out.println(Esum);
+		System.out.println(Osum);
+	}
+}
+7).WAP to print the sum of the even number even index and odd number odd index of the array..?
+package arrays..?
+
+public class EvennumEvenindexOddnumOddindex {
+
+	public static void main(String[] args) {
+		int [] a= {10,11,14,26,12,93,65};
+		int Esum = 0;
+		int Osum = 0;
+		for(int i = 0; i<= a.length-1; i++) {
+			if(i%2 == 0) {
+				if(a[i]%2 == 0) {
+					Esum = Esum + a[i];
+				}
+			}
+			else {
+				if(a[i]%2 !=0) {
+					Osum = Osum + a[i];
+				}
+			}
+		}
+	    System.out.println(Esum);
+	    System.out.println(Osum);
+	}
+}
+8).WAP to print the sum of the even number odd index and odd number even index of the array..?
+package arrays...?
+package arrays;
+
+public class EvenumOddindexOddnumEvenindex {
+
+	public static void main(String[] args) {
+		int[] a = {10,11,14,26,12,93,65};
+		int Esum = 0;
+		int Osum = 0;
+		for(int i = 0;i<= a.length-1; i++) {
+			if(i%2 == 0) {
+				if(a[i]%2 != 0) {
+					Osum = Osum +a[i];
+				}
+			}
+			else {
+				if(a[i]%2 == 0) {
+					Esum = Esum + a[i];
+				}
+			}
+		}
+        System.out.println(Osum);
+        System.out.println(Esum);
+	}
+}
+
+
 
