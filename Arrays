@@ -137,6 +137,22 @@ public class EvenumOddindexOddnumEvenindex {
         System.out.println(Esum);
 	}
 }
+9).to find the largest among three numbers in java using arrays...?
+package arrays;
+
+public class BigamongNumrs {
+
+	public static void main(String[] args) {
+		int[] a = {5,10,3};
+		int temp = a[0];
+		for(int i = 1; i<= a.length-1; i++) {
+		if(a[i] > temp) {
+			temp = a[i];
+		}
+	   }
+		System.out.println(temp);
+	}
+}
 
 
 
