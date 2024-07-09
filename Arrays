@@ -153,6 +153,73 @@ public class BigamongNumrs {
 		System.out.println(temp);
 	}
 }
+09/06/2024
+1).WAP to find the max number in the array..?
+package arrays;
 
+public class MaxNuminArray {
 
+	public static void main(String[] args) {
+		int[] a = {10,15,8,20,5,30};
+		int max = a[0];
+		for(int i =1; i<= a.length-1; i++) {
+			if(a[i] > max) {
+				max = a[i];
+			}
+		}
+        System.out.println(max);
+	}
+}
+2).WAP to find the min number in the array..?
+package arrays;
+
+public class MinNuminArray {
+
+	public static void main(String[] args) {
+		int[] a = {10,15,8,20,5,30};
+		int min = a[0];
+		for(int i = 1; i <= a.length-1; i++) {
+			if(a[i] < min) {
+			min = a[i];
+		}
+	  }
+		System.out.println(min);
+	}
+}
+3).WAP to insert values 10,20,30,.....,100 into an integer array using loops...?
+package arrays;
+
+public class EmptyArray {
+
+	public static void main(String[] args) {
+		int[] a = new int[10];
+		for(int i = 0; i<= a.length-1; i++) {
+			a[i] = 10 * (i+1);
+		}
+        for(int i = 0;i<= a.length-1;i++) {
+        	System.out.println(a[i]);
+        }
+     }
+}
+4).WAP to find the sum of array by passing the array to getSum method present in class A...?
+package arrays;
+
+public class SumOfEmptyArray {
+
+	public static void main(String[] args) {
+		int[] a = {5,15,3,10};
+		A a1 = new A();
+		int sum1 = a1.getSum(a);
+		System.out.println(sum1);
+	}
+}
+class A{
+	public int getSum(int[] a) {
+		int sum = 0;
+		for(int i=0; i<= a.length-1;i++) {
+			sum = sum +a[i];
+		}
+		return sum;
+	}
+}
 
