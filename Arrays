@@ -1,4 +1,4 @@
-08/06/2024
+08/07/2024
 1).WAAP to print the elements 10,11,14,26 using array/...?
 package arrays;
 public class PrintNumbers {
@@ -153,7 +153,7 @@ public class BigamongNumrs {
 		System.out.println(temp);
 	}
 }
-09/06/2024
+09/07/2024
 1).WAP to find the max number in the array..?
 package arrays;
 
@@ -220,6 +220,85 @@ class A{
 			sum = sum +a[i];
 		}
 		return sum;
+	}
+}
+10/07/2024
+for each loop
+1).print the array numbers by using for each loop..?
+array = {10,20,30,40,50};
+package foreach;
+
+public class ForEachLoop {
+
+	public static void main(String[] args) {
+		int[] a = {10,20,30,40,50};
+		for(int x:a) {
+			System.out.println(x);
+		}
+	}
+}
+2).print the names using for each loop...?
+package foreach;
+
+public class Names {
+
+	public static void main(String[] args) {
+		String[] arr = {"sahana","sunanda","bharath","manjunath"};
+		for(String items:arr) {
+			System.out.println(items);
+		}
+	}
+}
+3).WAP to find whethe the number is armstrong number or not in a simple way...?
+package foreach;
+
+public class ArmStrongNumberEx {
+
+	public static void main(String[] args) {
+		int num = 153;
+		int temp = num;
+		int temp1 = temp;
+		int count = 0;
+		while(num>0)
+		{
+			num = num / 10;
+			count = count + 1;
+		}
+		double sum = 0;
+		while(temp>0) {
+			int rem = temp % 10;
+			sum = sum +Math.pow(rem, count);
+			temp = temp / 10;
+		}
+		if(sum == temp1) {
+			System.out.println("the number is armstrong number");
+		}
+		else {
+			System.out.println("the number is not an armstrong number");
+		}
+	}
+}
+4).WAP to find whethe the number is armstrong number or not in a simple way and without using predefined methods of java...?
+package foreach;
+
+public class ArmStrongNum {
+
+	public static void main(String[] args) {
+		int num = 153;
+		int temp = num;
+		int sum = 0;
+		while(num > 0) 
+		{
+			int rem = num % 10;
+			sum = sum + (rem * rem * rem);
+			num = num / 10;
+		}
+		if(sum == temp) {
+			System.out.println("it is an armstrong number");
+		}
+		else {
+			System.out.println("it is not an armstrong number");
+		}
 	}
 }
 
