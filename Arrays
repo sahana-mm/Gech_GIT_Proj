@@ -334,7 +334,7 @@ public class NumSwapWithoutTemp {
 	}
 }
 14/07/2024
-1).swap the numbrers in the array..?
+1).swap the numbrers in the array.. using temporary variable....?
 package array;
 
 public class ArraySwapping {
@@ -356,3 +356,148 @@ public class ArraySwapping {
         }
     }
 }
+or....
+package array;
+
+public class Swap {
+
+	public static void main(String[] args) {
+		int[] a = {10,20,30,40,50};
+		int temp;
+		if(a.length % 2 !=0) {
+			a[a.length-1] = a[a.length-1];
+		}
+		for(int i = 0; i<=a.length-2;i=i+2) {
+			temp = a[i];
+			a[i] = a[i + 1];
+			a[i + 1] = temp;
+		}
+		for(int i = 0;i<=a.length-1;i++) {
+			System.out.println(a[i]);
+		}
+	}
+}
+2).swap the numbrers in the array.. without using temporary variable?
+package array;
+
+public class SwapWithoutTemp {
+
+	public static void main(String[] args) {
+		int[] a = {10,20,30,40,50};
+		if(a.length % 2 !=0) {
+			a[a.length-1] = a[a.length-1];
+		}
+		for(int i = 0;i<=a.length-2;i=i+2) {
+			a[i] = a[i] + a[i + 1];
+			a[i+1] = a[i] - a[i+1];
+			a[i] = a[i] - a[i+1];
+		}
+		for(int i = 0;i<=a.length-1;i++) {
+			System.out.println(a[i]);
+		}
+	}
+}
+3).copy one array to another array...?
+package array;
+
+public class SwapWithoutTemp {
+
+	public static void main(String[] args) {
+		int[] a = {10,20,30,40,50};
+		if(a.length % 2 !=0) {
+			a[a.length-1] = a[a.length-1];
+		}
+		for(int i = 0;i<=a.length-2;i=i+2) {
+			a[i] = a[i] + a[i + 1];
+			a[i+1] = a[i] - a[i+1];
+			a[i] = a[i] - a[i+1];
+		}
+		for(int i = 0;i<=a.length-1;i++) {
+			System.out.println(a[i]);
+		}
+	}
+}
+4).WAP to sort the array of the elments in the given array int[] a = {8,5,11,9,7,6};
+package array;
+
+public class SortArray {
+
+    public static void main(String[] args) {
+        int[] a = {8, 5, 11, 9, 7, 6};
+        int temp;
+        
+        // Bubble Sort
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    // Swap a[j] and a[j + 1]
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        
+        // Print sorted array
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+5).sort the array in descending order...?
+package array;
+
+public class SortInDescendingOrder {
+
+    public static void main(String[] args) {
+        int[] a = {8, 5, 11, 9, 7, 6};
+        int temp;
+        
+        // Bubble Sort
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[j] <  a[j + 1]) {
+                    // Swap a[j] and a[j + 1]
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        
+        // Print sorted array
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+6).simpler Java program that checks if a number is present in an array and prints its index if found...?
+import java.util.Scanner;
+
+public class NumberSearch {
+
+    public static void main(String[] args) {
+        int[] a = {8, 5, 11, 9, 7, 6};
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number to search in the array: ");
+        int numberToSearch = scanner.nextInt();
+        
+        boolean found = false;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == numberToSearch) {
+                System.out.println("Yes, " + numberToSearch + " is at index " + i);
+                found = true;
+                break;
+            }
+        }
+        
+        if (!found) {
+            System.out.println("No, " + numberToSearch + " is not present in the array.");
+        }
+        
+        scanner.close();
+    }
+}
+7)removing duplicates from the array elements.... if a={8,9,11,8,10,12} then output is 
+a={8,9,11,10,12}......?
