@@ -334,3 +334,25 @@ public class NumSwapWithoutTemp {
 	}
 }
 14/07/2024
+1).swap the numbrers in the array..?
+package array;
+
+public class ArraySwapping {
+
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50};
+        int temp;
+
+        // Swap adjacent elements
+        for (int i = 0; i < arr.length - 1; i += 2) {
+            temp = arr[i];        // Store the current element in temp
+            arr[i] = arr[i + 1];  // Move the next element to the current position
+            arr[i + 1] = temp;    // Move the current element (stored in temp) to the next position
+        }
+
+        // Print the resulting array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
