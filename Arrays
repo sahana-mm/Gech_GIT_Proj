@@ -501,3 +501,33 @@ public class NumberSearch {
 }
 7)removing duplicates from the array elements.... if a={8,9,11,8,10,12} then output is 
 a={8,9,11,10,12}......?
+package array;
+
+public class RemoveDuplicates {
+
+	public static void main(String[] args) {
+		    int[] a = {8, 5, 11, 9, 7, 6, 5,11};
+		    int temp;
+
+		    // Bubble Sort in descending order
+		    for (int i = 0; i < a.length - 1; i++) {
+		        for (int j = 0; j < a.length - 1 - i; j++) {
+		            if (a[j] < a[j + 1]) {
+		                // Swap a[j] and a[j + 1]
+		                temp = a[j];
+		                a[j] = a[j + 1];
+		                a[j + 1] = temp;
+		            }
+		        }
+		    }
+
+		    // Print sorted array and remove duplicates
+		    System.out.print(a[0]);
+		    for (int i = 1; i < a.length; i++) {
+		        if (a[i] != a[i - 1]) {
+		            System.out.print(" " + a[i]);
+		        }
+		    }
+		}
+         }
+
