@@ -1,1 +1,42 @@
-
+16/07/2024
+1).using constraints we can limit the data which is coming into table column...
+a).default key constraint
+b).null key constraint
+c).check key constraint
+d).primary key constraint
+e).unique constraint
+f).foreign key constraint
+and here one example....
+use mysql
+create table stud(sid int, name varchar(40),city_name varchar(40)default 'banglore')
+create table emp(eid int not null,name varchar(40),email varchar(40))
+create table empl(eid int,name varchar(40),age int check(age between 18 and 60))
+create table cust(cid int primary key,cust_name varchar(40),cust_mail varchar(40))
+create table custm(c_id int unique,name varchar(40),product varchar(40))
+create table s(sid int primary key)
+create table art(art_id int, sid int,foreign key(sid)references s(sid))
+2).to overcome from the insertion anomoly we add foreign key constraint....?
+create database mysqlbatch
+use mysql
+create table state(sid int primary key,statename varchar(40))
+insert into state values(1,'karnataka'),(2,'tamilnadu'),(3,'andrapradesh'),
+(4,'kerala'),(5,'uttarpradesh')
+select * from state
+create table student(sid int,name varchar(40),stateid int,foreign key(stateid) references state(sid))
+insert into student values(101,'sahana',3),(102,'saanu',4),(103,'sanvi',1),(104,'sahani',5),(105,'baby',2)
+select * from student
+insert into student values(106,'harini',1),(107,'prarthana',5)
+select * from student 
+3).to overcome from the insertion anomoly we add foreign key constraint....?
+create database mysql1
+use mysql
+create table blood_group(bg_id int primary key,blood_group varchar(40))
+insert into blood_group values(1,'o+ve'),(2,'o-ve'),(3,'b+ve')
+select * from blood_group
+create table state1(state_id int primary key,satete_name varchar(40))
+insert into state1 values(1,'karnataka'),(2,'andrapradesh'),(3,'kerala')
+select * from state1
+create table new_employee(eid int,ename varchar(40),age int,bg_id int,state_id int,
+foreign key(bg_id)references blood_group(bg_id),foreign key(state_id)references state1(state_id))
+insert into new_employee values(11,'sahana',21,1,1),(12,'sanvi',22,2,3),(13,'sahani',22,3,1)
+select * from new_employee
