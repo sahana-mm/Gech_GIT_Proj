@@ -40,3 +40,19 @@ create table new_employee(eid int,ename varchar(40),age int,bg_id int,state_id i
 foreign key(bg_id)references blood_group(bg_id),foreign key(state_id)references state1(state_id))
 insert into new_employee values(11,'sahana',21,1,1),(12,'sanvi',22,2,3),(13,'sahani',22,3,1)
 select * from new_employee
+
+17/07/2024
+1).display all employee details...?
+use mysql
+create table employee(eid int,fname varchar(40),lname varchar(40),age int,salary int,
+dept varchar(40),doj date)
+insert into employee values(1,'rajeev','sukla',23,12000,'.net','2011-10-23'),
+(2,'sowmya','kumari',23,19000,'db','2010-11-13'),
+(3,'kishor','kumar',27,36000,'android','2011-10-16'),
+(4,'abhimanyu','biswal',22,NULL,'android','2010-02-20'),
+(5,'soni','kumar',24,21800,'.net','2009-06-21'),
+(6,'anu','_singh',22,12000,'db','2010-10-23'),
+(7,'_dinesh','moh%anty',22,15000,'.net','2009-08-26'),
+(8,'nishala','_kumari',22,18000,'db','2008-07-19'),
+(1,'rajeev','sukla',23,12000,'.net','2011-10-23')
+select * from employee
