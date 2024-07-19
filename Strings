@@ -1,1 +1,160 @@
 
+19/07/2024
+1).one
+package patternmatching;
+
+public class One {
+
+	public static void main(String[] args) {
+		for(int i = 1; i  <= 4; i++) {
+			for(int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+2).two
+package patternmatching;
+
+public class Two {
+
+	public static void main(String[] args) {
+		for(int i = 4; i  >= 1; i--) {
+			for(int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+3).three
+package patternmatching;
+
+public class Three {
+
+	public static void main(String[] args) {
+		for(int i = 4; i  >= 1; i--) {
+			for(int j = 4; j > i; j--) {
+			System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+4).four
+package patternmatching;
+
+public class Four {
+
+	public static void main(String[] args) {
+		for(int i = 1; i  <= 4; i++) {
+			for(int j = 4; j > i; j--) {
+			System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+5).five
+package patternmatching;
+
+public class Five {
+
+	public static void main(String[] args) {
+		for(int i = 1; i  <= 4; i++) {
+			for(int j = 1; j <= 4; j++) {
+			System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+6).six
+package patternmatching;
+
+public class Six {
+
+	public static void main(String[] args) {
+		for(int i = 1; i  <= 3; i++) {
+			for(int j = 3; j > i; j--) {
+			System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++) {
+				System.out.print(" *");
+			}
+			System.out.println();
+		}
+		 for (int i = 2; i >= 1; i--) {
+	            for (int j = 3; j > i; j--) {
+	                System.out.print(" ");
+	            }
+	            for (int k = 1; k <= i; k++) {
+	                System.out.print(" *");
+	            }
+	            System.out.println();
+
+	      }
+      }
+}
+7).seven
+package patternmatching;
+
+public class Seven {
+
+	public static void main(String[] args) {
+		for(int i = 3; i  >= 1; i--) {
+			for(int j = 3; j > i; j--) {
+			System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++) {
+				System.out.print(" *");
+			}
+			System.out.println();
+		}
+	}
+}
+8).eight
+package patternmatching;
+
+public class Eight {
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+                if (i == 1 || i == 4 || j == 1 || j == 4) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+9).nine
+package patternmatching;
+
+public class Nine {
+
+	public static void main(String[] args) {
+		for(int i = 1; i <= 5; i++) {
+		for(int j = 1; j <= 9; j++) {
+			if(j>6-i && j<4+i) {
+				System.out.print(" ");
+			}
+			else {
+				System.out.print("*");
+			}
+		}
+      System.out.println();
+	}
+}
+}
+
