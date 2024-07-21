@@ -181,4 +181,132 @@ public class Main
 		System.out.println(OddCount);
 	}
 }
+15).Write a logic to print the sum of even numbers present in the array..?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5,6,7,8,9,10};
+		int sum = 0;
+		for(int i=0;i<=a.length-1;i++){
+		    if(a[i]%2==0){
+		        sum = sum +a[i];
+		    }
+		}
+		System.out.println(sum);
+	}
+}
+16).Write a logic to print the sum of odd numbers present in the array..?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5,6,7,8,9,10};
+		int sum = 0;
+		for(int i=0;i<=a.length-1;i++){
+		    if(a[i]%2 !=0){
+		        sum = sum +a[i];
+		    }
+		}
+		System.out.println(sum);
+	}
+}
+17).write the logic to find the biggest element in the array...?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,20,10,45,3};
+		int max = a[0];
+		for(int i=1;i<=a.length-1;i++){
+		    if(a[i] >max){
+		        max = a[i];
+		    }
+		}
+		System.out.println(max);
+	}
+}
+18).write the logic to find second biggest element in the array...?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a={1,27,9,100,10};
+		int max1=a[0];
+		for(int i=1;i<=a.length-1;i++){
+		    if(a[i]>max1){
+		        max1=a[i];
+		    }
+		}
+		int max2 =a[0];
+		for(int i =1;i<=a.length-1;i++){
+		    if(max1==a[i]){
+		        continue;
+		    }
+		    if(a[i]>max2){
+		        max2 = a[i];
+		    }
+		}
+		System.out.println(max2);
+}
+}
+
+or.....
+
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,20,10,45,3};
+		int firstmax = a[0];
+		for(int i=1;i<=a.length-1;i++){
+		    if(a[i] >firstmax){
+		        firstmax = a[i];
+		       
+		    }
+		 
+		}
+		System.out.println(firstmax);
+		
+		int secondmax = a[0];
+		for(int i =1;i<=a.length-1;i++){
+		    if(a[i] == firstmax){
+		    continue;
+		    }
+		    if(a[i] >secondmax && secondmax < firstmax){
+		        secondmax=a[i];
+		    } 	       
+	 }
+	 System.out.println(secondmax);		
+	}	
+}
+19).write a logic to find how many number of times each array element is repeating in the array...?
+public class Main
+{
+    public static void main(String[] args) {
+        int[] a = {1, 20, 10, 45, 20};
+        
+        // Loop through each element in the array
+        for (int i = 0; i < a.length; i++) {
+            int count = 0;
+            int temp = a[i];
+            
+            // Count occurrences of the current element
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == temp) {
+                    count++;
+                }
+            }
+            
+            // Print count only if this element has not been counted before
+            boolean isAlreadyCounted = false;
+            for (int k = 0; k < i; k++) {
+                if (a[k] == temp) {
+                    isAlreadyCounted = true;
+                    break;
+                }
+            }
+            
+            if (!isAlreadyCounted) {
+                System.out.println("The element " + temp + " is repeating " + count + " times");
+            }
+        }
+    }
+}
+
 
