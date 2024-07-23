@@ -177,4 +177,121 @@ public class Six {
 }
 23/07/2024
 1).WAP to print the string characters one by one using Strings...?
+package strings;
+
+public class String1 {
+
+	public static void main(String[] args) {
+		String s = "palle";
+		System.out.println(s);
+		for(int i = 0;i<=s.length()-1;i++) {
+			System.out.println(s.charAt(i));
+		}
+	}
+}
+or
+package strings;
+
+public class String1 {
+
+	public static void main(String[] args) {
+		String s = "palle";
+		System.out.println(s);
+		String s1 = "";
+		for(int i = 0;i<=s.length()-1;i++) {
+			//System.out.println(s.charAt(i));
+			s1 = s1 + s.charAt(i);
+		}
+		System.out.println(s1);
+	}
+}
+
+2).WAP to print the string characters one by one using Strings in a reverse order...?
+package strings;
+
+public class String2 {
+
+	public static void main(String[] args) {
+		String s = "palle";
+		System.out.println(s);
+		for(int i = s.length()-1; i >= 0; i--) {
+			System.out.println(s.charAt(i));
+		}
+	}
+}
+3).WAP to print the reverse of the string ...?
+package strings;
+
+public class String3 {
+
+	public static void main(String[] args) {
+		String s = "palle";
+		System.out.println(s);
+		String s1 = "";
+		for(int i =s.length()-1;i>=0;i--) {
+			s1 = s1 + s.charAt(i);
+		}
+		System.out.println(s1);
+	}
+}
+4).WAP to print the reverse of the string and also check whether the string is palindrome or not...?
+package strings;
+
+public class StringPalindrome {
+
+	public static void main(String[] args) {
+		String s = "palle";
+		System.out.println(s);
+		String s1 = "";
+       for(int i = s.length()-1;i>=0;i--) {
+    	   s1 = s1 + s.charAt(i);
+       }
+       if(s1.equals(s)) {
+    	   System.out.println("it is palindrome");
+       }
+       else {
+    	   System.out.println("it is not palindrome");
+       }
+}
+}
+5).WAP to print welcome becomes welemoc using strings...?
+package strings;
+
+public class WelocomeBecomesWelemoc {
+
+	public static void main(String[] args) {
+		String s = "welcome";
+		for(int i =0;i<=s.length()-5;i++) {	
+			System.out.print(s.charAt(i));
+		}
+		String s1 = "";
+		for(int j =s.length()-1;j>=3;j--) {
+			s1 = s1+s.charAt(j);
+		}
+			System.out.println(s1);	
+	}
+}
+6).WAP to to replace the vowels in the string with $..?
+like welcome becomes w$lc$m$
+package strings;
+
+public class VowelReplacement {
+
+	public static void main(String[] args) {
+		String s = "welcome";
+		char ch ='$';
+		String res = "";
+		for(int i = 0;i<=s.length()-1;i++) {
+			
+			if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u') {
+				res = res + ch;
+			}
+			else {
+				res = res + s.charAt(i);
+			}
+		}
+		System.out.println(res);
+	}
+}
+
 
