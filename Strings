@@ -293,5 +293,184 @@ public class VowelReplacement {
 		System.out.println(res);
 	}
 }
+or
+package strings;
 
+public class VowelRep2 {
 
+	public static void main(String[] args) {
+		String s = "welcome";
+		String s1 = "";
+		for(int i = 0;i <= s.length()-1;i++) {
+			if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u') {
+				s1 = s1 + '$';
+			}
+			else {
+				s1 = s1 + s.charAt(i);
+			}
+		}
+        System.out.println(s1);  
+	}
+}
+24/07/2024
+1).WAP to count the number of vowels in the array..?
+package strings;
+
+public class CountVowelsOfString {
+
+	public static void main(String[] args) {
+		String s = "hi good morning";
+		int count = 0;
+		for(int i=0; i <= s.length()-1; i++) {
+			if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u') {
+				count = count + 1;
+			}
+		}
+        System.out.println(count);
+	}
+}
+2).WAP to count the number of words in the array..?
+package strings;
+
+public class CountNumOfWords {
+
+	public static void main(String[] args) {
+		String s = "hi good eveneing";
+		int count = 1;
+		for(int i =0; i <= s.length()-1; i++) {
+			if(s.charAt(i)== ' ') {
+				count = count + 1;
+			}
+		}
+        System.out.println(count);
+	}
+}
+3).WAP to halfreverse of the string  ...?
+package strings;
+
+public class HalfReverseTheString {
+
+	public static void main(String[] args) {
+		String s = "welcome";
+		String s1 = "";
+		for(int i = 0; i < s.length()/2; i++) {
+			s1 = s1 +s.charAt(i);
+		}
+		for(int i = s.length()-1; i >= s.length()/2; i--) {
+			s1 = s1 +s.charAt(i);
+		}
+        System.out.println(s1);
+	}
+}
+4).........METHODS IN THE STRINGS...........
+package strings;
+
+public class MethodsInStrings {
+
+	public static void main(String[] args) {
+		/*1).charAt(int index)
+		String s = "palle";
+		System.out.println(s.charAt(4));*/
+		/*2).concat(String str)
+		String s = "palle";
+		System.out.println(s.concat("tech"));
+		System.out.println(s.concat(" tech"));*/
+		/*3).contains(String str)
+		String s ="palle";
+		System.out.println(s.contains(s));
+		System.out.println(s.contains(""));
+		System.out.println(s.contains("Palle"));
+		System.out.println(s.contains("palle"));
+		System.out.println(s.contains("tech"));*/
+		/*4).equals(Object anObject)
+        String s = "palle";
+        String s1 = "tech";
+        System.out.println(s.equals(s1));
+        System.out.println(s.equals("palle"));
+        System.out.println(s.equals("tech"));
+        System.out.println(s.equals("Palle"));*/
+		/*5).equalsIgnoreCase(String anotherString)
+		String s = "palle";
+		String s1 = "PALLE";
+		System.out.println(s.equalsIgnoreCase(s1));
+		String s2 = "paLLE";
+		System.out.println(s.equalsIgnoreCase(s2));*/
+		/*6).indexOf(int char)
+		String s = "palle";
+		System.out.println(s.indexOf('o'));
+		System.out.println(s.indexOf('p'));
+		System.out.println(s.indexOf('P'));
+		System.out.println(s.indexOf('0'));
+		System.out.println(s.indexOf('%'));
+		System.out.println(s.indexOf('l'));
+		System.out.println(s.indexOf('l'));*/
+		/*7).indexOf(String str)
+		String s = "palle IT technology";
+		System.out.println(s.indexOf(""));
+		System.out.println(s.indexOf("IT"));
+		System.out.println(s.indexOf("te"));
+		System.out.println(s.indexOf("palle"));
+		System.out.println(s.indexOf("it"));
+		System.out.println(s.indexOf("logy"));*/
+		/*8).lastIndexOf(int char)
+		String s = "palle";
+		String s1 = "technology";
+		System.out.println(s.lastIndexOf('t'));
+		System.out.println(s1.lastIndexOf('t'));
+		System.out.println(s.lastIndexOf('l'));
+		System.out.println(s1.lastIndexOf('y'));
+		System.out.println(s1.lastIndexOf('Y'));
+		System.out.println(s.lastIndexOf('A'));
+		System.out.println(s.lastIndexOf('e'));*/
+		/*9).lastIndexOf(String str)
+		String s = "palle";
+		String s1 = "technology";
+        System.out.println(s.lastIndexOf(s));
+        System.out.println(s.lastIndexOf(s1));
+        System.out.println(s.lastIndexOf("logy"));
+        System.out.println(s.lastIndexOf("palle"));
+        System.out.println(s.lastIndexOf("tech"));
+        System.out.println(s1.lastIndexOf("logy"));
+        System.out.println(s1.lastIndexOf("gy"));
+        System.out.println(s.lastIndexOf("le"));
+        System.out.println(s.lastIndexOf("ll"));
+        System.out.println(s.lastIndexOf("l"));*/
+		/* 10).length()
+		 String s = "palle";
+		 System.out.println(s.length());
+		 System.out.println(s.length());*/
+		/*11).replace(char oldchar, char newchar)
+		String s = "palle";
+		String s1 = "tech";
+		System.out.println(s.replace('a', '$'));
+		System.out.println(s.replace('l', '&'));
+		System.out.println(s1.replace('h', '+'));
+		System.out.println(s.replace('e', 'k'));*/
+		/*12).replace(String str)
+		String s = "sahana";
+		System.out.println(s.replace("sa", "ka"));
+		System.out.println(s.replace("ha", "$&"));*/
+		/*13).subString(int begining index)
+		String s = "palle it tech";
+		System.out.println(s.substring(0));
+		System.out.println(s.substring(4));
+		System.out.println(s.substring(10));
+		System.out.println(s.substring(-1));*/
+		/*14).sustrign(int begining index, int endindex)
+		String s = "palle";
+		String s1 = "sahanamm";
+		System.out.println(s.substring(0, 2));
+		System.out.println(s.substring(3) );
+		System.out.println(s1.substring(2, 5));*/
+		/*15).toLowerCase()
+		String s = "paLle";
+		String s1 = "TECHnolYYY";
+		System.out.println(s.toLowerCase());
+		System.out.println(s1.toLowerCase());*/
+		//16).toUpperCase()
+		String s = "palle";
+		String s1 = "palLE TECHNOLOGY .cOm";
+		System.out.println(s.toUpperCase());
+		System.out.println(s1.toUpperCase());
+	}
+}
