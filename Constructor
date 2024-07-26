@@ -1,1 +1,102 @@
+"CONSTRUCTORS"
+Constructors are the special type of fenctions/methods
+here we need to know three scenarios....
+1).same number of parameters with different datatype....?
+package constructors;
 
+public class ConstructorEx {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+class Test{
+	public Test(int x) {
+		
+	}
+	public Test(float x) {
+		
+	}
+}
+2).different number of paramenters of same datatype....?
+package constructors;
+
+public class ConstructorEx2 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+class Test1{
+	public Test1(int x) {
+		
+	}
+	public Test1(int x,float y) {
+		
+	}
+}
+3).same number of parameters in different order....?
+package constructors;
+
+public class ConstructorEx3 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+class Test2{
+	public Test2(int x,float f,String s) {
+		
+	}
+	public Test2(int x,String s,float f) {
+		
+	}
+    public Test2(String s,float f,int x) {
+		
+	}
+}
+4).Constructors properties...?
+package constructors;
+
+public class ConstructorProperties {
+
+	public static void main(String[] args) {
+		Test5 t = new Test5(2,"saan"); 
+		
+	}
+
+}
+class Test5{
+	public Test5(int x,String s) {
+		System.out.printf("it is " + x +  s);
+	}
+}
+5).one example..?
+package constructors;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		Hospital h1 = new Hospital("sahana",22);
+		Hospital h2 = new Hospital(21,"saan");
+		Hospital h3 = new Hospital(20,"sahani");
+	}
+
+}
+class Hospital{
+	public Hospital(String name1,int age1) {
+		System.out.println(name1 + age1);
+	}
+	public Hospital(int age2,String name2) {
+		System.out.println(name2 + age2);
+	}
+	public Hospital(byte age4,String name4) {
+		System.out.println(age4);
+	}
+}
