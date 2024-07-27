@@ -1,5 +1,5 @@
 
-19/07/2024
+19/07/2024                                       
 1).one
 package patternmatching;
 
@@ -474,3 +474,12 @@ public class MethodsInStrings {
 		System.out.println(s1.toUpperCase());
 	}
 }
+
+
+    *
+  * * *
+* * * * *
+
+
+
+
