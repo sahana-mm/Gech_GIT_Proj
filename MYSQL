@@ -1,1 +1,24 @@
+28/07/2004
+1).create database student
+use student
+create table stud(stud_id int,stud_name vachar(40),stud_age int,stud_dob date)
+insert into stud values(1,'san',20,'2002-07-31'),
+(2,'sahani',21,'2002-07-30'),
+(3,'sanvi',23,'2002-07-22'),
+(4,'saan',25,'2002-07-26'),
+(5,'sahana',22,'2002-07-17')
+select * from stud
 
+create database palletechnologies
+use palletechnologies
+create table product(pid int,pname varchar(40),cost int,manufact_date date)
+
+alter table product add manufact_name varchar(40)
+
+ALTER TABLE product RENAME COLUMN manufact_name TO manufacts_date
+ALTER TABLE product RENAME COLUMN manufact_date TO manufacts_name
+
+select * from product
+insert  into product values(1,'lux',34,'hul','2017-12-12'),
+(2,'sandal',35,'godrej','2017-11-10'),
+(3,'liril',36,'huli','2017-10-11')
