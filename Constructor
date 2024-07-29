@@ -100,3 +100,104 @@ class Hospital{
 		System.out.println(age4);
 	}
 }
+
+29/07/2024
+1).
+here we are not specifying this keyword and local variables and instance variables name are same.
+here what happens is the jvm will always prefer the local variables
+thats why the jvm will fetch the local variables values and  
+assign those values which are present in the stack itself 
+thats why output is null for string variable and 0  for integer variable.
+package constructors;
+
+public class Costruct {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("sahana",21);
+		Student s2 = new Student("sahani",20);
+		Student s3 = new Student("saan",22);  
+		s1.display();
+		s2.display();
+		s3.display();
+	}
+}
+class Student{
+	public String name;
+	public int age;
+	public Student(String name,int age) {
+		name = name;
+		age = age;
+	}
+	public void display() {
+		System.out.println(name);
+		System.out.println(age);		
+	}	
+}
+here we are not specifying this keyword and local variables and instance variables name are same.
+here what happens is the jvm will always prefer the local variables
+thats why the jvm will fetch the local variables values and  
+assign those values which are present in the stack itself 
+thats why output is null for string variable and 0  for integer variable.
+2).here we are assigning different variable names to the different variables like instance and local variables.
+and here we are fetching the values and print the values without any issues
+package constructors;
+
+public class Student1 {
+
+	public static void main(String[] args) {
+		Student3 s1 = new Student3("sahana",21);
+		Student3 s2 = new Student3("sahani",20);
+		Student3 s3 = new Student3("saan",22);  
+		System.out.println("1st student detais");
+		s1.display();
+		System.out.println("2nd student detais");
+		s2.display();
+		System.out.println("3rd student detais");
+		s3.display();
+	}
+}
+class Student3{
+	public String name;
+	public int age;
+	public Student3(String n,int a) {
+		name = n;
+		age = a;
+	}
+	public void display() {
+		System.out.println(name);
+		System.out.println(age);		
+	}	
+}
+here we are assigning different variable names to the different variables like instance and local variables.
+
+3).using keyword we are declaring that this keyword is responsible for creating the objects in the
+heap location and normal variables are local variables...
+package constructors;
+
+public class MainExample {
+
+	public static void main(String[] args) {
+		Stud s1 = new Stud("sahana",21);
+		Stud s2 = new Stud("sahani",20);
+		Stud s3 = new Stud("saan",22);  
+		System.out.println("1st student detais");
+		s1.display();
+		System.out.println("2nd student detais");
+		s2.display();
+		System.out.println("3rd student detais");
+		s3.display();
+	}
+}
+class Stud{
+	public String name;
+	public int age;
+	public Stud(String name,int age) {
+		this.name = name;
+		this.age = age;
+	}
+	public void display() {
+		System.out.println(name);
+		System.out.println(age);		
+	}
+}
+here jvm will come to know that the this.name and this.age are instance variables and the are created in the heap location. 
