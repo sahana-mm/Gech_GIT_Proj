@@ -201,3 +201,74 @@ class Stud{
 	}
 }
 here jvm will come to know that the this.name and this.age are instance variables and the are created in the heap location. 
+
+30/07/2024
+1).package constructors;
+
+public class CreateDoctorPatientNurse {
+
+	public static void main(String[] args) {
+	   Doctor d = new Doctor("sachin",10);  
+	   Patient p = new Patient("kumar","Viral fever");
+	   Nurse n = new Nurse("kavya","OT");
+	   System.out.println("DOCTOR DETAILS");
+	   d.display();
+	   System.out.println("PATIENT DETAILS");
+	   p.display();
+	   System.out.println("NURSE DETAILS");
+	   n.display();
+
+	}
+
+}
+class Doctor{
+	public String dname;
+	public int dexp;
+	public Doctor(String dname, int dexp) {
+		this.dname=dname;
+		this.dexp=dexp;
+	}
+	public void display() {
+		System.out.println(dname);
+		System.out.println(dexp);
+	}
+}
+
+class Patient{
+	public String pname;
+	public String pdis;
+	public Patient(String pname,String pdis) {
+		this.pname=pname;
+		this.pdis=pdis;
+	}
+	public void display() {
+		System.out.println(pname);
+		System.out.println(pdis);
+	}
+}
+
+class Nurse{
+	public String Nname;
+	public String Nspec;
+	public Nurse(String Nname,String Nspec) {
+		this.Nname=Nname;
+		this.Nspec=Nspec;
+	}
+	public void display() {
+		System.out.println(Nname);
+		System.out.println(Nspec);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
