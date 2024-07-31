@@ -334,4 +334,150 @@ public class Main
     }
 }
 
+31/07/2024
+1).how many times the element in the array is repeating print like that...?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,2};
+		for(int i=0;i<=a.length-1;i++){
+		    if(a[i]!=Integer.MIN_VALUE){
+		        int count =1;
+		        for(int j=i+1;j<=a.length-1;j++){
+		            if(a[i]==a[j]){
+		                count = count + 1;
+		                a[j]=Integer.MIN_VALUE;
+		            }
+		        }
+		        System.out.println(a[i] + " is repeating " + count + " times");
+		    }
+		}
+	}
+}
+2).WAP to print the array elements 0's to left side of array and 1's to right side of the array...?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,0,1,0,1};
+		int zerocount = 0;
+		for(int i=0;i<=a.length-1;i++){
+		    if(a[i]==0){
+		        zerocount = zerocount + 1;
+		    }
+		}
+		for(int i=0;i<=a.length-1;i++){
+		    if(i<=zerocount){
+		        a[i]=0;
+		    }
+		    else{
+		        a[i]=1;
+		    }
+		}
+		for(int i=0;i<=a.length-1;i++){
+		System.out.print(a[i] + " ");
+	}
+}
+}
+3).take an arry1 with 10 elements and copy those array1 elements into the array2 using for loop...?
 
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a1 = {1,2,1,7,1,8};
+		int[] a2 = new int[a1.length];
+		for(int i=0;i<=a1.length-1;i++){
+		    a2[i]= a1[i];
+	}
+	for(int i=0;i<=a2.length-1;i++){
+	    System.out.print(a2[i] + " ");
+    }
+  }
+}
+4).take 2 arrays with 10 numbers and find the common elements of both the arrays...?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a1 = {1,2,9,7,8};
+		int[] a2 = {1,2,3,4,5};
+		System.out.println("common elements are: ");
+		for(int i=0;i<=a1.length-1;i++){
+		    for(int j=0;j<=a2.length-1;j++){
+		  if(a1[i]==a2[j]){
+		      System.out.print(a1[i] + " ");
+		      break;
+		  }
+        }
+      }
+}
+}
+5).take array1 with 10 elements copy array1 elements to array2 in reverse order..?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a1 = {1,2,9,7,8};
+		int[] a2 = new int[a1.length];
+		
+		for(int i=a1.length-1;i>=0;i--){
+		    a2[i]= a1[a1.length-1-i];
+		}
+		for(int i=0;i<=a2.length-1;i++){
+		      System.out.print(a2[i] + " ");
+		      
+		  }
+    }
+}
+6).copy array1 and array2 elements to array3 in the sequence array1 elements must be 
+copied first fallowed by array2 to array3..?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a1 = {1,2,3};
+		int[] a2 = {4,5,6};
+		int[] a3 = new int[a1.length+a2.length];
+		
+		for(int i=0;i<=a1.length-1;i++){
+		    a3[i]= a1[i];
+		}
+		for(int i=0;i<=a2.length-1;i++){
+		    a3[a1.length+i] = a2[i];
+		}
+		for(int i=0;i<=a3.length-1;i++){
+		      System.out.print(a3[i] + " ");
+		      
+		  }
+    }
+}
+7).take an int array with 10 elements andd print difference between sum of even and sum of odd elements in the array..?
+public class Main
+{
+	public static void main(String[] args) {
+		int[] a = {1,2,3,4,5,6,7,8,9,10};
+	        int esum = 0;
+	        int osum = 0;
+		
+		for(int i=0;i<=a.length-1;i++){
+		    if(a[i] % 2 == 0){
+		        esum = esum + a[i];
+		    }
+		    else{
+		        osum = osum + a[i];
+		    }
+		}
+		int diff = esum - osum;
+		      System.out.print("the difference is " + diff);
+		      
+    }
+}
+8).print the array in reverse order..?
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		int[] a = {1,2,3,4,5,6,7,8,9,10};
+		
+		for(int i=a.length-1;i>=0;i--){
+		    
+		      System.out.print(a[i] + " ");
+		}
+    }
+}
