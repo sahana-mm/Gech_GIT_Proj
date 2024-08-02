@@ -688,3 +688,31 @@ public class ArrayBiggestElement {
 			System.out.println(big);
 	}
 }
+
+02/08/2024
+1).how to delete the last element of the array..?
+public class Main {
+    public static void main(String[] args){
+        int[] array = {1, 2, 3, 4, 5};
+        System.out.println("Original array:");
+        printArray(array);
+        int[] newArray = deleteLastElement(array);
+        System.out.println("Array after deleting the last element:");
+        printArray(newArray);
+    }
+
+    public static int[] deleteLastElement(int[] array) {
+        int[] newArray = new int[array.length - 1];
+
+         System.arraycopy(array, 0, newArray, 0, array.length - 1);
+
+        return newArray;
+    }
+
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+}
