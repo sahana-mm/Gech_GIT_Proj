@@ -299,7 +299,122 @@ class Bank{
 	}
 }
 
+02/08/2024
+Inheritance....
+1).package inheritance;
 
+public class Inheritance1 {
+
+	public static void main(String[] args) {
+    B b = new B();
+    System.out.println(b.x);
+    System.out.println(b.y);
+
+	}
+
+}
+class A{
+	public int x = 10;
+}
+class B extends A{
+	public int y = 20;
+}
+2).package inheritance;
+
+public class Inheritance2 {
+
+	public static void main(String[] args) {
+		N n = new N();
+		System.out.println(n.x);
+		System.out.println(n.y);
+		//System.out.println(n.t);
+
+	}
+
+}
+class M {
+	//public int t = 10; 
+	public int x = 10; 
+}
+class N extends M{
+	public int y = 20;
+	public int x = 30;
+} here we are not able to access the value of x which is present in the M class(parent class).
+
+3).package inheritance;
+
+public class Inheritance3 {
+
+	public static void main(String[] args) {
+		E e = new E();
+		System.out.println(e.x);
+		System.out.println(e.y);
+		System.out.println(e.z);
+
+	}
+
+}
+class C{
+	public int x = 10;
+}
+class D extends C{
+	public int y = 20;
+}
+class E extends D{
+	public int z = 30;
+}
+4).methods creation in inheritance..?
+package inheritance;
+
+public class InheritanceMethods {
+
+	public static void main(String[] args) {
+		P p = new P();
+		p.happy();
+		p.sad();
+	}
+
+}
+class O {
+	public void happy() {
+		System.out.println("I am happy");
+	}
+}
+class P extends O{
+	public void sad() {
+		System.out.println("I am sad");
+	}
+}
+5).constructor used in inheritance 
+creation of constructor in inheritance
+// Base class (Parent)
+class Animal {
+    Animal() {
+        System.out.println("Animal constructor called");
+    }
+}
+
+// Derived class (Child)
+class Dog extends Animal {
+    Dog() {
+        super(); // Call the base class constructor
+        System.out.println("Dog constructor called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog(); // Create a Dog object
+    }
+}
+
+vvvvvvvvvvvvimp*************
+can we inherit constructors..." no"
+In Java, constructors are not inherited by subclasses. 
+However, you can call a superclass constructor from 
+a subclass constructor using the super keyword.
+This allows you to initialize the superclass part of 
+an object when creating a subclass object.
 
 
 
