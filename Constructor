@@ -415,6 +415,45 @@ However, you can call a superclass constructor from
 a subclass constructor using the super keyword.
 This allows you to initialize the superclass part of 
 an object when creating a subclass object.
+// Base class (Parent)
+class Animal {
+    String name;
+
+    // Constructor of base class
+    Animal(String name) {
+        this.name = name;
+        System.out.println("Animal constructor called");
+    }
+
+    void display() {
+        System.out.println("Animal Name: " + name);
+    }
+}
+
+// Derived class (Child)
+class Dog extends Animal {
+    int age;
+
+    // Constructor of derived class
+    Dog(String name, int age) {
+        // Call the constructor of the base class
+        super(name);
+        this.age = age;
+        System.out.println("Dog constructor called");
+    }
+
+    void display() {
+        super.display();
+        System.out.println("Dog Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog("Buddy", 5);
+        d.display();
+    }
+}
 
 
 
