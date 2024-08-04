@@ -481,3 +481,25 @@ public class Main
 		}
     }
 }
+04/08/2024
+1).print the words of the string in reverse order....?
+public class Main
+{
+    public static void main(String[] args) {
+        String s1 = "sahana mm hassan";
+        String s2 = "";
+        String s3 = "";
+        
+        for (int i = s1.length() - 1; i >= 0; i--) {
+            if (s1.charAt(i) == ' ') {
+                s2 = s2 + s3 + " ";
+                s3 = "";  // Reset s3 after appending
+            } else {
+                s3 = s1.charAt(i) + s3;
+            }
+        }
+        
+        s2 = s2 + s3;  // Append the last reversed word
+        System.out.println(s2.trim());  // Trim any extra spaces
+    }
+}
