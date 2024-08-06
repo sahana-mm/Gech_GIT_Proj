@@ -503,3 +503,51 @@ public class Main
         System.out.println(s2.trim());  // Trim any extra spaces
     }
 }
+
+06/08/2024
+1).print the array2 and array3 by uing array1 take 10 elements in array1 and 
+store the even index numbers in arra2 and print at end and also 
+store the odd index numbers into the array3 and print it..?
+public class Main {
+    public static void main(String[] args) {
+        int[] a1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] a2 = new int[a1.length];
+        int[] a3 = new int[a1.length];
+        int evenIndex = 0;
+        int oddIndex = 0;
+
+        for (int i = 0; i <= a1.length - 1; i++) {
+            if (i % 2 == 0) {
+                a2[evenIndex++] = a1[i];
+            } else {
+                a3[oddIndex++] = a1[i];
+            }
+        }
+
+        System.out.print("Array a2 (even indices): ");
+        for (int i = 0; i < evenIndex; i++) {
+            System.out.print(a2[i] + " ");
+        }
+        System.out.println();
+
+        System.out.print("Array a3 (odd indices): ");
+        for (int i = 0; i < oddIndex; i++) {
+            System.out.print(a3[i] + " ");
+        }
+    }
+}
+
+2).take two strings s1="abc" and s2 = "xyz" and strore the values to empty string s3 
+and print value like "azbycx" at end...?
+public class Main {
+    public static void main(String[] args) {
+        String s1 = "abc";
+        String s2 = "xyz";
+        String s3 = "";
+        for (int i = 0; i < s1.length(); i++) {
+            s3 += s1.charAt(i);
+            s3 += s2.charAt(s2.length() - 1 - i);
+        }
+        System.out.println(s3);
+    }
+}
