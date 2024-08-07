@@ -1,1 +1,43 @@
+1).Constructors not used in inheritance...?
+package encapsulation;
 
+public class Case1ConstructorInInheritance {
+
+	public static void main(String[] args) {
+	H h = new H(10);
+	}
+}
+class G{
+	public G() {
+		System.out.println("Hello sahana");
+	}
+}
+class H extends G{
+	public H(int g) {
+		System.out.println("hi");
+		System.out.println(g);
+	}
+}
+2).Constructors are used in inheritance ...?
+package encapsulation;
+
+public class Case2ConstructorInInheritance {
+
+	public static void main(String[] args) {
+		V v = new V("sahana");
+	}
+}
+class D{
+	public D (int k) {
+		System.out.println("hello");
+		System.out.println(k);
+	}
+}
+class V extends D{
+	public V(String s) {
+	super(40);
+	System.out.println("hi");
+	System.out.println(s);
+	
+    }
+}
