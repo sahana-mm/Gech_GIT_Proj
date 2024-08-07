@@ -41,3 +41,25 @@ class V extends D{
 	
     }
 }
+3).Object Class 
+package encapsulation;
+
+public class ObjectClass {
+
+	public static void main(String[] args) {
+		H h = new H(10);
+	}
+}
+class T extends Object{  // here it is okay to give extends Object or not
+	public T() {
+		System.out.println("Hello sahana");
+	}
+}
+class K extends T{
+	public K(int g) {
+		System.out.println("hi");
+		System.out.println(g);
+	}
+} 
+
+
