@@ -454,7 +454,80 @@ public class Main {
         d.display();
     }
 }
+09/08/2024
+1**********method overloading*****************
+package methodoverloading;
 
+public class MethodOverloading1 {
+
+	public static void main(String[] args) {
+		Calculator c = new Calculator();
+		int r1 = c.add(3,4);
+		System.out.println(r1);
+		int r2 = c.add(3, 4, 6);
+		System.out.println(r2);
+		double r3 = c.add(4.8765d, 8);
+        System.out.println(r3);
+	}
+
+}
+class Calculator{
+	public int add(int n1,int n2) {
+		return n1 +n2;
+	}
+	public int add(int n1,int n2,int n3) {
+		return n1+n2+n3;
+	}
+	public double add(double n1,int n2) {
+		return n1+n2;
+	}
+}
+******************key points******************************
+Same Method Name: Method overloading allows multiple methods with the same name within 
+a class but with different parameter lists.
+Different Parameters: The overloaded methods must differ in the number of parameters,
+types of parameters, or both. They can also differ in the sequence of parameter types.
+Compile-Time Polymorphism: Overloading is a form of compile-time polymorphism,
+meaning the correct method is determined during compile time.
+Improves Code Readability: It groups related methods under a single name,
+making the code more intuitive and easier to read.
+Cannot Overload by Return Type Alone: Overloading cannot be achieved by changing only 
+the return type of methods; the parameter list must be different.
+2******************method overriding***********************
+package methodoverriding;
+
+public class MethodOverriding {
+
+	public static void main(String[] args) {
+		Calculator c = new Calculator();
+		int r1 = c.add(3, 4);
+		System.out.println(r1);  // Output: 7
+		
+		AdvancedCalculator ac = new AdvancedCalculator();
+		int r2 = ac.add(3, 4);
+		System.out.println(r2);  // Output: 14 (Overridden method in AdvancedCalculator)
+	}
+
+}
+
+class Calculator {
+	public int add(int n1, int n2) {
+		return n1 + n2;  // Adds the two numbers
+	}
+}
+
+class AdvancedCalculator extends Calculator {
+	@Override
+	public int add(int n1, int n2) {
+		return (n1 + n2) * 2;  // Overrides the add method to double the sum
+	}
+}
+*********************key points to remember*******************
+Method overriding allows the subclass (AdvancedCalculator) to modify the behavior of
+a method (add) inherited from the superclass (Calculator).
+The @Override annotation is used to indicate that a method is being overridden.
+When the add method is called on an AdvancedCalculator object, the overridden 
+version is executed, showing how the subclass can customize or extend the behavior of its superclass.
 
 
 
