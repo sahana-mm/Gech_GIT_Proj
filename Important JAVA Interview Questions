@@ -1,3 +1,4 @@
+ACCENTURE CODING INTERVIEW QUESTIONS
 1).given the string "Cloud Tech" replace the C character and we get only "loud Teh" as my output...?
 a).this is the one way to get the output like loud Teh.....using build in string methods....!
 public class Main {
@@ -98,4 +99,37 @@ public class Main {
             System.out.println(number + " is not a strong number.");
         }
     }
+}
+COGNIZANT INTERVIEW QUESTIONS
+4).Here i need to print first even numbers of array into the resultant array and odd numbers at the end of the resultant array....?
+package progs;
+
+public class AddEvenNumbersFirstThenOddNumbersAtTheEndOfArray {
+
+	public static void main(String[] args) {
+		int[] arr1 = {1,2,5,4,7,8,11,20};
+		 arryEvenAndOdd(arr1);
+
+	}
+	public static void arryEvenAndOdd(int[] arr) {
+		int[] a = new int[arr.length];
+		int index = 0;
+		//add all even numbers into the resultant array
+		for(int i=0; i < arr.length;i++) {
+			if(arr[i]%2 == 0) {
+				a[index]= arr[i];
+				index++;
+			}
+		}
+		//add all odd numbers into the resultant array
+		for(int i=0; i < arr.length;i++) {
+			if(arr[i]%2 != 0) {
+				a[index]= arr[i];
+				index++;
+			}
+		}
+		for(int i=0;i<a.length;i++) {
+			System.out.print(a[i] + ", ");
+		}
+	}
 }
