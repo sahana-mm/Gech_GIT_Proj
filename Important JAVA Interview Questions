@@ -1,1 +1,101 @@
+1).given the string "Cloud Tech" replace the C character and we get only "loud Teh" as my output...?
+a).this is the one way to get the output like loud Teh.....using build in string methods....!
+public class Main {
+    
+    public static void main(String[] args) {
+        String str = "Cloud TeCh";
+        System.out.println(str.replaceAll("C",""));
+        
+    }
+}
+b).without using the built in methods of string...
+public class Main {
+    
+    public static void main(String[] args) {
+        String str = "Cloud TeCh";
+        char ch = 'C';
+        removeChar(str,ch);
+    }
+    public static void removeChar(String str , char c){
+        int n = str.length();
+        String finalStr = "";
+        for(int i=0;i<n;i++){
+            if(str.charAt(i) != c){
+                finalStr = finalStr + str.charAt(i);
+            }
+        }
+        System.out.println(finalStr);
+    }
+}
+2).here what i need to print is if the array elements are present in both the arrays are same or not...
+no matter the position of the elements in both  the arrays and both arrays are of same size..?
+(we need to compare two arrays are same or not but the order of the elements in the array doesn't matter...)
+package progs;
 
+import java.util.Arrays;
+
+public class ArraysEqualness {
+    
+    public static void main(String[] args) {
+        int[] arr1 = {3,2,5,7};
+        int[] arr2 = {2,3,5,7};
+        if(areEqual(arr1,arr2)){
+            System.out.println("two arrays are equal");
+        }
+        else{
+            System.out.println("two arrays are not equal");
+        }
+    }
+    public static boolean areEqual(int[] arr1,int[] arr2){
+        int n = arr1.length;
+        int m = arr2.length;
+        if(n != m){
+            return false;
+        }
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        for(int i=0;i<n;i++){
+            if(arr1[i]!=arr2[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+        
+}
+3).WAP to find the number is Strong number or not .....?
+ex:145->1!+4!+5!=145 the it is strong number else it is not a strong number...?
+public class Main {
+    // Method to calculate the factorial of a digit
+    public static int factorial(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+
+    // Method to check if the number is a strong number
+    public static boolean isStrongNumber(int num) {
+        int originalNum = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += factorial(digit);
+            num /= 10;
+        }
+
+        return sum == originalNum;
+    }
+
+    public static void main(String[] args) {
+        int number = 145;
+
+        if (isStrongNumber(number)) {
+            System.out.println(number + " is a strong number.");
+        } else {
+            System.out.println(number + " is not a strong number.");
+        }
+    }
+}
