@@ -56,3 +56,5 @@ insert into employee values(1,'rajeev','sukla',23,12000,'.net','2011-10-23'),
 (8,'nishala','_kumari',22,18000,'db','2008-07-19'),
 (1,'rajeev','sukla',23,12000,'.net','2011-10-23')
 select * from employee
+
+11/08/2024
