@@ -58,3 +58,200 @@ insert into employee values(1,'rajeev','sukla',23,12000,'.net','2011-10-23'),
 select * from employee
 
 11/08/2024
+INTERVIEW PREPERATION
+use mysql
+create table Employeinfo(empID int,empFname varchar(40),empLname varchar(40),department varchar(40),salary int)
+
+insert into Employeinfo(empID,empFname,empLname,department,salary)values(1,'karan','mehta','HR',300000),
+(2,'rohit','sharma','Admin',75000),
+(3,'anush','rajput','Account',60000),
+(4,'priyanshi','sharma','HR',500000),
+(5,'sanket','gupta','Developer',100000),
+(6,'shruti','kapoor','Admin',80000),
+(2,'rohit','sharma','Admin',75000)
+
+1).write a query to find the third highest salary from the employeeInfo Table
+select salary from Employeinfo order by salary desc limit 2,1
+or
+select * from Employeinfo order by salary desc limit 2,1
+
+2).write a query to get 5 th lowest salary from the employeInfo table
+select salary from Employeinfo order by salary asc limit 4,1
+
+3)write a query to find the Nth highest salary from the table without using top/limit kayword
+if we want to fetch the 3rd highest salary N=3
+select salary from Employeinfo e1 where 2=(select count(distinct salary) 
+from Employeinfo e2 where e2.salary>e1.salary)
+(here N can be 1,2,3,.....so on and the query like select salary from Employeinfo e1 where 2=(select count(distinct salary) 
+from Employeinfo e2 where e2.salary>e1.salary))
+
+4).write the sql query to find the duplicate rows in a table
+select empID,count(empID) from Employeinfo group by empID having count(empID) > 1
+
+5).write a query to calculate even and odd records from the table
+to find even records
+select * from Employeinfo where MOD(empID,2)=0
+to find odd records
+select * from Employeinfo where MOD(empID,2)=1
+
+6).write a query to display the first and the last record from the Employeinfo table
+for to get first record
+select * from Employeinfo where empID = (select min(empID) from Employeinfo)
+for to get the last record
+select * from Employeinfo where empID = (select max(empID) from Employeinfo)
+
+7).how do you copy the all rows of a table using SQL
+create table EmpSalary AS select empID,salary from employeInfo
+select * from EmpSalary
+
+to copy all information into another table 
+create table EmpDetails AS select * from Employeinfo
+
+8).to copy only SCHEMA not the data of the table using this query
+(NOTE: here we are copying the SCHEMA of the table not the data from the table)
+create table EmpCopy AS select * from Employeinfo where 3=4
+select * from EmpCopy
+
+9).write a query to retrieve the list of employees working in the same department
+select distinct e.empID,e.empFname,e.department from Employeinfo e,Employeinfo e1 
+where e.department=e1.department AND e.empID != e1.empID
+
+10).write a query to retrieve last three records from the Employeinfo table
+select * from (select * from Employeinfo order by empID desc limit 3) temp order by empID asc
+or 
+select * from Employeinfo order by empID limit 4,3
+
+11).write a query to fetch details of employees whose empLname ends with alphabet 'a' 
+and contain 5 alphabets from start to end
+select * from Employeinfo where empLname like '----a'
+select * from Employeinfo where empLname like '-----a'
+select * from Employeinfo where empLname like 'r%'
+
+ANOTHER EXAMPLE
+use mysql
+CREATE TABLE Empinfor(id INT(10),name VARCHAR(40),email VARCHAR(40),
+department VARCHAR(40),salary INT,DOB DATE,gender CHAR(1))
+insert into Empinfor(id,name,email,department,salary,DOB,gender)values
+(1,'karan mehta','karan@gmail.com','HR',300000,'1998-05-10','M'),
+(2,'rohit sharma','rohit@gmail.com','Admin',75000,'1997-01-25','M'),
+(3,'ankush rajput','ankush@gmail.com','Accounts',60000,'1998-02-09','M'),
+(4,'priyanshi sharma','priyanshi@gmail.com','HR',500000,'1998-06-15','F'),
+(5,'sanket gupta','sanket@gmail.com','Developer',100000,'1997-05-07','M'),
+(6,'shruthi sharma','shruthi@gmail.com','Admin',80000,'1995-11-26','F'),
+(7,'rohit sharma','rohit@gmail.com','Admin',75000,'1997-01-25','M'),
+(8,'sanket gupta','sanket@gmail.com','Developer',100000,'1997-05-07','M'),
+(9,'geet gour','geet@gmail.com','Tester',17000,'1998-07-03','F')
+select * from Empinfor
+
+12).write a query to delete the duplicate record from the employeInfo tabel 
+delete from Employeinfo e1,Employeinfo e2 where e1.email=e2.email AND e1.id != e2.id
+set sql_safe_updates=0
+DELETE FROM Empinfor WHERE id IN (SELECT id FROM (SELECT e1.id FROM Empinfor e1
+JOIN Empinfor e2 ON e1.email = e2.email WHERE e1.id > e2.id) AS temp)
+select * from Empinfor
+
+13).write a query t retreive the first four characters of employe name from the Empinfor table
+select SUBSTRING(name,1,4) from Empinfor
+
+14).write a query to find number of employees whose DOB is between 01/06/1995 to 30/06/1998
+and are grouped according to gender
+select count(*),gender from Empinfor where DOB between '1995=01-01' AND '1998-06-30' 
+group by gender
+
+note:if we enter the date in any format like mm/dd/yyyy or mm/yyyy/dd or yyyy/dd/mm
+ we need to get output when we use the STR_TO_DATE function
+select count(*),gender from Empinfor where DOB between STR_TO_DATE('01-01-1995','%d/%m/%y')
+AND
+STR_TO_DATE('30-06-1998','%d/%m/%y') group by gender
+
+for ex: STR_TO_DATE('July 01 1995', '%M %d %Y')
+ SELECT STR_TO_DATE('JANUARY 01 1995', '%M %d %Y')
+SELECT STR_TO_DATE('01 august 1995', '%d %M %Y');
+note:here must and should the month and year are in the capital letters
+
+15).write a query to fetch all the records from the Empinfor table ordered by department in ascending 
+order and salary in the descending order
+select * from Empinfor order by department asc,salary desc
+(here first Storage Engine order the departments the aiisgn their particular salaries
+ because in statement we first give like this order by department asc thats why)
+
+16).write a query to fetch details of all employees excluding the employees 
+who are belonged to the HR and Admin department
+select *  from Empinfor where department not in ('HR','Admin')
+
+17).write a query to fetch 50% records from the Empinfor table 
+select * from Empinfor where id <= (select count(id)/2 from Empinfor)
+#.when some records are deleted like 4 is missing from the autoincrementd  id's then what we do is
+set @count = (select count(id)/2 from Empinfor
+PREPARE STMT from select * from Empinfor limit 5
+EXECUTE STMT using @count
+
+**********or***********
+-- Set the count variable
+SET @count = (SELECT COUNT(id) / 2 FROM Empinfor);
+-- Prepare the statement
+PREPARE STMT FROM 'SELECT * FROM Empinfor LIMIT 5';
+-- Execute the prepared statement
+EXECUTE STMT;
+-- Deallocate the prepared statement
+DEALLOCATE PREPARE STMT;
+select * from Empinfor limit 5
+
+Here’s how you can use a variable in a query without needing PREPARE:
+-- Set the variable
+SET @count = (SELECT COUNT(id) / 2 FROM Empinfor);
+-- Use the variable in a query
+SELECT * FROM Empinfor LIMIT @count
+
+DELIMITER //
+CREATE PROCEDURE GetLimitedRecords()
+BEGIN
+    DECLARE limitCount INT;
+    SET limitCount = (SELECT COUNT(id) / 2 FROM Empinfor);
+    
+    SET @sql = CONCAT('SELECT * FROM Empinfor LIMIT ', limitCount);
+    PREPARE STMT FROM @sql;
+    EXECUTE STMT;
+    DEALLOCATE PREPARE STMT;
+END //
+DELIMITER ;
+
+********or**********
+-- Set the variable
+SET @count = (SELECT COUNT(id) / 2 FROM Empinfor);
+-- Prepare the dynamic SQL
+SET @sql = CONCAT('SELECT * FROM Empinfor LIMIT ', @count);
+-- Prepare and execute the statement
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+OTHER WAYS LIKE
+a).using floor to get 4.5->4(values)
+select floor(count(id)/2)from Empinfor
+b).using ceil to get 4.5->5(values)
+select ceil(count(id)/2)from Empinfor
+
+17).write a query to display the total salary of each employee after adding 10%  increment in the salary
+select id,name,salary + (salary/10) AS TotalSalary from Empinfor
+
+18).write a query to retreive two minimum and maximum salaries..?
+a).for minimum salary
+select distinct salary from Empinfor e1 where 2 >= (select count(distinct salary) 
+from Empinfor e2 where e1.salary >= e2.salary) order by e1.salary asc
+b).for maximum salary
+select distinct salary from Empinfor e1 where 2 >= (select count(distinct salary) 
+from Empinfor e2 where e1.salary <= e2.salary) order by e1.salary desc
+
+19).write a query to fetch the Empinfor name and replace the space with '_'..?
+here we can easily get it by using the "REPLACE" function...
+select REPLACE(name,' ','_') from  Empinfor
+
+20).write a query to fetch the employee gender and replace the 'M'  with 'male'..?
+select *,REPLACE(gender,'M','male') from Empinfor
+
+21).write a query to fetch the employee gender and replace the 'F'  with 'female_employee'..?
+select *,REPLACE(gender,'F','female_employee') from Empinfor
+
+22).write a query to fetch the employee gender and replace the 'M'  with 'male' and 'F' with 'female'..?
+select *,REPLACE(REPLACE(gender,'M','male'),'F','female') from Empinfor
+SELECT *, REPLACE(REPLACE(gender, 'M', 'male'), 'F', 'female') AS gender FROM Empinfor;
