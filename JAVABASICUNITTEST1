@@ -1,1 +1,1168 @@
+some important questions in the strings and arrays in java programming....?
+******************the thing we need to know before*********************
+== Operator: This compares the memory addresses (references) of two objects. If two references point to the same memory location,
+== returns true. It does not compare the actual content of the objects.
+
+equals() Method: This method is used to compare the content or state of two objects. By default, it behaves like ==, 
+comparing the memory addresses. However, you can override the equals() method in your class to compare the content of the objects.
+class MyCls {
+   int i = 10;
+
+   // Override equals method
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      }
+      if (obj == null || getClass() != obj.getClass()) {
+         return false;
+      }
+      MyCls other = (MyCls) obj;
+      return i == other.i;
+   }
+}
+
+public class Eight {
+   public static void main(String[] args) {
+      MyCls m = new MyCls();
+      MyCls n = m;
+
+      // Using == operator
+      System.out.println(m == n); // true, because m and n reference the same object
+
+      // Using equals() method
+      System.out.println(m.equals(n)); // true, because m and n reference the same object
+      
+      MyCls o = new MyCls();
+      System.out.println(m.equals(o)); // false, because m and o are different objects
+   }
+}
+
+1)one
+package javaBasicUnitTest1;
+
+public class One {
+	
+		public static void main(String[] args) {
+		String str3 = new String("skill");
+		System.out.println(str3.contains("kill"));
+		System.out.println(str3.charAt(1));
+		System.out.println(str3.concat("hi"));
+		System.out.println(str3);
+	
+	}
+} o/p:true k skillhi skill
+2).two
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+public class Second
+    {
+       public static void main(String args[])
+          {
+           int i=10;
+           int j=10;
+           Value v = new Value();
+           Value u = new Value();
+
+       if(i==j){
+            System.out.println("i & j are equal");
+       }
+          if(u==v){
+              System.out.println("u & v are equal");
+            }
+
+       }
+ }
+
+   class Value{
+      int i=10;
+  }  o/p:i & j are equal
+3).three
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+    class Rextester
+      {
+         public static void main(String args[])
+           {
+             int[10] arr = {1,2,3,4,5,6,7,8,9,10};
+               System.out.println("array element at 0 is.."+arr[0]);
+
+         }
+    } o/p: here while we are already initialized the values to the arrays then no need to declare array with its size
+4).four
+package javaBasicUnitTest1;
+
+public class Four {
+       public static void main(String[] args) {
+           String str3 = new String("skill");
+           System.out.println(str3.indexOf('i'));
+           System.out.println(str3.indexOf("l"));
+           System.out.println(str3.substring(1));
+           System.out.println(str3);
+           System.out.println(str3.length());
+      }
+  } o/p:2 3 kill skill 5
+5).five
+package javaBasicUnitTest1;
+
+public class Five {
+          public static void main(String[] args) {
+               String str1 = new String("skill gun");
+               String str2 = new String("skill gun");
+                    if(str1 == str2){
+                        System.out.println("same");
+                     }
+                    else{
+                        System.out.println("not same");
+                     }
+            }
+     } o/p:not same 
+6).six
+package javaBasicUnitTest1;
+
+public class Six {
+         public static void main(String[] args) {
+             StringBuilder sb = new StringBuilder("start");
+             sb.insert(sb.length(), "le");
+             System.out.println(sb);
+        }
+   } o/p:startle( it is telling that insert le into the asb.length)
+7).seven
+package javaBasicUnitTest1;
+
+class MyClass{
+     int i = 10;
+   }
+public class Seven {
+      public static void main(String[] args) {
+            StringBuilder sb1 = new StringBuilder("skillgun");
+            StringBuilder sb2 = new StringBuilder("skillgun");
+
+            if(sb1.equals(sb2)){
+                System.out.println("same");
+              }
+            else{
+                System.out.println("not same");
+             }
+     }
+ } o/p:not same
+StringBuilder Class: The StringBuilder class does not override the equals() method from the Object class.
+Therefore, sb1.equals(sb2) uses the default implementation from the Object class, which compares the memory addresses (references) of the two StringBuilder objects.
+
+Different Instances: Even though sb1 and sb2 have the same content, they are different instances of StringBuilder. 
+Since they are different objects in memory, sb1.equals(sb2) will return false.
+
+If you want to compare the content of StringBuilder objects, you would need to use the toString() method to convert them to String and then use equals():
+ex*************
+if (sb1.toString().equals(sb2.toString())) {
+    System.out.println("same");
+} else {
+    System.out.println("not same");
+}
+.....This approach will compare the contents of the StringBuilder objects and print "same" if the contents are equal.
+8).eight
+package javaBasicUnitTest1;
+
+class MyCls{
+   int i = 10;
+  }
+public class Eight {
+         public static void main(String[] args) {
+            MyClass m = new MyClass();
+            MyClass n = m;
+
+              if(m.equals(n)){
+                 System.out.println("same");
+               }
+              else{
+                 System.out.println("not same");
+               }
+          }
+   }  o/p:same
+Here's why:
+
+Object Reference Equality: In Java, the equals() method, if not overridden, defaults to the behavior of Object class which checks 
+if two references point to the same object in memory. In your code, m and n both reference the same MyCls object (since n is assigned m). 
+Therefore, m.equals(n) will return true.
+
+Overriding equals(): If you want equals() to compare the content of the objects rather than their memory references, 
+you need to override the equals() method in the MyCls class. Since you haven't overridden equals(), the default implementation from 
+the Object class is used, which checks if the references are the same.
+
+In summary, since m and n refer to the same instance of MyCls, m.equals(n) evaluates to true, and "same" is printed.
+9).nine
+package javaBasicUnitTest1;
+
+public class Nine {
+        public static void main(String[] args) {
+           StringBuilder sb = new StringBuilder("sk");
+           sb.append("ill");
+             System.out.println(sb);
+      }
+}  o/p:skill
+10).Ten
+package javaBasicUnitTest1;
+
+public class Ten {
+         public static void main(String[] args) {
+               StringBuilder sb = new StringBuilder("start");
+               sb.insert(4, "le");
+               System.out.println(sb);
+        }
+   } o/p:starlet
+11).eleven
+package javaBasicUnitTest1;
+
+public class Eleven {
+        public static void main(String[] args) {
+          StringBuilder sb = new StringBuilder();
+          System.out.println(sb.length());
+          System.out.println(sb.capacity());
+          sb.append("skill gun technologies private limited");
+          System.out.println(sb.length());
+          System.out.println(sb.capacity());
+    }
+} o/p: 0 16 38 38
+12).twelve
+package javaBasicUnitTest1;
+
+public class Twelve {
+      public static void main(String[] args) {
+          StringBuilder sb = new StringBuilder();
+          System.out.println(sb.length());
+          System.out.println(sb.capacity());
+          sb.append("skill gun technologies pvt ltd");
+          System.out.println(sb.length());
+          System.out.println(sb.capacity());
+   }
+} o/p: 0 16 30 34
+13).thirteen
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+class Value1{
+int i = 10;
+}
+
+  class MainClass
+    {
+         public static void main(String args[])
+             {
+                int i = 10;
+                Value v = new Value();
+                Test t = new Test();
+                t.incre(v);
+                System.out.println("i val is.."+v.i);
+
+         }
+   }
+
+class Test{
+        public void incre(Value v){
+               v.i++;
+        }
+} o/p:11
+Object Reference: In main(), you create an instance of Value (v), which has a field i initialized to 10.
+
+Method Call: The incre() method of the Test class is called with v as an argument. Inside the incre() method, the field i of the Value instance v is incremented by 1.
+
+Print Statement: After calling incre(), the value of i in the Value instance has been updated to 11, so the println statement prints i val is.. 11.
+
+In summary, the value of i in the Value object is modified by the incre() method, and hence the final output is 11.
+14)fourteen
+package javaBasicUnitTest1;
+
+public class Fourteen {
+      public static void main(String[] args) {
+          String str1 = "skill";
+          String str2 = "gun";
+          str1 = str1.concat(str2);
+          System.out.println(str1);
+          System.out.println(str2);
+     }
+} o/p:skillgun and skill
+15).fifteen
+package javaBasicUnitTest1;
+
+public class Fifteen {
+          public static void main(String[] args) {
+                  StringBuilder sb = new StringBuilder("skillgun");
+                  System.out.println(sb.length());
+                  System.out.println(sb.capacity());
+         }
+ } o/p:8 24
+Yes, you are correct that a StringBuilder with a capacity of 16 can easily store a string of length 8. However, the StringBuilder class is designed to optimize
+performance by managing its internal buffer efficiently. Here’s why the capacity might increase even if the length is less than the initial capacity:
+
+Capacity Management: StringBuilder increases its capacity to accommodate future modifications more efficiently. 
+This approach helps avoid frequent resizing operations as more characters are appended. The resizing 
+strategy often involves increasing the capacity by a factor (e.g., doubling it) rather than just adding the exact amount needed.
+
+Growth Strategy: When the StringBuilder needs more space, it usually increases its capacity beyond the 
+immediate requirement. This is because each time the buffer needs resizing, it involves overhead for reallocating and 
+copying the data. By growing the capacity more significantly, StringBuilder minimizes the frequency of resizing operations.
+
+Optimizing Performance: A larger capacity reduces the need for frequent resizing and copying of data, 
+improving performance during operations like appending characters. This is particularly useful when building strings incrementally.
+
+Here’s a quick illustration of how capacity might grow:
+
+Initial capacity: 16
+After appending characters and reaching capacity: The StringBuilder might double its capacity or use 
+some other growth strategy. For example, if the capacity grows from 16 to 24, it provides extra space for future additions without immediate resizing.
+
+*******************for ex*******************
+public class Main {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("skillgun");
+        System.out.println("Length: " + sb.length());
+        System.out.println("Capacity: " + sb.capacity());
+
+        // Append more characters
+        sb.append("additionaltext");
+        System.out.println("New Length: " + sb.length());
+        System.out.println("New Capacity: " + sb.capacity());
+    }
+}
+When you run this code, you’ll likely see that the capacity increases as more characters are appended, 
+reflecting the StringBuilder's resizing strategy.
+16).sixteen
+package javaBasicUnitTest1;
+
+public class Sixteen {
+          public static void main(String[] args) {
+              String str1 = "skill gun";
+              String str2 = "skill gun";
+                 if(str1 == str2){
+                     System.out.println("same");
+                  }
+                 else{
+                     System.out.println("not same");
+              }
+       }
+} o/p:same
+17).seventeen
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+
+public class Seventeen{
+        public static void main(String args[]){
+            int i = 10;
+            int j = 20;
+          Test1 t = new Test1();
+               t.swap(i,j);
+           System.out.println("i is.."+i+"..j is.."+j);
+     }
+}
+
+
+class Test1{
+       public void swap(int i, int j){
+          int temp = i;
+           i = j;
+           j = temp;
+        }
+  } o/p:i is..10..j is..20
+18).eighteen
+package javaBasicUnitTest1;
+
+public class Eighteen {
+         public static void main(String[] args) {
+               StringBuilder sb = new StringBuilder("start");
+               sb.append("le");
+               System.out.println(sb);
+               sb.setLength(4);
+               System.out.println(sb);
+               System.out.println(sb.length());
+               System.out.println(sb.capacity());
+      }
+} o/p:startle star 4 21
+The capacity of a StringBuilder grows dynamically as characters are appended. Initially, the capacity is set to a default value (usually 16), but it can grow beyond that. After appending "le" to "start", the capacity is automatically increased as needed.
+
+Here’s a step-by-step breakdown:
+
+Initial Capacity: If not explicitly set, the initial capacity of StringBuilder is often 16.
+Appending Characters: After appending "le" to "start", the internal capacity may increase to accommodate the new size and future growth.
+Resizing: If the buffer needs to expand, it typically grows by doubling its current size or using another growth strategy.
+In your case, after appending "le" and truncating the length to 4, the StringBuilder's capacity is still reflecting 
+the internal buffer size that was expanded during the append operation.
+
+Here’s how the code and output reflect this:
+
+java
+Copy code
+public class Eighteen {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("start");
+        sb.append("le");
+        System.out.println(sb);         // Output: startle
+        sb.setLength(4);
+        System.out.println(sb);         // Output: star
+        System.out.println(sb.length()); // Output: 4
+        System.out.println(sb.capacity());// Output: 21 (reflects the internal buffer size after appending)
+    }
+}
+The output 21 for capacity reflects that the internal buffer was resized to accommodate the appended characters,
+even though the length was later truncated.
+19).nineteen
+package javaBasicUnitTest1;
+
+public class Nineteen {
+         public static void main(String[] args) {
+               String str1 = "skill";
+               String str2 = "gun";
+               str1.concat(str2);
+                System.out.println(str1);
+                System.out.println(str2);
+     }
+} o/p:skil and gun
+20).twenty
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+public class Twenty{
+          public static void main(String args[]){
+                  int[] arr = {1,2,3,4,5,6,7,8,9,10};
+                     System.out.println("array element at 0 is.."+arr[0]);
+
+        }
+  } o/p:array element at 0 is..1
+21).twentyone
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+public class Twentyone{
+          public static void main(String args[]){
+               int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+                   System.out.println("array element at 0 is.."+arr[-1]);
+      }
+  } o/p:run time error, array index out of bounds exception
+22).twentytwo
+package javaBasicUnitTest1;
+
+public class Twentytwo {
+           public static void main(String[] args) {
+                    StringBuilder sb = new StringBuilder();
+                     System.out.println(sb.length());
+                     System.out.println(sb.capacity());
+      }
+} o/p:0 16
+23).twentythree
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+class Value2{
+   int i = 10;
+ }
+
+public class TwentyThree{
+           public static void main(String args[]){
+                    int i = 10;
+                    Value2 v = new Value2();
+                    Test2 t = new Test2();
+                    t.incre(v);
+                    System.out.println("i val is.."+v.i);
+        }
+ }
+
+class Test2{
+           public void incre(Value2 v){
+                 v = new Value2();
+                 v.i++;
+        }
+  } o/p:i val is..10
+24).twentyfour
+package javaBasicUnitTest1;
+
+class MyClass1{
+    int i = 10;
+  }
+public class Twentyfour {
+           public static void main(String[] args) {
+                   MyClass1 m = new MyClass1();
+                   MyClass1 n = new MyClass1();
+
+                 if(m.equals(n)){
+                       System.out.println("same");
+                 }
+                 else{
+                    System.out.println("not same");
+                 }
+        }
+ } o/p:not same
+25).twenty five
+package javaBasicUnitTest1;
+
+import java.util.*;
+import java.lang.*;
+
+public class Twentyfive{
+            public static void main(String args[]){
+                int i = 10;
+                Test3 t = new Test3();
+                t.incre(i);
+                System.out.println("i val is.."+i);
+       }
+ }
+
+class Test3{
+    public void incre(int i){
+       i++;
+  }
+} o/p:i val is..10
+*****************QUESTIONS GOES LIKE THIS*******************
+Total points
+33/38
+ 
+The respondent's email (sahanasahanamm@gmail.com) was recorded on submission of this form.
+//what will be the output of below Java program?
+public class StringDemo3 {
+public static void main(String[] args) {
+String str3 = new String("skill");
+System.out.println(str3.contains("kill"));
+System.out.println(str3.charAt(1));
+System.out.println(str3.concat("hi"));
+System.out.println(str3);
+}
+}
+*
+1/1
+true s skillhi skill
+true k skillhi skillhi
+true k skillhi skill
+false k skillhi skillhi
+//what is the output of below java program
+
+import java.util.*;
+import java.lang.*;
+
+class MainClass
+{
+public static void main(String args[])
+{
+int i=10;
+int j=10;
+Value v = new Value();
+Value u = new Value();
+
+if(i==j){
+System.out.println("i & j are equal");
+}
+if(u==v){
+System.out.println("u & v are equal");
+}
+
+}
+}
+
+class Value{
+int i=10;
+}
+*
+1/1
+"i & j are equal u & v are equal"
+u & v are equal
+i & j are equal
+no output
+Which of the below is the correct way of declaring & creating an array in java?
+*
+1/1
+int arr = new int[10];
+int [10] arr;
+int[] arr = new int[10];
+int[10] arr = new int[10];
+how does character [ ] array different from a String?
+*
+1/1
+charecter array is mutable. that means we can change the content of a charecter array
+String objects are immutable.
+we can apply all string functions directly on charecter array.
+select option 1 if only 1 is true, select 2 if both option 1 and 2 are correct, select option3 if both 1 ,2,and 3 are correct, else select option 4.
+//What is the output of below java program?
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{
+public static void main(String args[])
+{
+int[10] arr = {1,2,3,4,5,6,7,8,9,10};
+System.out.println("array element at 0 is.."+arr[0]);
+
+}
+}
+*
+1/1
+array element at 0 is.. 1
+run time error, array index out of bounds exception
+compile time error as you can't give array size in its variable declaration.
+array element at 0 is..0
+//what will be the output of below Java program?
+public class StringDemo3 {
+public static void main(String[] args) {
+String str3 = new String("skill");
+System.out.println(str3.indexOf('i'));
+System.out.println(str3.indexOf("l"));
+System.out.println(str3.substring(1));
+System.out.println(str3);
+System.out.println(str3.length());
+}
+}
+*
+1/1
+2 3 skill skill 5
+2 3 kill skill 5
+3 4 skill skill 5
+2 3 kill skill 4
+In StringBuilder what is the difference between length() and capacity() functions?
+*
+1/1
+Both length & capacity will give you the total size of that array.
+Capacity will give you the total size(capacity) of the array, where as length will give the number of charecters in that array.
+Capacity will give you the total number of charecters in that array, where as length will give you the total length(capacity) of that array.
+capacity will be always less than or equal to total lenght of that array.
+name
+*
+Sahana M M 
+//what is the output of below Java program?
+public class StringDemo2 {
+public static void main(String[] args) {
+String str1 = new String("skill gun");
+String str2 = new String("skill gun");
+if(str1 == str2){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+same
+not same
+no error no output
+gives compile time error, you can't compare two strings like this.
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder("start");
+sb.insert(sb.length(), "le");
+System.out.println(sb);
+}
+}
+*
+1/1
+starlet
+start le
+startle
+garbage or crash
+//what is the output of below Java program?
+class MyClass{
+int i = 10;
+}
+public class StringDemo2 {
+public static void main(String[] args) {
+StringBuilder sb1 = new StringBuilder("skillgun");
+StringBuilder sb2 = new StringBuilder("skillgun");
+
+if(sb1.equals(sb2)){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+compile time error
+output is unpredictable
+same
+not same
+//what is the output of below Java program?
+class MyClass{
+int i = 10;
+}
+public class StringDemo2 {
+public static void main(String[] args) {
+MyClass m = new MyClass();
+MyClass n = m;
+
+if(m.equals(n)){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+not same
+same
+compile time error
+output is unpredictable as we don't know if both m and n are might be pointing to the same object.
+//what is the output of below Java program?
+public class StringDemo2 {
+public static void main(String[] args) {
+String str1 = new String("skill gun");
+String str2 = new String("skill gun");
+if(str1.equals(str2)){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+same
+not same
+no error no output
+gives compile time error, you can't compare two strings like this.
+Which of the below statements are true about an equals() and == operator
+*
+0/1
+operator == always returns true, if both the objects are having or pointing to same address.
+equals() function on all objects tests if the content in both the objects are same or not.
+operator == some times might return false, even if both the objects are poitning to same address.
+it is mandatory for every class to implement equals() function. Else it gives compile time error.
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder("sk");
+sb.append("ill");
+System.out.println(sb);
+}
+}
+*
+1/1
+skill
+ill
+sk
+garbage or crash
+I wanted to use a string in my program, where single threads will be accessing and modifying that string, then what should I use?
+*
+1/1
+String
+StringBuilder
+StringBuffer
+charecter array
+which is true about strings in java?
+*
+1/1
+replace function in string will change the content in the same memory location.
+concat() function will append new string to the existing string in the same location.
+string function has its own implementation of equals() function to check for content equivalancy.
+length function in string class, always returns 1 less than actual size
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder("start");
+sb.insert(4, "le");
+System.out.println(sb);
+}
+}
+*
+0/1
+starlet
+start le
+startle
+garbage or crash
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder();
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+sb.append("skill gun technologies private limited");
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+}
+}
+*
+0/1
+0 16 38 34
+0 16 38 38
+0 16 34 38
+0 16 34 34
+which of the below statements are true about a stringbuilder and stringbuffer?
+*
+1/1
+StringBuilder is mutable & synchronized
+StringBuffer is mutable & not synchronized.
+StringBuilder is immutable & not synchronized
+StringBuffer is mutable & synchorinzed
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder();
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+sb.append("skill gun technologies pvt ltd");
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+}
+}
+*
+1/1
+0 16 30 32
+0 16 30 34
+0 16 30 30
+0 16 34 34
+//what will be the output of below java program?
+
+
+import java.util.*;
+import java.lang.*;
+
+class Value{
+int i = 10;
+}
+
+class MainClass
+{
+public static void main(String args[])
+{
+int i = 10;
+Value v = new Value();
+Test t = new Test();
+t.incre(v);
+System.out.println("i val is.."+v.i);
+
+}
+}
+
+class Test{
+public void incre(Value v){
+v.i++;
+}
+}
+
+*
+1/1
+10
+11
+garbage
+compile time error or run time error.
+//what will be the output of below Java program?
+public class StringDemo3 {
+public static void main(String[] args) {
+String str1 = "skill";
+String str2 = "gun";
+str1 = str1.concat(str2);
+System.out.println(str1);
+System.out.println(str2);
+}
+}
+*
+1/1
+skillgun and gun
+skill and gun
+skillgun and skillgun
+none
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder("skillgun");
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+}
+}
+*
+0/1
+8 and 16
+8 and 24
+24 and 16
+8 and 8
+//what is the output of below Java program?
+public class StringDemo2 {
+public static void main(String[] args) {
+String str1 = "skill gun";
+String str2 = "skill gun";
+if(str1 == str2){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+same
+not same
+no error no output
+gives compile time error, you can't compare two strings like this.
+//what will be the output of below java program?
+
+
+import java.util.*;
+import java.lang.*;
+
+
+class MainClass
+{
+public static void main(String args[])
+{
+int i = 10;
+int j = 20;
+Test t = new Test();
+t.swap(i, j);
+System.out.println("i is.."+i+"..j is.."+j);
+
+}
+}
+
+
+class Test{
+public void swap(int i, int j){
+int temp = i;
+i = j;
+j = temp;
+}
+}
+
+*
+1/1
+i is.. 20..j is.. 10
+i is.. 10..j is.. 20
+i is.. 10..j is.. 10
+i is.. 20..j is.. 20
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder("start");
+sb.append("le");
+System.out.println(sb);
+sb.setLength(4);
+System.out.println(sb);
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+}
+}
+*
+1/1
+startle start 4 16
+startle star 4 21
+startle start 4 21
+startle star 7 21
+//what will be the output of below Java program?
+public class StringDemo3 {
+public static void main(String[] args) {
+String str1 = "skill";
+String str2 = "gun";
+str1.concat(str2);
+System.out.println(str1);
+System.out.println(str2);
+}
+}
+
+*
+1/1
+skillgun and gun
+skill and gun
+skillgun and skillgun
+none
+mobile
+*
+9686322098
+I wanted to use a string in my program, where I have multipe threads which will be only reading that string. But I don't want any thread to modify that data. Then what should I use?
+*
+1/1
+String
+StringBuilder
+StringBuffer
+charecter array
+which is true about a String class in java?
+*
+1/1
+String class is immutable
+String objects are immutable
+both option 1 and 2 are true
+String class is mutable, but String objects are immutable.
+//What is the output of below java program?
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{
+public static void main(String args[])
+{
+int[] arr = {1,2,3,4,5,6,7,8,9,10};
+System.out.println("array element at 0 is.."+arr[0]);
+
+}
+}
+*
+1/1
+array element at 0 is.. 1
+run time error, array index out of bounds exception
+compile time error, trying to initialize with out allocating memory.
+no error no output
+//What is the output of below java program?
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{
+public static void main(String args[])
+{
+int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+System.out.println("array element at 0 is.."+arr[-1]);
+
+}
+}
+*
+1/1
+array element at 0 is.. 1
+run time error, array index out of bounds exception
+compile time error, trying to initialize with out specifying the size.
+compile time error, invalid array initialization
+//what will be the output of below Java program?
+public class StringBuilderDemo {
+public static void main(String[] args) {
+StringBuilder sb = new StringBuilder();
+System.out.println(sb.length());
+System.out.println(sb.capacity());
+}
+}
+*
+1/1
+0 and 16
+0 and 0
+16 and 16
+cant predict
+//what will be the output of below java program?
+
+
+import java.util.*;
+import java.lang.*;
+
+class Value{
+int i = 10;
+}
+
+class MainClass
+{
+public static void main(String args[])
+{
+int i = 10;
+Value v = new Value();
+Test t = new Test();
+t.incre(v);
+System.out.println("i val is.."+v.i);
+
+}
+}
+
+class Test{
+public void incre(Value v){
+v = new Value();
+v.i++;
+}
+}
+
+*
+1/1
+11
+garbage
+error
+10
+//what is the output of below Java program?
+class MyClass{
+int i = 10;
+}
+public class StringDemo2 {
+public static void main(String[] args) {
+MyClass m = new MyClass();
+MyClass n = new MyClass();
+
+if(m.equals(n)){
+System.out.println("same");
+}else{
+System.out.println("not same");
+}
+}
+}
+*
+1/1
+not same
+same
+compile time error
+output is unpredictable as we don't know if both m and n are might be pointing to the same object.
+I wanted to use a string in my program, where mutliple threads will be accessing and modifying that string, then what should I use?
+*
+1/1
+String
+StringBuilder
+StringBuffer
+charecter array
+Which of the below points are disadvantages of a String?
+*
+1/1
+I can share string with multiple threads, so that all threads can read it with out modifying it.
+If I want to do too many modifications on string, it is not recommended to use as it generates separate object each time I try to modify it.
+Strings when stored in string constant pool, uses memory efficiently due to its reusability property.
+I can't inherit String class to my own class and modify its behavior.
+//what will be the output of below java program?
+
+
+import java.util.*;
+import java.lang.*;
+
+class MainClass
+{
+public static void main(String args[])
+{
+int i = 10;
+Test t = new Test();
+t.incre(i);
+System.out.println("i val is.."+i);
+
+}
+}
+
+class Test{
+public void incre(int i){
+i++;
+}
+}
+*
+1/1
+10
+11
+garbage
+compile time error or run time error.
+Which is a correct statement about arrays in java?
+*
+0/1
+It is ok to have size in the array declaration
+while creating or initializing array, it is mandatory to give size of that array.
+while creating or initializaing array, some times array size will be automatically calculated by the initialized members.
+lenght is the variable of array which holds the size of array and it is not constant
+
+
+
+
+
+
+
 
