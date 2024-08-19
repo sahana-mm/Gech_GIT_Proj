@@ -1,1 +1,33 @@
+1).Instance and Static Members..?
+package membersOfClass;
+
+public class MembersOfClass {
+
+	public static void main(String[] args) {
+		Circle c = new Circle(3);
+		c.getAreaOfCircle();
+		System.out.println(Circle.pi);
+		Circle.f1();
+
+	}
+
+}
+class Circle{
+	public int radius;
+	public static float pi=3.142f;
+	public Circle(int radius) {
+		this.radius=radius;
+	}
+	public void getAreaOfCircle() {
+		float Area = (pi * radius * radius);
+		System.out.println(Area);
+		f1();
+	}
+	public static void f1() {
+		Circle c = new Circle(2);
+		System.out.println(c.radius);
+		System.out.println(pi);
+		System.out.println("hi, i am static");
+	}
+}
 
