@@ -22,3 +22,19 @@ select * from product
 insert  into product values(1,'lux',34,'hul','2017-12-12'),
 (2,'sandal',35,'godrej','2017-11-10'),
 (3,'liril',36,'huli','2017-10-11')
+
+20/08/2024
+Normalization is a process in database design used to:
+
+Avoid Redundancy: It ensures that data is not duplicated across the database.
+This means storing each piece of information in one place only.
+
+Prevent Anomalies:
+Insert Anomaly: Prevents issues when inserting new data if certain information cannot be added 
+without other related data being present.
+Update Anomaly: Prevents problems when updating data, ensuring that changes are consistently 
+applied across the database.
+Delete Anomaly: Avoids issues when deleting data, ensuring that removal of information does
+not unintentionally remove related data.
+In summary: Normalization helps to organize data into separate tables based on logical relationships,
+reducing redundancy and preventing inconsistencies that can occur during insert, update, or delete operations.
