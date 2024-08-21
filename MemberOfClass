@@ -30,4 +30,65 @@ class Circle{
 		System.out.println("hi, i am static");
 	}
 }
+21/08/2024
+1).how can we call the constructors in the parent and child class...?
+class Parent {
+    Parent() {
+        System.out.println("Parent class constructor called");
+    }
+}
 
+class Child extends Parent {
+    Child() {
+        super(); // Calls the Parent class constructor
+        System.out.println("Child class constructor called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child obj = new Child(); // Creates an instance of Child, calling both constructors
+    }
+}
+output
+Parent class constructor called
+Child class constructor called
+************When an instance of the child class is created, the child class constructor
+is automatically invoked. Here's how it works:**********
+public class Main {
+    public static void main(String[] args) {
+        Child obj = new Child(); // This line creates an instance of the Child class, which automatically calls the Child constructor.
+    }
+}
+In this example, when you write new Child(), the constructor of the Child class is called.
+This is automatic; you don't need to explicitly call the constructor. The Child constructor, 
+in turn, can call the Parent constructor using super(), as shown in the previous example.
+
+So, when you create an instance of Child using new Child(), the following sequence occurs:
+
+The Child constructor is called.
+If super() is present in the Child constructor, it calls the Parent constructor.
+After the Parent constructor completes, the rest of the Child constructor is executed.
+This is how the child class constructor is accessed when an instance of the child class is created.
+
+When you create an instance of the Child class using Child obj = new Child();, the JVM does the following:
+Locate the Child class constructor: The JVM starts by finding the constructor of the Child class.
+Invoke the Parent class constructor first:
+
+Before the Child class constructor's body executes, the JVM ensures that the Parent class constructor is called. 
+This is because the Child class inherits from the Parent class, 
+and the Parent class needs to be properly initialized first.
+The super() call (which may be implicit if not explicitly written) at the beginning of the Child class constructor invokes 
+the Parent class constructor.
+Execute the Parent class constructor: The JVM executes the Parent class constructor, initializing the parent 
+part of the object.
+
+Execute the Child class constructor: After the Parent class constructor has finished executing, the 
+JVM returns to the Child class constructor and executes its body.
+
+Return to the main method: Once the Child class constructor has finished executing, the JVM completes
+the creation of the Child object, and control returns to the main method.
+
+This is why, even though the Child constructor is called first, the Parent constructor executes before 
+the Child constructor's body does. It's part of the inheritance mechanism in Java to ensure that the 
+parent class is properly initialized before the child class.
