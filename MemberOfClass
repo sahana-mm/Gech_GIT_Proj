@@ -92,3 +92,5 @@ the creation of the Child object, and control returns to the main method.
 This is why, even though the Child constructor is called first, the Parent constructor executes before 
 the Child constructor's body does. It's part of the inheritance mechanism in Java to ensure that the 
 parent class is properly initialized before the child class.
+
+1).can we call super(0 function in main method...?
