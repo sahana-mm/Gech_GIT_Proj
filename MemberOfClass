@@ -93,4 +93,4 @@ This is why, even though the Child constructor is called first, the Parent const
 the Child constructor's body does. It's part of the inheritance mechanism in Java to ensure that the 
 parent class is properly initialized before the child class.
 
-1).can we call super(0 function in main method...?
+1).can we call super() function in main method...?
