@@ -38,3 +38,20 @@ Delete Anomaly: Avoids issues when deleting data, ensuring that removal of infor
 not unintentionally remove related data.
 In summary: Normalization helps to organize data into separate tables based on logical relationships,
 reducing redundancy and preventing inconsistencies that can occur during insert, update, or delete operations.
+
+24/08/2024
+1).here i want to display whose fname starts with vowel 
+SELECT * FROM employees WHERE fname LIKE 'a%' OR fname LIKE 'e%' OR fname LIKE 'i%' OR 
+fname LIKE 'o%' OR fname LIKE 'u%';
+is also correct and will return the desired result. The REGEXP version just makes it more concise.
+
+SELECT * FROM employees WHERE fname REGEXP '^[aeiouAEIOU]';
+The query you've written to display employees whose first name (fname) starts with a vowel is correct.
+However, there's a minor improvement you can make by using the REGEXP operator, which simplifies the query:
+SELECT * FROM employees WHERE fname REGEXP '^[aeiouAEIOU]';
+This query will select all employees whose fname starts with any vowel (case-insensitive).
+
+
+
+
+
