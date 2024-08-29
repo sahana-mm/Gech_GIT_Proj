@@ -265,3 +265,59 @@ Original Variables: The i and j in the main method remain unchanged because only
 modified inside the swap method.
 If you want to modify the original variables in main, you would need to use a different approach,
 such as passing an array or using a wrapper class to hold and modify the values.
+
+3).public class Main
+{
+	public static void main(String[] args) {
+	    int i =10;
+	    Value v = new Value();
+	    Test t = new Test();
+	    t.incre(v);
+		System.out.println("i value is.." + v.i);
+	}
+}
+class Value{
+    int i=10;
+}
+class Test{
+    public void incre(Value v){
+        v = new Value();
+        v.i++;
+    }
+}Initialization in main Method:
+
+java
+Copy code
+int i = 10;
+Value v = new Value(); // Original Value object with v.i = 10
+Test t = new Test();
+t.incre(v); // Call to incre method
+System.out.println("i value is.." + v.i); // Print the i field of the original Value object
+Inside the incre Method:
+
+java
+Copy code
+public void incre(Value v){
+    v = new Value(); // Creates a new Value object
+    v.i++;           // Increment the i field of the new Value object (from 10 to 11)
+}
+v = new Value(); creates a new Value object. This new object’s i starts at 10 (the default value for int).
+v.i++; increments the i of this new Value object. The new Value object’s i becomes 11.
+This reassignment (v = new Value();) does not affect the original Value object. 
+It only changes the local reference v inside the incre method.
+Returning to main Method:
+
+After the incre method completes, the local variable v inside incre points to the 
+new Value object created within the method. The original Value object that was passed in the main method remains unchanged.
+Printing the Value:
+
+java
+Copy code
+System.out.println("i value is.." + v.i);
+The v in main still refers to the original Value object. Since the incre method did not modify this original Value object, its i remains 10.
+Key Points:
+Reassignment in Method: Reassigning v to a new Value object inside incre does not change the Value object originally 
+passed to the method. The reassignment only affects the local reference v inside the incre method.
+Original Object Unchanged: The original Value object, which was passed from main, is not affected by
+the changes to the local v reference inside incre.
+Output: Therefore, when you print the i value of the original Value object in the main method, it remains 10.
