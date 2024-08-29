@@ -180,15 +180,88 @@ For legacy code or situations where thread safety is critical, StringBuffer may 
 In summary, while StringBuilder and StringBuffer offer similar functionalities, the choice between them typically
 depends on whether synchronization (thread safety) is necessary or not.
 
+2).Method program
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        int j = 20;
+        Test t = new Test();
+        t.swap(i, j);
+        System.out.println("i value is.." + i + " j value is.." + j);
+    }
+}
 
+class Test {
+    public void swap(int i, int j) {
+        int temp = i; // Local 'i' (copy of main's 'i') is 10
+        i = j;        // Local 'i' now becomes 20 (value of local 'j')
+        j = temp;     // Local 'j' now becomes 10 (value of temp)
+    }
+}
+In the swap Method:
 
+The i and j variables inside swap are local copies.
+You successfully swap the values of these local copies (i and j), but these changes are limited to the swap method’s scope.
+In the main Method:
 
+After swap finishes, the original i and j in main are still 10 and 20 because the method worked with copies, not the original variables.
+Key Points:
+Pass-by-Value: Java passes a copy of the value (for primitive types) when you pass arguments to a method.
+Local Variables: The i and j in swap are local to that method and don’t affect the i and j in main.
+Changes Are Local: The swap affects only the local copies within the method, not the originals.
+This is why, despite the swap inside the method, the original values in main remain unchanged.
 
+Yes, in the context of your program, when you print the values of i and j in the main method, you are indeed working with the variables that were originally declared and initialized within the main method. Here's how this works:
 
+Flow of Execution:
+Initialization in main Method:
 
-You’ve hit the Free plan limit for GPT-4o.
-Responses will use our basic model until your limit resets after 9:47 PM.
+You declare and initialize i and j in the main method with values 10 and 20.
+java
+Copy code
+int i = 10;
+int j = 20;
+Calling the swap Method:
 
-Get Plus
+You pass i and j to the swap method:
+java
+Copy code
+t.swap(i, j);
+Here, the values of i and j (which are 10 and
 
+Calling the swap Method (continued):
 
+When you call t.swap(i, j);, the values of i (10) and j (20) are passed to the swap method. These values are passed by value, meaning the method receives copies of these values, not the original variables.
+Inside the swap Method:
+
+The swap method receives these copies as its local variables:
+java
+Copy code
+public void swap(int i, int j) {
+    int temp = i;  // Local copy of i, which is 10
+    i = j;         // Local copy of i is now 20
+    j = temp;      // Local copy of j is now 10
+}
+Here, temp temporarily holds the original value of i. The local variable 
+i is set to the value of j, and j is set to the original value of i held in temp. 
+These changes are made only to the local copies inside the swap method.
+Returning to main Method:
+
+After the swap method completes execution, control returns to the main method.
+The original variables i and j in the main method remain unchanged. The swap method's 
+changes affect only its local copies.
+Printing the Values in main:
+
+Finally, when you print the values of i and j in the main method:
+
+System.out.println("i value is.." + i + " j value is.." + j);
+You see the original values 10 and 20 because the swap method did not modify the original i and j in the main method.
+Summary:
+Local Variables: The swap method has its own local copies of i and j, which are separate from the
+i and j in the main method.
+Pass-by-Value: Java passes primitive values by copying them. The swap method works with these copies, 
+so it does not affect the original variables.
+Original Variables: The i and j in the main method remain unchanged because only the copies were 
+modified inside the swap method.
+If you want to modify the original variables in main, you would need to use a different approach,
+such as passing an array or using a wrapper class to hold and modify the values.
