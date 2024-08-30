@@ -105,3 +105,45 @@ class A4{
 		}
 	}
 }
+
+30/08/2024
+1) Can we call super() in the main function?
+
+"In Java, the super() call is specifically designed to be used within constructors 
+to invoke the constructor of the parent class. Since the main function is a static 
+method and is not associated with any class instance, it cannot directly call super().
+However, if you want to ensure that the parent class constructor is invoked, you would create 
+an object of the subclass within the main method, and the super() call will automatically be 
+invoked as part of the subclass's constructor."
+
+2) Can we use static members inside the constructor?
+
+"Yes, we can use static members inside a constructor. Static members belong to
+the class itself rather than any specific instance, so they are accessible anywhere 
+within the class, including the constructor. However, it's important to note that while 
+static members can be accessed, the primary purpose of a constructor is to initialize 
+instance variables, not static members, as static members should already be initialized when the class is loaded."
+
+3) Can I make a constructor private? If yes, then how can I access it?
+
+"Yes, you can make a constructor private in Java. This is often done in design 
+patterns like Singleton, where you want to restrict the instantiation of a class 
+to a single instance. To access or instantiate the class with a private constructor, 
+you typically provide a public static method within the class that returns the single instance. 
+This pattern ensures controlled access to the class's instance."
+
+4) Can I inherit a parent class if the parent class is private?
+
+"No, you cannot inherit from a parent class if it is private. In Java, a private class
+cannot be accessed outside the class in which it is declared. Inheritance requires that 
+the subclass be able to access the parent class, so if the parent class is private, it 
+effectively blocks inheritance. Typically, classes are made public or package-private to 
+allow for inheritance and use within the same package."
+
+5) Can I inherit a parent class constructor into a child class?
+
+"In Java, constructors are not inherited by the subclass. However, a subclass can
+invoke a parent class constructor using super() within its own constructor. This 
+allows the child class to reuse the parent class's constructor logic, but the constructor
+itself is not directly inherited. It's a powerful feature that ensures proper initialization
+of both the parent and child classes."
