@@ -147,3 +147,73 @@ invoke a parent class constructor using super() within its own constructor. This
 allows the child class to reuse the parent class's constructor logic, but the constructor
 itself is not directly inherited. It's a powerful feature that ensures proper initialization
 of both the parent and child classes."
+
+5).interfaces in java programming language
+package interfaace;
+
+// Interface definition
+public interface Movable {
+    void move();
+}
+
+// Car class implementing Movable
+class Car implements Movable {
+    @Override
+    public void move() {
+        System.out.println("The car drives on the road.");
+    }
+}
+
+// Bicycle class implementing Movable
+class Bicycle implements Movable {
+    @Override
+    public void move() {
+        System.out.println("The bicycle pedals on the path.");
+    }
+}
+
+// Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        Movable myCar = new Car();
+        Movable myBicycle = new Bicycle();
+
+        myCar.move();        // Output: The car drives on the road.
+        myBicycle.move();    // Output: The bicycle pedals on the path.
+    }
+}
+orr**************************
+package interfaace;
+
+public class Main {
+    
+    // Interface definition
+    public interface Movable {
+        void move();
+    }
+
+    // Car class implementing Movable
+    static class Car implements Movable {
+        @Override
+        public void move() {
+            System.out.println("The car drives on the road.");
+        }
+    }
+
+    // Bicycle class implementing Movable
+    static class Bicycle implements Movable {
+        @Override
+        public void move() {
+            System.out.println("The bicycle pedals on the path.");
+        }
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+        Movable myCar = new Car();
+        Movable myBicycle = new Bicycle();
+
+        myCar.move();        // Output: The car drives on the road.
+        myBicycle.move();    // Output: The bicycle pedals on the path.
+    }
+}
