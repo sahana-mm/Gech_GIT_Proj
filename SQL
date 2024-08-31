@@ -302,3 +302,71 @@ Boyce-Codd Normal Form (BCNF): A stronger version of 3NF that deals with certain
 Summary
 Normalization helps avoid anomalies by structuring data in a way that ensures consistency, reduces redundancy, 
 and makes it easier to maintain and manage. This process is essential for creating a robust and efficient database system.
+
+
+Scenario: Combined Table for Student Information and Course Enrollment
+Imagine you have a table that combines student information and their course enrollments:
+
+Table: StudentCourse
+StudentID	StudentName	CourseID	CourseName
+1	Alice	101	Math
+1	Alice	102	Science
+2	Bob	103	History
+Issue: Insertion Anomaly
+Problem: You want to add a new student to the database, but the table design forces you to also include course information.
+
+Inserting New Student:
+
+Suppose you want to add a new student named Carol who hasn’t enrolled in any courses yet.
+sql
+Copy code
+INSERT INTO StudentCourse (StudentID, StudentName, CourseID, CourseName)
+VALUES (3, 'Carol', NULL, NULL);
+Problem: The above insert statement is problematic because it leaves CourseID and CourseName as NULL, 
+which might not be allowed or meaningful. This also could lead to inconsistencies or incomplete data.
+
+Current Table Structure:
+
+The table design requires CourseID and CourseName for each entry, meaning you can't just insert a student
+without specifying at least one course.
+Proper Database Design to Avoid Insertion Anomaly
+To avoid this problem, you should separate student information and course enrollment into different tables.
+Here’s how you can redesign the schema:
+
+Table: Student
+StudentID	StudentName
+1	Alice
+2	Bob
+3	Carol
+Table: Enrollment
+StudentID	CourseID	CourseName
+1	101	Math
+1	102	Science
+2	103	History
+How It Solves the Insertion Anomaly
+Adding New Student:
+
+You can add a new student to the Student table without any requirement to specify course information.
+sql
+Copy code
+INSERT INTO Student (StudentID, StudentName)
+VALUES (4, 'Dave');
+Adding Course Enrollment Later:
+
+You can insert course enrollments separately when needed, without forcing the student record to be linked
+with a course immediately.
+sql
+Copy code
+INSERT INTO Enrollment (StudentID, CourseID, CourseName)
+VALUES (4, 104, 'Geography');
+Summary
+By separating student information and course enrollments into different tables, you avoid the insertion anomaly. 
+Now, you can add students or course enrollments independently, ensuring that your database design supports data
+integrity and flexibility.
+
+
+
+
+
+
+
