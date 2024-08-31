@@ -255,3 +255,50 @@ select *,REPLACE(gender,'F','female_employee') from Empinfor
 22).write a query to fetch the employee gender and replace the 'M'  with 'male' and 'F' with 'female'..?
 select *,REPLACE(REPLACE(gender,'M','male'),'F','female') from Empinfor
 SELECT *, REPLACE(REPLACE(gender, 'M', 'male'), 'F', 'female') AS gender FROM Empinfor;
+
+
+31/08/2024
+Normalization is a process in database design used to reduce redundancy and improve data 
+integrity by organizing data into related tables. This helps in avoiding anomalies and 
+inconsistencies during database operations like insertion, updating, and deletion.
+
+Types of Anomalies Addressed by Normalization
+Insertion Anomaly:
+
+Occurs when you cannot insert data into the database without including additional, unwanted data.
+Example: In a table where student information and course enrollment are combined, you cannot 
+add a new student without also adding a course enrollment.
+Update Anomaly:
+
+Occurs when data needs to be updated in multiple places to ensure consistency.
+Example: If a student’s address is stored in multiple rows, updating the address requires 
+changing it in every row where it appears.
+Deletion Anomaly:
+
+Occurs when the deletion of data causes unintended loss of additional information.
+Example: Deleting a course from a table that combines course details and student enrollment 
+could also accidentally remove information about students enrolled in that course.
+How Normalization Helps
+Reduces Redundancy:
+
+Data is stored in such a way that duplication is minimized. This means each piece of information 
+is stored in only one place.
+Improves Data Integrity:
+
+Ensures that the data is consistent and accurate. By dividing data into related tables, you ensure 
+that changes are made in one place, which automatically updates related data.
+Eliminates Anomalies:
+
+By organizing data into tables and establishing relationships, normalization addresses the anomalies 
+mentioned above, ensuring that the database remains consistent and reliable.
+Normal Forms
+Normalization is typically carried out in stages known as normal forms:
+
+First Normal Form (1NF): Ensures that each column contains atomic values and each record is unique.
+Second Normal Form (2NF): Ensures that all non-key attributes are fully functionally dependent on the primary key.
+Third Normal Form (3NF): Ensures that all non-key attributes are not only fully functionally dependent on the primary 
+key but also independent of each other.
+Boyce-Codd Normal Form (BCNF): A stronger version of 3NF that deals with certain types of anomalies not handled by 3NF.
+Summary
+Normalization helps avoid anomalies by structuring data in a way that ensures consistency, reduces redundancy, 
+and makes it easier to maintain and manage. This process is essential for creating a robust and efficient database system.
