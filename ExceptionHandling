@@ -1,1 +1,62 @@
+1).package exception.com.tech.palle;
+
+public class Exception {
+
+	public static void main(String[] args) {
+		System.out.println("sahana");
+		int i =10;
+		try{
+		i = i/0;	
+			System.out.println("hi");
+		}
+        catch(ArithmeticException e) {
+			System.out.println("banglore");
+		}
+		System.out.println(i);
+        
+	}
+}
+2).package exception.com.tech.palle;
+
+public class Exception1 {
+
+	public static void main(String[] args) {
+		try {
+			try {
+				System.out.println(10/0);
+			}
+		   catch(ArithmeticException e) {
+			   System.out.println("hi");
+		   }
+		}
+		catch(ArithmeticException e) {
+			System.out.println("banglore");
+		}
+		finally {
+			System.out.println("sahana");
+		}
+	}
+}
+3).package exception.com.tech.palle;
+
+public class Exception2 {
+
+	public static void main(String[] args) {
+		try {
+			System.out.println(10/5);
+			try {
+				System.out.println(10/0);
+			}
+		   catch(ArrayIndexOutOfBoundsException e) {
+			   System.out.println("hi");
+		   }
+		}
+		catch(ArithmeticException ex) {
+			System.out.println("banglore");
+		}
+		finally {
+			System.out.println("sahana");
+		}
+	}
+}
 
