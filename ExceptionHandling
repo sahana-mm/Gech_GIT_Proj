@@ -60,3 +60,57 @@ public class Exception2 {
 	}
 }
 
+11/09/2024
+package exception.com.tech.palle;
+
+public class Exception3 {
+
+    public static void main(String[] args) {
+        System.out.println("welcome");
+
+        // First try-catch block to handle ArithmeticException
+        try {
+            int i = 20 / 0;  // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("sahana");
+        }
+
+        // Second try-catch block to handle ArrayIndexOutOfBoundsException
+        try {
+            int[] a = {1, 2, 3};
+            System.out.println(a[3]);  // This will throw ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("array");
+        }
+
+        // Finally block that always executes
+        finally {
+            System.out.println("mm");
+        }
+    }
+}
+ here we can handle bot the exception easily
+****************but here**************
+package exception.com.tech.palle;
+
+public class Exception3 {
+
+    public static void main(String[] args) {
+        System.out.println("welcome");
+
+        try {
+            int i = 20 / 0;  // First exception
+            try {
+                int[] a = {1, 2, 3};
+                System.out.println(a[3]);  // Second exception
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("array");
+            }
+        } catch (ArithmeticException e) {
+            System.out.println("sahana");
+        } finally {
+            System.out.println("mm");
+        }
+    }
+}
+here we can handle the ArrayIndexOutOfBoundsException but cant get the output
