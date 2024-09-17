@@ -211,3 +211,44 @@ class H{
 		System.out.println("hello");
 	}
 }
+17/09/2024
+1).files concept
+import java.io.File;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+public class FileWriteExample {
+    public static void main(String[] args) {
+        File f = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+
+        try {
+            // Initialize File object
+            f = new File("d:/palle.txt");
+
+            // Initialize FileWriter object
+            fw = new FileWriter(f);
+
+            // Initialize BufferedWriter object
+            bw = new BufferedWriter(fw);
+
+            // Write text to the file
+            bw.write("hello we are writing into files\n");
+            bw.write("we are learning files\n");
+
+        } catch (IOException e) {
+            // Handle any IO exceptions
+            e.printStackTrace();
+        } finally {
+            // Close BufferedWriter and FileWriter in the finally block to ensure they are closed
+            try {
+                if (bw != null) bw.close();
+                if (fw != null) fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+}
