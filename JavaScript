@@ -1,1 +1,78 @@
-
+19/09/2024
+1).display the daya name by using functions in javascript
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JavaScript</title>
+<script type="text/javascript">
+function DisplayDayName(dayno)
+{
+	if(dayno==1)
+	{
+		alert('monday');
+	}
+	else if(dayno==2)
+	{
+		alert('tuesday');
+	}
+	else if(dayno==3)
+	{
+		alert('wednesday');
+	}
+	else if(dayno==4)
+	{
+		alert('thursday');
+	}
+	else if(dayno==5)
+	{
+		alert('friday');
+	}
+	else if(dayno==6)
+	{
+		alert('saturday');
+	}
+	else if(dayno==7)
+	{
+		alert('sunday');
+	}
+	else{
+		alert('invalid day no entered');
+	}
+}
+</script>
+</head>
+<body>
+<input type="button" id="btndisplay" value="Displaydayname" onclick="DisplayDayName(6)"/>
+</body>
+</html>
+2).same above using switch selection statement...
+function DisplayDayName(daynum)
+{
+	switch(daynum)
+	{
+	case 1:
+		alert('monday');
+		break;
+	case 2:
+		alert('tuesday');
+		break;
+	case 3:
+		alert('wednesday');
+		break;
+	case 4:
+		alert('thursday');
+		break;
+	case 5:
+		alert('friday');
+		break;
+	case 6:
+		alert('saturday');
+		break;
+	case 7:
+		alert('sunday');
+		break;
+	default:
+		alert('inavlid day');
+	}
+}
