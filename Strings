@@ -558,4 +558,40 @@ public class MyClass {
 With this implementation, if you create instances of MyClass with the same value,
 the equals method will return true if the values are the same, and "same" will be printed. 
 Otherwise, "not same" will be printed.
+04/10/2024
+1).Question: Write a Java program to check if a given string is a palindrome. 
+A string is considered a palindrome if it reads the same forward and backward, ignoring case and spaces.
+Example:
+Input: "A man a plan a canal Panama"
+Output: true
+public class Main {
+    public static void main(String[] args) {
+        String s1 = "a man a plan a canal Panama";
+        String s2 = "";
+        String s3 = "";
+
+        // First loop to build s2 (without spaces and in lowercase)
+        for (int i = 0; i < s1.length(); i++) {
+            char c = s1.charAt(i);
+            if (c != ' ') {  // Only process if it's not a space
+                if (c >= 'A' && c <= 'Z') {
+                    c = (char) (c + 32);  // Convert uppercase to lowercase
+                }
+                s2 = s2 + c;  // Append only the valid character to s2
+            }
+        }
+
+        // Second loop to create the reversed version of s2
+        for (int i = s2.length() - 1; i >= 0; i--) {
+            s3 = s3 + s2.charAt(i);
+        }
+
+        // Check if s2 is equal to its reverse (s3)
+        if (s3.equals(s2)) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
 
