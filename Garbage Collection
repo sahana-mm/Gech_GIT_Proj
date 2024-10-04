@@ -1,1 +1,3 @@
-
+Garbage collection it is the process of reclaiming the unused memory automatically.
+Garbage Collector
+ it is responsible for deleting dead or unused objects present in the memory.
