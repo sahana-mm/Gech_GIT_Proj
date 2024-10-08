@@ -1,3 +1,65 @@
 06/10/2024
-1).J2EE
+1).J2EE code
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JdbcExample {
+    public static void main(String[] args) {
+        // JDBC URL, username and password
+        String url = "jdbc:mysql://localhost:3306/palle";
+        String user = "root";
+        String password = "admin";
+
+        // JDBC objects
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet rs = null;
+
+        try {
+            // Step 1: Load JDBC Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Step 2: Establish a Connection
+            connection = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the database successfully!");
+
+            // Step 3: Create a Statement
+            statement = connection.createStatement();
+
+            // Step 4: Execute an INSERT query
+            String insertQuery = "INSERT INTO emp (id, name) VALUES (1, 'John')";
+            statement.executeUpdate(insertQuery);
+            System.out.println("Data inserted successfully!");
+
+            // Step 5: Execute a SELECT query
+            String selectQuery = "SELECT * FROM emp";
+            rs = statement.executeQuery(selectQuery);
+
+            // Step 6: Process the Result Set
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                System.out.println("ID: " + id + ", Name: " + name);
+            }
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Step 7: Close JDBC objects
+            try {
+                if (rs != null) rs.close();
+                if (statement != null) statement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
 
