@@ -1,4 +1,4 @@
-"String Builder" 
+"String Builder"
 String Builder here it is the predefined class in java and it is in the package of java.lang
 1).WAP to know how the StringBuilder is working in the java...?
 package com.example.mystringbuilder;
