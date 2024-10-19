@@ -133,3 +133,28 @@ public class AddEvenNumbersFirstThenOddNumbersAtTheEndOfArray {
 		}
 	}
 }
+19/10/2024
+1).A
+   B  C
+   D  E  F
+   G  H  L  J
+   K  L  M  N  O
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("enter the size");
+	    int n = sc.nextInt();
+	   char c='A';
+	    for(int i=1;i<=n;i++){
+	        for(int j=1;j<=i;j++){
+	            System.out.print(c +"      ");
+	            c++;
+	        }
+	        	System.out.println();
+	    }
+	
+	}
+}
