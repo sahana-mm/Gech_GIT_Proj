@@ -262,3 +262,15 @@ public class FileWriterBufferedWriter {
 		}
 	}
 }
+24/10/2024
+java array interview question..?
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr={2,1,0};
+	    for(int i:arr){
+		System.out.println(arr[i]);
+	}
+	}
+}
+o/p:0,1,2
