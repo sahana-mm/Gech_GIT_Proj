@@ -1,6 +1,6 @@
 13/10/2024
 1).how to create threads
-in java there are two ways to create threads 
+in java there are two ways to create threads
 a). Extending the Thread Class
 class MyThread extends Thread {
     @Override
