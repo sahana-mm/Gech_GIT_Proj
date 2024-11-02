@@ -1,3 +1,6 @@
 Garbage collection it is the process of reclaiming the unused memory automatically.
 Garbage Collector
  it is responsible for deleting dead or unused objects present in the memory.
+or garbage collection is the process of removal of unreferenced objects from the heap location..an dit is done by
+garbage collector it is keep tracking the memory to remov ethe dead or unused or unrefenced objects which are present 
+in the heap location.
