@@ -1,1 +1,24 @@
+LocalClass is defined inside the display() method of OuterClass.
+The LocalClass can only be instantiated and used within the display() method.
+When display() is called in main, it creates an instance of LocalClass and calls showMessage(), which prints the message to the console.
+This demonstrates that LocalClass is accessible only within the display method and is not visible outside it.
+public class OuterClass {
+    public void display() {
+        // Local class inside the method
+        class LocalClass {
+            void showMessage() {
+                System.out.println("This is a message from the local class.");
+            }
+        }
+        
+        // Creating an instance of the local class
+        LocalClass local = new LocalClass();
+        local.showMessage();
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        outer.display();
+    }
+}
 
