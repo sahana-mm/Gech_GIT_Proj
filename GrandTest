@@ -551,3 +551,8 @@ public class Main {
         System.out.println(s3);
     }
 }
+
+06/11/2024
+Ststic block (initialisation block): we need this block to initialize the static variables which are present inside the 
+normal method. if we have any print statements inside the sattaic block it is executed without the need of main method.
+It is executed only when the class is loaded into the memory.
