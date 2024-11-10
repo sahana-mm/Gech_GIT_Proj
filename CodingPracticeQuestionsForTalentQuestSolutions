@@ -1,1 +1,67 @@
-
+1).Reove the duplicates from the String?
+public class Main
+{
+	public static void main(String[] args) {
+	    String s = "helloworld";
+	    String  s1 = "";
+	    for(int i=0;i<=s.length()-1;i++){
+	        boolean isDuplicate = false;
+	        for(int j=0;j<=s1.length()-1;j++){
+	            if(s.charAt(i)==s1.charAt(j)){
+	                isDuplicate  = true;
+	                break;
+	            }
+	        }
+	        if(isDuplicate==false){
+	            s1 = s1 + s.charAt(i);
+	        }
+	    }
+         System.out.println(s1);
+	}
+}
+2).Remove the duplicate elements in the array?
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr1={1,2,3,4,3};
+	    int[] arr2=new int[arr1.length];
+	    int newIndex=0;
+	    for(int i=0;i<=arr1.length-1;i++){
+	        boolean isDuplicate=false;
+	        for(int j=0;j<=arr2.length-1;j++){
+	            if(arr1[i]==arr2[j]){
+	                isDuplicate=true;
+	                break;
+	            }
+	        }
+	        if(isDuplicate==false){
+	            arr2[newIndex]=arr1[i];
+	            newIndex++;
+	        }
+	        
+	    }
+	    for(int i=0;i<=arr2.length-1;i++){
+         System.out.print(arr2[i]+" ");
+	}
+	}
+}
+===================or=====================
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr1={1,2,3,4,3};
+	   
+	    for(int i=0;i<=arr1.length-1;i++){
+	         for(int j=i+1;j<=arr1.length-1;j++){
+	             if(arr1[i]==arr1[j]){
+	                 arr1[j]=0;
+	             }
+	         }
+	    }
+	    for(int i=0;i<=arr1.length-1;i++){
+	        if(arr1[i] !=0){
+         System.out.print(arr1[i]+" ");
+        	}
+	     }
+	}
+}
