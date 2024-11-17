@@ -4,3 +4,4 @@ Garbage Collector
 or garbage collection is the process of removal of unreferenced objects from the heap location..an dit is done by
 garbage collector it is keep tracking the memory to remov ethe dead or unused or unrefenced objects which are present 
 in the heap location.
+Garbage collectionis done defaulty by JVM.
